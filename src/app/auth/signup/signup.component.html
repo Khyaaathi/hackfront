@@ -1,0 +1,242 @@
+<!-- navbar section start -->
+<div *ngIf="isSubmitting" class="loading">
+  <mat-spinner color="accent"></mat-spinner>
+</div>
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/home"
+      ><img src="assets/images/logo-inner.png" alt=""
+    /></a>
+  </div>
+</nav>
+<!-- // navbar section end -->
+<div class="banner-mask">
+  <picture>
+    <source srcset="assets/images/lostfound-banner.jpg" media="(max-width: 992px)">
+    <source srcset="assets/images/lostfound-banner2.jpg" media="(min-width: 992px)">
+    <source srcset="assets/images/lostfound-banner.jpg">
+    <img src="assets/images/lostfound-banner.jpg" alt="Ratha Yatra Image">
+  </picture>
+  <!-- <img src="assets/images/lostfound-banner.jpg" alt="" /> -->
+</div>
+<div class="container banner-curve">
+  <!-- <span class="header-icon"><img src="assets/images/about-jaganath-icon.png" alt=""></span> -->
+  <h2 i18n="@@auth-signup-title">Enter your Details (SIGN UP)</h2>
+  <h3
+    i18n="@@auth-signup-errorMessage"
+    class="text-danger text-center"
+    *ngIf="errors"
+  >
+    *Something Went wrong
+  </h3>
+  <form [formGroup]="authForm" (ngSubmit)="submitForm()">
+    <div class="form-group">
+      <label i18n="@@auth-signup-firstName">First Name</label>
+      <span class="mandatory-mark">*</span>
+      <div class="input-group mb-3">
+        <input
+          i18n-placeholder="@@auth-signup-firstNamePlaceHolder"
+          type="text"
+          class="form-control"
+          formControlName="firstName"
+          placeholder="Enter First Name"
+        />
+        <div class="input-group-append">
+          <span class="input-group-text" id="basic-addon2"
+            ><mat-icon>person</mat-icon></span
+          >
+        </div>
+      </div>
+      <div *ngIf="f['firstName'].errors" class="invalid-feedback">
+        <div
+          *ngIf="
+            f['firstName'].errors['minlength'] ||
+            f['firstName'].errors['maxlength']
+          "
+          i18n="@@auth-signup-mameerr"
+        >
+          *Should be more than 3 and less than 30 character
+        </div>
+
+        <div *ngIf="f['firstName'].errors['pattern']" i18n="@@characterErr">
+          *Only characters are allowed
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label i18n="@@auth-signup-lastName">Last Name</label>
+      <span class="mandatory-mark">*</span>
+      <div class="input-group mb-3">
+        <input
+          i18n-placeholder="@@auth-signup-lastNamePlaceHolder"
+          type="text"
+          class="form-control"
+          formControlName="lastName"
+          placeholder="Enter Last Name"
+        />
+        <div class="input-group-append">
+          <span class="input-group-text" id="basic-addon2"
+            ><mat-icon>person</mat-icon></span
+          >
+        </div>
+      </div>
+      <div *ngIf="f['lastName'].errors" class="invalid-feedback">
+        <div
+          *ngIf="
+            f['lastName'].errors['minlength'] ||
+            f['lastName'].errors['maxlength']
+          "
+          i18n="@@auth-signup-mameerr"
+        >
+          *Should be more than 3 and less than 30 character
+        </div>
+        <div *ngIf="f['lastName'].errors['pattern']" i18n="@@characterErr">
+          *Only characters are allowed
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label i18n="@@auth-signup-contactNo">Contact Number</label>
+      <span class="mandatory-mark">*</span>
+      <div class="input-group mb-3">
+        <input
+          i18n-placeholder="@@auth-signup-contactNoPlaceHolder"
+          type="text"
+          class="form-control"
+          formControlName="contactNo"
+          placeholder="Enter Contact Number"
+        />
+        <div class="input-group-append">
+          <span class="input-group-text" id="basic-addon2"
+            ><mat-icon> phone</mat-icon></span
+          >
+        </div>
+      </div>
+      <div *ngIf="f['contactNo'].errors" class="invalid-feedback">
+        <div
+          *ngIf="
+            f['contactNo'].errors['minlength'] ||
+            f['contactNo'].errors['maxlength']
+          "
+          i18n="@@sos-reportSos-secondaryTenDigitErr"
+        >
+          *Phone number should be of 10 digits
+        </div>
+        <div
+          *ngIf="f['contactNo'].errors['pattern']"
+          i18n="@@sos-reportSos-secondaryNumericErr"
+        >
+          *Only numeric digits are allowed
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label i18n="@@auth-signup-Email">Email</label>
+      <div class="input-group mb-3">
+        <input
+          i18n-placeholder="@@auth-signup-emailPlaceHolder"
+          type="text"
+          class="form-control"
+          formControlName="emailId"
+          placeholder="Enter Email Id"
+        />
+        <div class="input-group-append">
+          <span class="input-group-text" id="basic-addon2"
+            ><mat-icon> email</mat-icon></span
+          >
+        </div>
+      </div>
+      <div *ngIf="f['emailId'].errors" class="invalid-feedback">
+        <div *ngIf="f['emailId'].errors['email']" i18n="@@auth-signup-emailErr">
+          *Should be a valid email
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label i18n="@@auth-auth-pwd">Password</label>
+      <span class="mandatory-mark">*</span>
+      <div class="input-group mb-3">
+        <input
+          i18n-placeholder="@@auth-auth-pwdPlaceHolder"
+          type="password"
+          class="form-control"
+          formControlName="password"
+          placeholder="Password"
+        />
+        <div class="input-group-append">
+          <span class="input-group-text" id="basic-addon2"
+            ><mat-icon>lock</mat-icon></span
+          >
+        </div>
+      </div>
+      <div *ngIf="f['password'].errors" class="invalid-feedback">
+        <div
+          *ngIf="
+            f['password'].errors['minlength'] ||
+            f['password'].errors['maxlength']
+          "
+          i18n="@@auth-signup-pwdErr"
+        >
+          *Should be more than 6 and less than 30 character
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label i18n="@@auth-signup-cnfPwd">Confirm Password</label>
+      <span class="mandatory-mark">*</span>
+      <div class="input-group mb-3">
+        <input
+          i18n-placeholder="@@auth-auth-confirmPwdPlaceHolder"
+          type="password"
+          class="form-control"
+          formControlName="confirmPassword"
+          placeholder="Confirm Password"
+        />
+        <div class="input-group-append">
+          <span class="input-group-text" id="basic-addon2"
+            ><mat-icon>lock</mat-icon></span
+          >
+        </div>
+      </div>
+      <div *ngIf="f['confirmPassword'].errors" class="invalid-feedback">
+        <div
+          *ngIf="
+            f['confirmPassword'].errors['minlength'] ||
+            f['confirmPassword'].errors['maxlength']
+          "
+          i18n="@@auth-signup-pwdErr"
+        >
+          *Should be more than 6 and less than 30 character
+        </div>
+        <div
+          *ngIf="f['confirmPassword'].errors['matching']"
+          i18n="@@auth-signup-pwdmatchErr"
+        >
+          *Password didn't match
+        </div>
+      </div>
+    </div>
+    <!-- <div class="form-group">
+        <ngx-recaptcha2
+          #captchaElem
+          siteKey="6LfKNi0cAAAAACeYwFRY9_d_qjGhpiwYUo5gNW5-"
+          [size]="size"
+          [hl]="lang"
+          [theme]="theme"
+          [type]="type"
+          formControlName="recaptcha"
+        >
+        </ngx-recaptcha2>
+      </div> -->
+    <div class="text-center">
+      <button
+        i18n="@@auth-auth-loginButton"
+        class="btn cmn-btn btn-lg btn-dark mx-auto"
+        [disabled]="!authForm.valid || isSubmitting"
+        type="submit"
+      >
+        Enter
+      </button>
+    </div>
+  </form>
+</div>

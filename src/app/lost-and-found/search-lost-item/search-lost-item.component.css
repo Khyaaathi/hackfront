@@ -1,0 +1,196 @@
+.form-group {
+  margin-bottom: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+  .img-fluid {
+    width: 90%;
+  }
+  .banner-mask {
+    text-align: center;
+  }
+}
+.modal-header {
+  border: none;
+}
+.modal-content {
+  background: #ad0004;
+}
+.token {
+  color: yellow;
+  font-weight: bold;
+}
+.success-image {
+  width: 60px;
+  margin-bottom: 10px;
+}
+.invalid-feedback {
+  display: block;
+  font-weight: bold;
+}
+.modal-button {
+  display: none;
+}
+.yellow-text {
+  color: #ffd443;
+}
+.white-text {
+  color: #ffffff;
+}
+form {
+  padding: 10px;
+  background: #e9ecef;
+  border-radius: 10px;
+}
+.btn-dark {
+  width: fit-content;
+  /* border-radius: 20px; */
+}
+.item-holder {
+  background: #ffffff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.item-header {
+  display: inline-block;
+  width: 100%;
+}
+
+.item-header .item-titleImg {
+  width: calc(100% - 82px);
+}
+.item-header .item-titleImg .img-hldr {
+  width: 43px;
+  height: 43px;
+  border-radius: 100%;
+  border: 3px solid #dbdada;
+}
+.item-header .item-titleImg .img-hldr img {
+  width: 37px;
+  height: 37px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.item-details-holder div {
+  position: relative;
+  padding-left: 30px !important;
+}
+
+.item-details-holder .img-hldr {
+  position: absolute;
+  left: 0;
+}
+
+.item-details-holder h3,
+.item-details-holder p {
+  margin-bottom: -4px !important;
+}
+
+.btn-hldr {
+  /* margin-top: -24px; */
+  margin-left: -39px;
+}
+.btn-link {
+  color: #808080;
+  text-decoration: none;
+}
+.btn-pink {
+  background-color: #ff6b6f;
+  color: white;
+  border-radius: 100px;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+  .img-fluid {
+    width: 90%;
+  }
+
+  .banner-mask {
+    text-align: center;
+  }
+}
+
+.modal-header {
+  border: none;
+}
+
+.modal-content {
+  background: #ad0004;
+}
+
+.token {
+  color: yellow;
+  font-weight: bold;
+}
+
+.success-image {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.invalid-feedback {
+  display: block;
+  font-weight: bold;
+}
+
+form {
+  padding: 10px;
+  background: #e9ecef;
+  border-radius: 10px;
+}
+
+.card-holder > div {
+  margin-bottom: 20px;
+}
+
+.card-holder .card-style {
+  background: #f9f9f9;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  border: none;
+  height: 100%;
+}
+
+.card-style .card-body {
+  padding: 10px 20px 20px;
+}
+
+.card-style .card-body p {
+  margin-bottom: 5px;
+}
+
+.card-style .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ad0004;
+  color: white;
+  min-height: 62px;
+  padding: 0 15px;
+  border-radius: 20px 20px 0 0;
+}
+
+.card-style .card-header h5 {
+  margin-bottom: 0;
+  font-size: 15px;
+}
+
+.card-holder .card-style button {
+  border-radius: 100px;
+  padding: 5px 15px;
+  border: none;
+}
+
+.card-style .card-body button {
+  padding: 10px 20px;
+}
+div {
+  word-break: break-all;
+}

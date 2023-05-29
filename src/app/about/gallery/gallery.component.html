@@ -1,0 +1,61 @@
+<div class="container py-3">
+  <div class="row" style="align-items: center">
+    <div class="col">
+      <h2 i18n="about-imageGallery-title">Ratha Yatra Image Gallery</h2>
+    </div>
+  </div>
+</div>
+
+<div class="container tab-holder py-3">
+  <div class="d-flex justify-content-center justify-content-evenly">
+    <mat-tab-group>
+      <mat-tab [label]="tab" *ngFor="let tab of tabs">
+        <div class="masonry">
+          <div class="item" *ngFor="let image of images; let i = index">
+            <img
+              (click)="currentImage = image.url; currentImageIndex = i"
+              data-toggle="modal"
+              data-target="#exampleModalCenter"
+              [src]="image.url"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="exampleModalCenter"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+>
+  <div
+    class="modal-dialog modal-dialog-centered modal-fullscreen"
+    role="document"
+  >
+    <div class="modal-content">
+      <div class="popup-holder">
+        <div class="img-hldr">
+          <div class="closebtn">
+            <img
+              data-dismiss="modal"
+              aria-label="Close"
+              src="assets/images/close-btn.png"
+              alt="Close"
+            />
+          </div>
+          <img [src]="currentImage" alt="" />
+        </div>
+        <div class="d-flex justify-content-between py-1 txt-white">
+          <div (click)="previousImage()">Previous</div>
+          <div (click)="nextImage()">Next</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

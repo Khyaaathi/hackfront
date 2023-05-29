@@ -1,0 +1,156 @@
+<div *ngIf="loading" class="loading">
+  <mat-spinner color="accent"></mat-spinner>
+</div>
+<div *ngIf="parkingDetails" class="banner-mask">
+  <picture>
+    <source
+      srcset="assets/images/banner/d-banner_parking-info.jpg"
+      media="(max-width: 992px)"
+    />
+    <source
+      srcset="assets/images/banner/d-banner_parking-info.jpg"
+      media="(min-width: 992px)"
+    />
+    <source srcset="assets/images/banner/d-banner_parking-info.jpg" />
+    <img
+      src="assets/images/banner/d-banner_parking-info.jpg"
+      alt="Ratha Yatra Image"
+    />
+  </picture>
+  <!-- <img [src]="'assets/images/Mask group.png'" alt="" /> -->
+</div>
+<div *ngIf="parkingDetails; else not_found" class="container banner-curve">
+  <h2>{{ parkingDetails.parkingName }}</h2>
+  <div class="container innerHldr">
+    <div class="container parking-banner mb-4 p-2">
+      <div class="img-hldr mb-2">
+        <img
+          [src]="'assets/images/parking/' + parkingDetails.parkingId + '.jpg'"
+          loading="lazy"
+          alt=""
+        />
+      </div>
+      <div class="desc-hldr text-center">
+        <strong>{{ parkingDetails.location }}</strong>
+      </div>
+    </div>
+
+    <div class="parking-rate-hldr">
+      <div class="w-100">
+        <div class="refresh">
+          <button
+            class="cmn-btn ref-btn float-right m-1"
+            (click)="refreshData()"
+          >
+            <span i18n="@@refresh">Refresh</span>
+            <em class="bi bi-arrow-clockwise ml-2"></em>
+          </button>
+        </div>
+      </div>
+
+      <div class="w-100">
+        <div class="img-hldr">
+          <img src="assets/images/icon-parking-area2.png" alt="" />
+        </div>
+        <div class="desc-hldr">
+          <p i18n="parking-parkingEntryGate-capacity">Capacity</p>
+        </div>
+        <div class="_ml-2 p-card">
+          <div class="card">
+            <span i18n="@@two-wheeler">Two Wheeler</span><br /><strong>{{
+              parkingDetails?.twoWheelerCapacity | odia
+            }}</strong>
+            <em class="bi bi-bicycle ml-2"></em>
+          </div>
+          <div class="card ml-2">
+            <span i18n="@@four-wheeler">Four Wheeler</span><br /><strong>{{
+              parkingDetails?.fourWheelerCapacity | odia
+            }}</strong>
+            <em class="bi bi-car-front-fill ml-2"></em>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-100">
+        <!-- <div class="last-child"> -->
+        <div class="img-hldr">
+          <img src="assets/images/icon-parking-area3.png" alt="" />
+        </div>
+        <div class="desc-hldr">
+          <p i18n="@@parking-parkingInfo-available">Available</p>
+        </div>
+        <div class="_ml-2 p-card">
+          <div class="card">
+            <span i18n="@@two-wheeler">Two Wheeler</span><br /><strong>{{
+              parkingDetails?.twoWheelerVacancy | odia
+            }}</strong>
+            <em class="bi bi-bicycle ml-2"></em>
+          </div>
+          <div class="card ml-2">
+            <span i18n="@@four-wheeler">Four Wheeler</span><br /><strong>{{
+              parkingDetails?.fourWheelerVacancy | odia
+            }}</strong>
+            <em class="bi bi-car-front-fill ml-2"></em>
+          </div>
+        </div>
+        <!-- </div> -->
+      </div>
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="d-flex flex-column justify-content-center">
+      <div class="d-flex w-100 mb-2 parking-btn-hldr green-btn">
+        <div class="mr-1 entry-exit-btn" i18n>Vehicles Entry / Exit</div>
+
+        <div class="form-check">
+          <label class="form-check-label" for="flexRadioDefault1">
+            <em i18n-title title="Bike" class="bi bi-bicycle"></em>
+          </label>
+          <input
+            class="form-check-input"
+            type="radio"
+            name="veichle1"
+            value="twoWheeler"
+            [(ngModel)]="veichle"
+          />
+        </div>
+
+        <div class="form-check">
+          <label class="form-check-label" for="flexRadioDefault1">
+            <em i18n-title title="Car" class="bi bi-car-front-fill"></em>
+          </label>
+          <input
+            class="form-check-input"
+            type="radio"
+            name="veichle2"
+            value="fourWheeler"
+            [(ngModel)]="veichle"
+          />
+        </div>
+        <button
+          i18n-title
+          [disabled]="!veichle"
+          title="Entry"
+          class="btn-plus"
+          (click)="parkingUpdate('false')"
+        >
+          +
+        </button>
+        <button
+          i18n-title
+          [disabled]="!veichle"
+          title="Exit"
+          class="btn-plus"
+          (click)="parkingUpdate('true')"
+        >
+          -
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #not_found>
+  <div class="container no-data-found">
+    <p i18n="@@no-data" class="text-center">Sorry No data found ....</p>
+  </div>
+</ng-template>

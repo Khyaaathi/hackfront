@@ -1,0 +1,102 @@
+/* img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+} */
+.f-link li {
+  list-style: none;
+  color: white;
+  font-size: 0.75rem;
+}
+
+.card-holder {
+  background: #f5f5f5;
+  box-shadow: 4px 4px 16px rgba(18, 18, 18, 0.04);
+  border-radius: 12px;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.card-holder img.card-img-top {
+  width: 82px;
+  height: 82px;
+  border-radius: 100%;
+}
+
+.card-holder .desc-hldr {
+  color: #878787;
+}
+
+.card-holder .desc-hldr > div:last-child {
+  width: 100px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #101010;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.card-holder .desc-hldr > div:first-child h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #101010;
+  line-height: 120%;
+  margin-bottom: 0px;
+}
+
+.card-holder .card-body {
+  padding: 0;
+  padding-left: 10px;
+}
+
+.card-holder .card-body .card-contact {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.card-holder .card-body .card-contact img {
+  width: 20px;
+  margin-right: 6px;
+}
+
+/* search section */
+.hotel-search-holder {
+  width: 100%;
+  border: 1px solid #d6d6d6;
+  border-radius: 8px;
+}
+
+.hotel-search-holder button {
+  border: none;
+}
+
+.hotel-search-holder input[type="search"] {
+  border: none;
+  background: url(../../../assets/images/icon-search-btn.png) 6px center
+    no-repeat;
+  height: 40px;
+  padding: 0 10px 0 34px;
+  width: calc(100% - 36px);
+}
+.col-md-6 {
+  padding: 8px !important;
+}
+mat-form-field {
+  width: 100%;
+}
+.filter-option-rating {
+  color: #3b82f6;
+  background: #dbeafe;
+  border-radius: 999px;
+  padding: 1px 3px;
+}
+.card-holder {
+  height: 100%;
+}
+div {
+  word-break: break-all;
+}

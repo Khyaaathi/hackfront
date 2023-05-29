@@ -1,0 +1,16 @@
+/* .cmn-footer {
+    width: 100%;
+    background-color: #000;
+} */
+
+.f-link li {
+  list-style: none;
+  color: white;
+  font-size: 0.75rem;
+}
+
+/* @media (min-width: 992px) {
+    .cmn-footer {
+        
+    }
+} */

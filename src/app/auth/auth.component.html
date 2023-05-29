@@ -1,0 +1,128 @@
+<!-- navbar section start -->
+<div *ngIf="isSubmitting" class="loading">
+  <mat-spinner color="accent"></mat-spinner>
+</div>
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex logo-hldr" routerLink="/home">
+      <div class="logo" routerLink="/home">
+        <img src="assets/images/flag.gif" alt="" />
+      </div>
+      <p class="ml-2 logo-txt" i18n>
+        Shree<br />Jagannatha<br /><span>Ratha Yatra</span> 2023
+      </p>
+    </a>
+  </div>
+</nav>
+<!-- // navbar section end -->
+<div class="banner-mask">
+  <picture>
+    <source
+      srcset="assets/images/banner/m-banner_sign-in.jpg"
+      media="(max-width: 992px)"
+    />
+    <source
+      srcset="assets/images/banner/d-banner_sign-in.jpg"
+      media="(min-width: 992px)"
+    />
+    <source srcset="assets/images/banner/d-banner_sign-in.jpg" />
+    <img
+      src="assets/images/banner/d-banner_sign-in.jpg"
+      alt="Ratha Yatra Image"
+    />
+  </picture>
+  <!-- <img src="assets/images/lostfound-banner.jpg" alt="" /> -->
+</div>
+<div class="container banner-curve">
+  <!-- <span class="header-icon"><img src="assets/images/about-jaganath-icon.png" alt=""></span> -->
+  <h2 i18n="@@auth-login-title">Enter your credentials</h2>
+  <h3
+    i18n="@@auth-login-errorMessage"
+    class="text-danger text-center"
+    *ngIf="errors"
+  >
+    *Invalid Credentials
+  </h3>
+  <form
+    #ngForm="ngForm"
+    [formGroup]="authForm"
+    (ngSubmit)="authForm.valid && submitForm()"
+  >
+    <div class="form-group">
+      <label i18n="@@auth-auth-contactNumber">Phone No</label>
+      <span class="mandatory-mark">*</span>
+      <div class="input-group mb-3">
+        <input
+          [ngClass]="{
+            'border border-danger':
+              ngForm.submitted && f['contactNumber'].errors
+          }"
+          i18n-placeholder="@@auth-auth-contactNumberPlaceHolder"
+          type="number"
+          class="form-control"
+          formControlName="contactNumber"
+          placeholder="Phone No"
+        />
+        <div class="input-group-append">
+          <span class="input-group-text" id="basic-addon2"
+            ><em class="bi bi-telephone-fill"></em
+          ></span>
+        </div>
+      </div>
+      <div *ngIf="f['contactNumber'].errors" class="invalid-feedback">
+        <div
+          *ngIf="
+            f['contactNumber'].errors['min'] || f['contactNumber'].errors['max']
+          "
+          i18n="@@sos-reportSos-primaryTenDigitErr"
+        >
+          *Phone number should be of 10 digits
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label i18n="@@auth-auth-pwd">Password</label>
+      <span class="mandatory-mark">*</span>
+      <div class="input-group mb-3">
+        <input
+          [ngClass]="{
+            'border border-danger': ngForm.submitted && f['password'].errors
+          }"
+          i18n-placeholder="@@auth-auth-pwdPlaceHolder"
+          [type]="passwordType"
+          class="form-control"
+          formControlName="password"
+          placeholder="Password"
+        />
+        <div class="input-group-append">
+          <span class="input-group-text" id="basic-addon2" (click)="onClick()"
+            ><em *ngIf="!show" class="bi bi-eye-fill"></em>
+            <em *ngIf="show" class="bi bi-eye-slash-fill"></em>
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="form-group">
+      <ngx-recaptcha2
+        #captchaElem
+        siteKey="6LfKNi0cAAAAACeYwFRY9_d_qjGhpiwYUo5gNW5-"
+        [size]="size"
+        [hl]="lang"
+        [theme]="theme"
+        [type]="type"
+        formControlName="recaptcha"
+      >
+      </ngx-recaptcha2>
+    </div> -->
+    <div class="text-center">
+      <button
+        i18n="@@auth-auth-loginButton"
+        class="btn cmn-btn btn-lg btn-dark mx-auto"
+        [disabled]="isSubmitting"
+        type="submit"
+      >
+        Enter
+      </button>
+    </div>
+  </form>
+</div>

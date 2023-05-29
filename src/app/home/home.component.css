@@ -1,0 +1,55 @@
+:host {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  /* background: url(../../assets/images/rath-yatra-1626060968.svg) bottom center / cover no-repeat; */
+  /* background: url(../../assets/images/rath-splash_bg.jpg) center 70px / cover no-repeat; */
+  background: url(../../assets/images/banner/m-banner_home.jpg) center 70px /
+    cover no-repeat;
+}
+
+.btn-holder {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.btn-holder > div > div {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+.btn-holder > div > div button {
+  background-color: #ffd443;
+  color: #161616;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+@media (min-width: 992px) {
+  :host {
+    background: url(../../assets/images/banner/d-banner_home_bg.jpg) bottom
+      center / cover no-repeat #70c7f0;
+    /* background-size: 64%; */
+  }
+
+  .btn-holder {
+    max-width: 50%;
+  }
+
+  /* .btn-holder > div > div button {
+    background-color: #161616;
+    color: white;
+  } */
+
+  .home-btn {
+    font-size: 1.2rem;
+  }
+}

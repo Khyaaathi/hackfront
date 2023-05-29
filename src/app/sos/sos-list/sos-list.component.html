@@ -1,0 +1,432 @@
+<div *ngIf="loading" class="loading">
+  <mat-spinner color="accent"></mat-spinner>
+</div>
+<div *ngIf="sosData" class="banner-mask">
+  <picture>
+    <source
+      srcset="assets/images/banner/m-banner_grievance.jpg"
+      media="(max-width: 992px)"
+    />
+    <source
+      srcset="assets/images/banner/d-banner_grievance.jpg"
+      media="(min-width: 992px)"
+    />
+    <source srcset="assets/images/banner/d-banner_grievance.jpg" />
+    <img
+      src="assets/images/banner/d-banner_grievance.jpg"
+      alt="Ratha Yatra Image"
+    />
+  </picture>
+  <!-- <img src="assets/images/lostfound-banner.jpg" alt="" /> -->
+</div>
+<div *ngIf="sosData; else not_found" class="container banner-curve">
+  <h2 i18n="@@sos-sosList-title">Grievance List</h2>
+  <div class="container find-duty-hldr mb-4 py-3">
+    <div class="datepicker">
+      <div class="mb-3">
+        <input
+          type="date"
+          [(ngModel)]="filterDate"
+          (change)="dateSelect(filterDate)"
+          class="form-control"
+        />
+      </div>
+    </div>
+    <div class="time-picker-hldr">
+      <div
+        class="time-hldr"
+        (click)="dateSelect(currentDate)"
+        [ngClass]="{ 'date-selected': currentDate == filterDate }"
+      >
+        <div class="time">{{ currentDate | date : "dd-MM-yyyy" }}</div>
+        <div class="time-icon">
+          <img src="assets/images/icon-calender.png" alt="" />
+        </div>
+      </div>
+      <div
+        class="time-hldr"
+        (click)="dateSelect(yesterdayDate)"
+        [ngClass]="{ 'date-selected': yesterdayDate == filterDate }"
+      >
+        <div class="time">{{ yesterdayDate | date : "dd-MM-yyyy" }}</div>
+        <div class="time-icon">
+          <img src="assets/images/icon-calender.png" alt="" />
+        </div>
+      </div>
+      <div
+        class="time-hldr"
+        (click)="dateSelect(beforeYesterdayDate)"
+        [ngClass]="{ 'date-selected': beforeYesterdayDate == filterDate }"
+      >
+        <div class="time">{{ beforeYesterdayDate | date : "dd-MM-yyyy" }}</div>
+        <div class="time-icon">
+          <img src="assets/images/icon-calender.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-between mb-2">
+    <p>
+      <span i18n="@@totalCount"> Total</span> {{ dataCount | odia }}
+      <span i18n="@@sos-sosList-length">Item Listed</span>
+    </p>
+    <div class="filter-icon">
+      <span class="refresh-button" (click)="refreshData()">
+        <span i18n="@@refresh">Refresh</span>
+        <em class="bi bi-arrow-clockwise ml-2"></em> </span
+      >&nbsp;&nbsp;
+      <div
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasBottom"
+        aria-controls="offcanvasBottom"
+        class="filter-icon"
+      >
+        <img src="assets/images/icon-filter.png" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div *ngFor="let item of sosData; let index = index" class="item-holder mb-4">
+    <div class="item-header">
+      <div class="float-start item-titleImg">
+        <div class="hd-hldr float-start">
+          <h3 class="mb-1">{{ item.categoryType }}</h3>
+          <p>
+            <span i18n="@@sos-sosList-token">Token No</span> : #{{ item.token }}
+          </p>
+        </div>
+      </div>
+      <div class="float-end">
+        <button style="border-radius: 25px" class="btn btn-danger">
+          {{ item.priority }}
+        </button>
+      </div>
+    </div>
+
+    <div class="item-header">
+      <div class="float-start item-titleImg">
+        <div class="hd-hldr float-start">
+          <h3 class="mb-1">{{ item.name }}</h3>
+          <p>{{ item.primaryNumber | odia }}</p>
+        </div>
+      </div>
+      <div class="float-end">
+        <a [href]="'tel:' + item.primaryNumber"
+          ><img src="assets/images/phone-btn.png" alt=""
+        /></a>
+      </div>
+    </div>
+
+    <div class="d-flex flex-wrap item-details-holder">
+      <div class="p-2 w-50 bd-highlight">
+        <span class="img-hldr"
+          ><img src="assets/images/icon-category.svg" alt=""
+        /></span>
+        <h3 i18n="@@sos-sosList-category">Category</h3>
+        <p>{{ item.categoryName }}</p>
+      </div>
+      <div class="p-2 w-50 bd-highlight">
+        <span class="img-hldr"
+          ><img src="assets/images/icon-location.svg" alt=""
+        /></span>
+        <h3 i18n="@@sos-sosList-location">Location</h3>
+        <p>{{ item.location }}</p>
+      </div>
+      <div class="p-2 w-100 bd-highlight">
+        <span class="img-hldr"
+          ><img src="assets/images/icon-description.svg" alt=""
+        /></span>
+        <h3 i18n="@@sos-sosList-description">Description</h3>
+        <p style="word-wrap: break-word">
+          {{ item.description }}
+        </p>
+      </div>
+
+      <div class="p-2 w-50 bd-highlight">
+        <span class="img-hldr"
+          ><img src="assets/images/icon-date-time.svg" alt=""
+        /></span>
+        <h3 i18n="@@lostFound-lostItemList-reportDate">
+          Report Date &amp; Time
+        </h3>
+        <p>{{ item.createDate | date : "dd.MM.yy HH:mm a" | odia }}</p>
+      </div>
+      <div class="p-2 w-50 bd-highlight">
+        <span class="img-hldr"
+          ><img src="assets/images/icon-date-time.svg" alt=""
+        /></span>
+        <h3 i18n="@@lostFound-lostItemList-occurancedate">
+          Occurrence Date &amp; Time
+        </h3>
+        <p>{{ item.occuranceDateTime | date : "dd.MM.yy HH:mm a" | odia }}</p>
+      </div>
+      <div class="p-2 w-100 bd-highlight">
+        <span class="img-hldr"
+          ><img src="assets/images/icon-images.svg" alt=""
+        /></span>
+        <h3>Images</h3>
+        <div *ngIf="item.image?.length <= 3" class="img-lost-hldr">
+          <div *ngFor="let image of item.image">
+            <img [src]="image.image" alt="no file" />
+          </div>
+        </div>
+      </div>
+      <div class="p-2 w-60 bd-highlight">
+        <span class="img-hldr"
+          ><img src="assets/images/icon-facility.png" alt=""
+        /></span>
+        <label i18n="@@sos-sosList-status">Change Status: </label>
+        <select
+          (change)="changeStatus($event.target, item, index)"
+          class="form-select"
+          aria-label="Default select example"
+          [(ngModel)]="item.status"
+        >
+          <option i18n="@@sos-sosList-attended" [value]="'Attended'">
+            Attended
+          </option>
+          <option disabled i18n="@@sos-sosList-Open" [value]="'Open'">
+            Open
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-container *ngIf="sosData?.length">
+  <app-paginator-goto
+    [length]="dataCount"
+    [pageIndex]="0"
+    [pageSize]="20"
+    [showFirstLastButtons]="true"
+    (page)="PageChange($event)"
+  ></app-paginator-goto>
+</ng-container>
+<ng-template #not_found>
+  <div class="container no-data-found">
+    <p i18n="@@no-data" class="text-center">Sorry No data found ....</p>
+  </div>
+</ng-template>
+<div
+  class="offcanvas offcanvas-bottom"
+  tabindex="-1"
+  id="offcanvasBottom"
+  aria-labelledby="offcanvasBottomLabel"
+>
+  <div class="offcanvas-header">
+    <h5
+      i18n="@@lostFound-lostItemList-filterHeading"
+      class="offcanvas-title"
+      id="offcanvasBottomLabel"
+    >
+      Filter Your Search
+    </h5>
+    <button
+      type="button"
+      class="btn-close text-reset"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body small">
+    <form [formGroup]="filterItemForm" (ngSubmit)="filterData(1)">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <div class="form-group">
+            <label i18n="@@lostFound-lostItemList-filterCategory"
+              >Filter By Category</label
+            >
+            <select
+              formControlName="categoryName"
+              class="form-select"
+              aria-label="Default select example"
+            >
+              <option i18n="@@select-placeholder" value="">Select</option>
+              <option i18n="@@sos-reportSOS-Bullying" value="Bullying">
+                Bullying
+              </option>
+              <option i18n="@@sos-reportSOS-Harassment" value="Harassment">
+                Harassment
+              </option>
+              <option
+                i18n="@@sos-reportSOS-Discrimination"
+                value="Discrimination"
+              >
+                Discrimination
+              </option>
+              <option
+                i18n="@@sos-reportSOS-healthAndSafety"
+                value="Health and Safety"
+              >
+                Health and Safety
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <div class="form-group">
+            <label i18n="@@sos-sosList-filterStatus">Filter By Status</label>
+            <select
+              formControlName="status"
+              class="form-select"
+              aria-label="Default select example"
+            >
+              <option i18n="@@select-placeholder" value="">Select</option>
+              <option i18n="@@status-open" value="Open">Open</option>
+              <option i18n="@@status-attended" value="Attended">
+                Attended
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <div class="form-group">
+            <label i18n="@@sos-sosList-tokenFilter">Filter By Token</label>
+            <input
+              formControlName="token"
+              type="text"
+              class="form-control"
+              id="exampleFormControlInput1"
+            />
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <div class="form-group">
+            <label i18n="@@sos-sosList-phoneFilter">Filter By Phone No</label>
+            <input
+              formControlName="phoneNumber"
+              type="number"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-3">
+          <div class="form-group">
+            <label
+              i18n="@@sos-sosList-filterfromDate"
+              for="exampleFormControlInput1"
+              class="form-label"
+              >Filter By From Date</label
+            >
+            <input
+              formControlName="fromDate"
+              type="datetime-local"
+              class="form-control"
+              id="exampleFormControlInput1"
+            />
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-3">
+          <div class="form-group">
+            <label
+              i18n="@@sos-sosList-filterToDate"
+              for="exampleFormControlInput1"
+              class="form-label"
+              >Filter By To Date</label
+            >
+            <input
+              formControlName="toDate"
+              type="datetime-local"
+              class="form-control"
+              id="exampleFormControlInput1"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <button
+          i18n="@@lostFound-lostItemList-filterButton"
+          data-bs-dismiss="offcanvas"
+          class="btn btn-lg cmn-btn btn-dark mx-auto"
+          [disabled]="!filterItemForm.valid"
+          type="submit"
+        >
+          Search
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<button
+  #modalButton
+  type="button"
+  class="btn btn-primary modal-btn"
+  data-toggle="modal"
+  data-target="#exampleModal"
+>
+  Launch demo modal
+</button>
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 i18n>Status Change</h3>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label
+            for="exampleFormControlTextarea1"
+            class="form-label"
+            i18n="@@sos-sosList-commentLabel"
+            >Comments</label
+          ><span class="mandatory-mark">*</span>
+          <em
+            i18n-matTooltip="@@max-desc-char"
+            class="bi bi-info-circle-fill"
+            data-toggle="tooltip"
+            data-placement="top"
+            mat-raised-button
+            matTooltip="Maximum 1000 characters are allowed"
+            matTooltipPosition="above"
+          >
+          </em>
+          <textarea
+            maxlength="1000"
+            [(ngModel)]="policeComment"
+            class="form-control"
+            rows="2"
+          ></textarea>
+        </div>
+        <strong i18n>Are you sure, want to change the status?</strong>
+      </div>
+      <div class="modal-footer">
+        <button
+          i18n
+          type="button"
+          class="btn btn-secondary"
+          data-dismiss="modal"
+          (click)="cancel()"
+        >
+          No
+        </button>
+        <button
+          i18n
+          [disabled]="!policeComment"
+          data-dismiss="modal"
+          (click)="saveStatus()"
+          type="button"
+          class="btn btn-primary"
+        >
+          Yes
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

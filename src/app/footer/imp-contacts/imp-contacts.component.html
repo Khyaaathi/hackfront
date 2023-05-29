@@ -1,0 +1,30 @@
+<!-- navbar section end -->
+
+<!-- // navbar section end -->
+
+<!-- about section -->
+<div class="banner-mask">
+  <img src="assets/images/imp-contacts.png" alt="" />
+</div>
+<div class="container banner-curve">
+  <h2 i18n="@@footer-impContact-title">Important Contacts</h2>
+  <p i18n="@@footer-impContact-desc">
+    Check Out Some Important Contacts Information Listed Below :
+  </p>
+  <div class="table-resposive card">
+    <table class="table table-bordered" aria-hidden="true">
+      <thead>
+        <tr>
+          <th i18n scope="col">Service</th>
+          <th i18n scope="col">Phone No</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of data">
+          <td>{{ item.name }}</td>
+          <td>{{ item.contact | odia }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

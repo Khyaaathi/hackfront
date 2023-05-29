@@ -1,0 +1,361 @@
+<div *ngIf="loading" class="loading">
+  <mat-spinner color="accent"></mat-spinner>
+</div>
+
+<!-- about section -->
+<div class="banner-mask" *ngIf="filteredItems">
+  <picture>
+    <source
+      srcset="assets/images/banner/m-banner_lostAndFound.jpg"
+      media="(max-width: 992px)"
+    />
+    <source
+      srcset="assets/images/banner/d-banner_lostAndFound.jpg"
+      media="(min-width: 992px)"
+    />
+    <source srcset="assets/images/banner/d-banner_lostAndFound.jpg" />
+    <img
+      src="assets/images/banner/d-banner_lostAndFound.jpg"
+      alt="Ratha Yatra Image"
+    />
+  </picture>
+  <!-- <img src="assets/images/lostfound-banner.jpg" alt="" /> -->
+</div>
+<div *ngIf="filteredItems; else not_found" class="container banner-curve">
+  <!-- <span class="header-icon"><img src="assets/images/about-jaganath-icon.png" alt=""></span> -->
+  <h2 i18n="@@lostFound-lostItemList-heading">List of Lost Item/Person</h2>
+  <div class="container find-duty-hldr mb-4 py-3">
+    <div class="datepicker">
+      <div class="mb-3">
+        <input
+          type="date"
+          [(ngModel)]="filterDate"
+          (change)="dateSelect(filterDate)"
+          class="form-control"
+        />
+      </div>
+    </div>
+    <div class="time-picker-hldr">
+      <div
+        class="time-hldr"
+        (click)="dateSelect(currentDate)"
+        [ngClass]="{ 'date-selected': currentDate == filterDate }"
+      >
+        <div class="time">{{ currentDate | date : "dd-MM-yyyy" }}</div>
+        <div class="time-icon">
+          <img src="assets/images/icon-calender.png" alt="" />
+        </div>
+      </div>
+      <div
+        class="time-hldr"
+        (click)="dateSelect(yesterdayDate)"
+        [ngClass]="{ 'date-selected': yesterdayDate == filterDate }"
+      >
+        <div class="time">{{ yesterdayDate | date : "dd-MM-yyyy" }}</div>
+        <div class="time-icon">
+          <img src="assets/images/icon-calender.png" alt="" />
+        </div>
+      </div>
+      <div
+        class="time-hldr"
+        (click)="dateSelect(beforeYesterdayDate)"
+        [ngClass]="{ 'date-selected': beforeYesterdayDate == filterDate }"
+      >
+        <div class="time">{{ beforeYesterdayDate | date : "dd-MM-yyyy" }}</div>
+        <div class="time-icon">
+          <img src="assets/images/icon-calender.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-between mb-2">
+    <p>
+      <span i18n="@@totalCount"> Total</span> {{ dataCount | odia
+      }}<span i18n="@@lostFound-lostItemList-length"> Item/Person Listed</span>
+    </p>
+    <div class="filter-icon">
+      <span class="refresh-button" (click)="refreshData()">
+        <span i18n="@@refresh">Refresh</span>
+        <em class="bi bi-arrow-clockwise ml-2"></em> </span
+      >&nbsp;&nbsp;
+      <div
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasBottom"
+        aria-controls="offcanvasBottom"
+        class="filter-icon"
+      >
+        <img src="assets/images/icon-filter.png" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div *ngFor="let item of filteredItems" class="item-holder mb-4">
+    <div class="item-header">
+      <div class="float-start item-titleImg">
+        <div class="hd-hldr float-start">
+          <h3 class="mb-1">{{ item.name }}</h3>
+          <p>
+            <span i18n="@@lostFound-lostItemList-tokenNo">Token No</span> : #{{
+              item.token
+            }}
+          </p>
+        </div>
+      </div>
+      <!-- <div class="form-check float-end">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckDefault"
+        />
+      </div> -->
+      <!-- <div
+        class="float-end"
+        [routerLink]="['/lost/report-lost-item', item.lostItemId]"
+      >
+        <img src="assets/images/icon-edit.png" alt="" />
+      </div> -->
+    </div>
+
+    <div class="d-flex flex-wrap item-details-holder">
+      <div class="p-2 w-50 bd-highlight">
+        <span class="img-hldr"
+          ><img src="assets/images/icon-category.svg" alt=""
+        /></span>
+        <h3 i18n="@@lostFound-lostItemList-category">Category</h3>
+        <p>{{ item.categoryName }}</p>
+      </div>
+      <div class="p-2 w-50 bd-highlight">
+        <span class="img-hldr"
+          ><img src="assets/images/icon-category.svg" alt=""
+        /></span>
+        <h3 i18n="@@lostFound-lostItemList-beatBox">Beat Box</h3>
+        <p><span i18n>Beat Box No</span> : {{ item.beatBoxId }}</p>
+      </div>
+      <div class="p-2 w-50 bd-highlight">
+        <span class="img-hldr"
+          ><img src="assets/images/icon-location.svg" alt=""
+        /></span>
+        <h3 i18n="@@lostFound-lostItemList-location">Location</h3>
+        <p>{{ item.location }}</p>
+      </div>
+      <div class="p-2 w-50 bd-highlight">
+        <!-- <span class="img-hldr">
+          <a [href]="'tel:' + item.primaryNumber"
+            ><img src="assets/images/icon-phone.svg" alt=""
+            /></a
+        ></span> -->
+        <span class="img-hldr"
+          ><img src="assets/images/icon-phone.svg" alt=""
+        /></span>
+        <h3 i18n="@@lostFound-lostItemList-primaryPh">Primary Phone</h3>
+        <p>{{ item.primaryNumber | odia }}</p>
+      </div>
+      <div *ngIf="item.alternateNumber" class="p-2 w-50 bd-highlight">
+        <span class="img-hldr">
+          <!-- <span class="img-hldr"
+            ><a [href]="'tel:' + item.alternateNumber">
+              <i class="bi bi-telephone"></i></a
+          ></span> -->
+          <span class="img-hldr"
+            ><img src="assets/images/icon-phone.svg" alt=""
+          /></span>
+        </span>
+        <h3 i18n="@@lostFound-lostItemList-secondaryPh">Secondary Phone</h3>
+        <p>{{ item.alternateNumber | odia }}</p>
+      </div>
+      <div class="p-2 w-50 bd-highlight">
+        <span class="img-hldr"
+          ><img src="assets/images/icon-date-time.svg" alt=""
+        /></span>
+        <h3 i18n="@@lostFound-lostItemList-reportDate">
+          Report Date &amp; Time
+        </h3>
+        <p>{{ item.createDate | date : "dd.MM.yy HH:mm a" | odia }}</p>
+      </div>
+      <div class="p-2 w-50 bd-highlight">
+        <span class="img-hldr"
+          ><img src="assets/images/icon-date-time.svg" alt=""
+        /></span>
+        <h3 i18n="@@lostFound-lostItemList-occurancedate">
+          Occurrence Date &amp; Time
+        </h3>
+        <p>{{ item.lostDateTime | date : "dd.MM.yy HH:mm a" | odia }}</p>
+      </div>
+      <div class="p-2 w-100 bd-highlight">
+        <span class="img-hldr"
+          ><img src="assets/images/icon-description.svg" alt=""
+        /></span>
+        <h3 i18n="@@lostFound-lostItemList-description">Description</h3>
+        <p>
+          {{ item.description }}
+        </p>
+      </div>
+
+      <div class="p-2 w-100 bd-highlight">
+        <span class="img-hldr"
+          ><img src="assets/images/icon-images.svg" alt=""
+        /></span>
+        <h3>Images</h3>
+        <div *ngIf="item.image?.length <= 3" class="img-lost-hldr">
+          <div *ngFor="let image of item.image">
+            <img [src]="image.image" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="p-2 w-100 bd-highlight btn-hldr">
+        <button
+          i18n="@@lostFound-lostItemList-status"
+          class="btn btn-link mr-2"
+        >
+          Status
+        </button>
+        <button type="button" class="btn btn-pink px-4">
+          <span>{{ item.status | statusOdia }}</span>
+          <!-- <span *ngIf="!item.status" i18n="@@item-closeStatus">Close</span> -->
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #not_found>
+  <div class="container no-data-found">
+    <p i18n="@@no-data" class="text-center">Sorry No data found ....</p>
+  </div>
+</ng-template>
+<ng-container *ngIf="filteredItems?.length">
+  <app-paginator-goto
+    [length]="dataCount"
+    [pageIndex]="0"
+    [pageSize]="20"
+    (page)="PageChange($event)"
+  ></app-paginator-goto>
+</ng-container>
+
+<!-- <mat-paginator (page)="PageChange($event)" [length]="dataCount" [pageSize]="20">
+</mat-paginator> -->
+<div
+  class="offcanvas offcanvas-bottom"
+  tabindex="-1"
+  id="offcanvasBottom"
+  aria-labelledby="offcanvasBottomLabel"
+>
+  <div class="offcanvas-header">
+    <h5
+      i18n="@@lostFound-lostItemList-filterHeading"
+      class="offcanvas-title"
+      id="offcanvasBottomLabel"
+    >
+      Filter Your Search
+    </h5>
+    <button
+      type="button"
+      class="btn-close text-reset"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body small">
+    <form [formGroup]="filterItemForm" (ngSubmit)="filterData(1)">
+      <div class="row">
+        <div class="col-md-6 col-lg-6">
+          <div class="form-group">
+            <label i18n="@@lostFound-lostItemList-filterCategory"
+              >Filter By Category</label
+            >
+            <select
+              formControlName="categoryName"
+              class="form-select"
+              aria-label="Default select example"
+            >
+              <option i18n="@@select-placeholder" value="">Select</option>
+              <option i18n="@@select-person" value="Person">Person</option>
+              <option i18n="@@select-item" value="Item">Item</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <div class="form-group">
+            <label i18n="@@lostFound-lostItemList-filterStatus"
+              >Filter By Status</label
+            >
+            <select
+              formControlName="status"
+              class="form-select"
+              aria-label="Default select example"
+            >
+              <option i18n="@@select-placeholder" value="">Select</option>
+              <option i18n="@@status-open" value="Open">Open</option>
+              <option i18n="@@status-found" value="Found">Found</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <div class="form-group">
+            <label
+              i18n="@@lostFound-lostItemList-filterToken"
+              class="form-label"
+              >Filter By Token</label
+            >
+            <input formControlName="token" type="text" class="form-control" />
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <div class="form-group">
+            <label
+              i18n="@@lostFound-lostItemList-filterPhone"
+              class="form-label"
+              >Filter By PhoneNo</label
+            >
+            <input
+              formControlName="phoneNumber"
+              type="number"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-3">
+          <div class="form-group">
+            <label
+              i18n="@@lostFound-lostItemList-filterfromDate"
+              class="form-label"
+              >Filter By From Date</label
+            >
+            <input
+              formControlName="fromDate"
+              type="datetime-local"
+              class="form-control"
+              id="exampleFormControlInput1"
+            />
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-3">
+          <div class="form-group">
+            <label
+              i18n="@@lostFound-lostItemList-filtertoDate"
+              class="form-label"
+              >Filter By To Date</label
+            >
+            <input
+              formControlName="toDate"
+              type="datetime-local"
+              class="form-control"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <button
+          i18n="@@lostFound-lostItemList-filterButton"
+          data-bs-dismiss="offcanvas"
+          class="btn cmn-btn btn-lg btn-dark mx-auto"
+          [disabled]="!filterItemForm.valid"
+          type="submit"
+        >
+          Search
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

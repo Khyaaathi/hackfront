@@ -1,0 +1,94 @@
+<div class="container">
+  <p i18n="@@hotel-panthaNivas-text">
+    The Odisha Tourism Development Corporation (OTDC) is a Government of Odisha
+    undertaking corporation in the Indian state of Odisha. It was incorporated
+    in the year 1979[1] to promote tourism in the state and operate some of the
+    existing tourist bungalows and transport fleets in commercial line. OTDC's
+    Tourist Bungalows are called as Panthanivas. OTDC provides customised tour
+    packages.
+  </p>
+  <p>
+    <span i18n="@@totalCount"> Total</span>
+    <strong class="txt-brown mx-1">{{ data.length }}</strong>
+    <span i18n="@@hotels-panthaNiwas-length">Pantha Nivas found in Puri</span>
+  </p>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-4 mb-4" *ngFor="let item of data">
+        <div class="px-2 item-holder">
+          <div class="row _item-holder">
+            <div class="col-4 pr-0">
+              <div class="img-hldr">
+                <img [ngSrc]="item.imageUrl" fill alt="" />
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="desc-hldr">
+                <h3>{{ item.name }}</h3>
+                <h4 i18n="@@hotels-panthaNiwas-location">Location</h4>
+                <p>{{ item.location }}</p>
+
+                <p class="call-icon d-flex">
+                  <span class="span-call-icon"
+                    ><em class="bi bi-telephone brown-btn"></em
+                  ></span>
+                  <span class="phone-no">{{ item.phone | odia }}</span>
+                </p>
+                <!-- <p class="mail-icon">
+                  <i class="bi bi-envelope dark-btn"></i>
+                  {{ item.email }}
+                </p> -->
+
+                <div class="container p-0">
+                  <div class="row">
+                    <div class="col-6">
+                      <a
+                        rel="noopener"
+                        target="_blank"
+                        i18n="@@hotels-panthaNiwas-bookNow"
+                        class="btn cmn-btn dark-btn"
+                        [href]="
+                          'https://odishatourism.gov.in/content/tourism/en/plan/food-accommodation/otdc.html'
+                        "
+                      >
+                        Book Now
+                      </a>
+                    </div>
+                    <div class="col-6">
+                      <a
+                        rel="noopener"
+                        i18n="@@hotels-panthaNiwas-viewMap"
+                        [href]="
+                          'https://maps.google.com/maps?z=12&t=m&q=' +
+                          item.place
+                        "
+                        target="_blank"
+                        class="btn cmn-btn brown-btn"
+                      >
+                        View Map
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <a
+          rel="noopener"
+          i18n="@@hotels-panthaNiwas-bookingSite"
+          target="_blank"
+          class="btn cmn-btn dark-btn mx-auto booking-btn"
+          [href]="
+            'https://odishatourism.gov.in/content/tourism/en/plan/food-accommodation/otdc.html'
+          "
+        >
+          CONTINUE TO BOOKING SITE
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

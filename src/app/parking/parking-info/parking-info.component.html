@@ -1,0 +1,285 @@
+<div *ngIf="loading" class="loading">
+  <mat-spinner color="accent"></mat-spinner>
+</div>
+<div *ngIf="parkingDetails" class="banner-mask">
+  <picture>
+    <source
+      srcset="assets/images/banner/d-banner_parking-info.jpg"
+      media="(max-width: 992px)"
+    />
+    <source
+      srcset="assets/images/banner/d-banner_parking-info.jpg"
+      media="(min-width: 992px)"
+    />
+    <source srcset="assets/images/banner/d-banner_parking-info.jpg" />
+    <img
+      src="assets/images/banner/d-banner_parking-info.jpg"
+      alt="Ratha Yatra Image"
+    />
+  </picture>
+  <!-- <img src="assets/images/parking-banner.jpg" alt="" /> -->
+</div>
+<div *ngIf="parkingDetails; else not_found" class="container banner-curve">
+  <h2 style="text-align: left">
+    {{ parkingDetails?.parkingName }}
+    <span style="float: right">
+      <a
+        style="padding: 0px 15px"
+        i18n-title="@@back-btn"
+        routerLink="/parking/parking-space"
+        class="btn dark-btn"
+        title="go back"
+      >
+        <mat-icon>arrow_back</mat-icon>
+      </a>
+    </span>
+  </h2>
+  <div class="d-flex justify-content-between mb-2">
+    <p i18n="@@parking-parkingInfo-parkingZone">Parking Zone</p>
+    <div class="filter-icon">
+      <button
+        *ngIf="
+          parkingDetails &&
+          (parkingDetails.fourWheelerVacancy ||
+            parkingDetails.twoWheelerVacancy)
+        "
+        type="button"
+        class="btn btn-success"
+        i18n="@@parking-parkingInfo-avlButton"
+      >
+        Available
+      </button>
+      <button
+        *ngIf="
+          parkingDetails &&
+          !(
+            parkingDetails.fourWheelerVacancy ||
+            parkingDetails.twoWheelerVacancy
+          )
+        "
+        type="button"
+        class="btn btn-danger"
+        i18n="@@parking-parkingInfo-unavlButton"
+      >
+        Not Available
+      </button>
+    </div>
+  </div>
+
+  <div class="container innerHldr">
+    <div
+      class="d-flex flex-wrap justify-content-start parking-rate-hldr parking-rate-hldr2"
+    >
+      <div *ngIf="parkingDetails?.twoWheelerCharge" class="w-50">
+        <div class="img-hldr img-hldr2">
+          <img src="assets/images/icon-bike-parking.png" alt="" />
+        </div>
+        <div class="desc-hldr">
+          <p i18n="@@parking-parkingInfo-twoWheelerCharge">
+            Charges For Two Wheelers
+          </p>
+          <p>
+            <strong
+              ><img src="assets/images/icon-rupee.svg" alt="" />
+              {{ parkingDetails.twoWheelerCharge | odia }}</strong
+            >
+            <br /><span i18n="@@parkingCharge-perHuour">Per Hour</span>
+          </p>
+        </div>
+      </div>
+      <div *ngIf="parkingDetails?.fourWheelerCharge" class="w-50">
+        <div class="img-hldr img-hldr img-hldr2">
+          <img src="assets/images/icon-car-parking.png" alt="" />
+        </div>
+        <div class="desc-hldr">
+          <p i18n="@@parking-parkingInfo-fourWheelerCharge">
+            Charges For Four Wheelers
+          </p>
+          <p>
+            <strong
+              ><img src="assets/images/icon-rupee.svg" alt="" />
+              {{ parkingDetails.fourWheelerCharge | odia }}</strong
+            >
+            <br /><span i18n="@@parkingCharge-perHuour">Per Hour</span>
+          </p>
+        </div>
+      </div>
+      <div *ngIf="parkingDetails?.BusCharge" class="w-50">
+        <div class="img-hldr img-hldr img-hldr2">
+          <img src="assets/images/icon-car-parking.png" alt="" />
+        </div>
+        <div class="desc-hldr">
+          <p i18n="@@parking-parkingInfo-busCharge">Charges For Buses</p>
+          <p>
+            <strong
+              ><img src="assets/images/icon-rupee.svg" alt="" />
+              {{ parkingDetails.BusCharge | odia }}</strong
+            >
+            <br /><span i18n="@@parkingCharge-perHuour">Per Hour</span>
+          </p>
+        </div>
+      </div>
+      <div *ngIf="parkingDetails?.ShuttleCharge" class="w-50">
+        <div class="img-hldr img-hldr img-hldr2">
+          <img src="assets/images/icon-car-parking.png" alt="" />
+        </div>
+        <div class="desc-hldr">
+          <p i18n="@@parking-parkingInfo-shuttleCharge">Charges For Shuttles</p>
+          <p>
+            <strong
+              ><img src="assets/images/icon-rupee.svg" alt="" />
+              {{ parkingDetails.ShuttleCharge | odia }}</strong
+            >
+            <br /><span i18n="@@parkingCharge-perHuour">Per Hour</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-100 mb-5">
+      <h3 class="mb-2" i18n="@@parking-parkingInfo-facilities">
+        Facilities They Have
+      </h3>
+      <div class="h-scroll">
+        <div class="slider-hldr" *ngFor="let item of parkingDetails.facilities">
+          <div class="img-hldr" [ngSwitch]="item.facilityLogoId">
+            <img
+              *ngSwitchCase="11"
+              src="assets/images/icon-toilet.png"
+              alt=""
+            />
+
+            <img
+              *ngSwitchCase="6"
+              src="assets/images/cashless-payment.png"
+              alt=""
+            />
+            <img
+              *ngSwitchCase="3"
+              src="assets/images/icon-guesthouse.png"
+              alt=""
+            />
+
+            <img
+              *ngSwitchDefault
+              src="assets/images/icon-parking-area.png"
+              alt=""
+            />
+          </div>
+          <div class="desc-hldr">
+            <p>{{ item.facilityName }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="parking-rate-hldr">
+      <div class="w-100">
+        <div class="refresh">
+          <button
+            class="cmn-btn ref-btn float-right m-1"
+            (click)="refreshData()"
+          >
+            <span i18n="@@refresh">Refresh</span>
+            <em class="bi bi-arrow-clockwise ml-2"></em>
+          </button>
+        </div>
+      </div>
+
+      <div class="w-100">
+        <div class="img-hldr">
+          <img src="assets/images/icon-parking-area2.png" alt="" />
+        </div>
+        <div class="desc-hldr">
+          <p i18n="@@parking-parkingInfo-capacity">Capacity</p>
+        </div>
+        <div class="_ml-2 p-card">
+          <div *ngIf="parkingDetails?.twoWheelerCapacity" class="card">
+            <span i18n="@@two-wheeler">Two Wheeler</span><br /><strong>{{
+              parkingDetails?.twoWheelerCapacity | odia
+            }}</strong>
+            <em class="bi bi-bicycle ml-2"></em>
+          </div>
+          <div *ngIf="parkingDetails?.fourWheelerCapacity" class="card ml-2">
+            <span i18n="@@four-wheeler">Four Wheeler</span><br /><strong>{{
+              parkingDetails?.fourWheelerCapacity | odia
+            }}</strong>
+            <em class="bi bi-car-front-fill ml-2"></em>
+          </div>
+          <div *ngIf="parkingDetails?.BusCapacity" class="card ml-2">
+            <span i18n="@@bus">Bus</span><br /><strong>{{
+              parkingDetails?.BusCapacity | odia
+            }}</strong>
+            <em class="bi bi-bus-front-fill ml-2"></em>
+          </div>
+          <div *ngIf="parkingDetails?.ShuttleCapacity" class="card ml-2">
+            <span i18n="@@shuttle">Shuttle</span><br /><strong>{{
+              parkingDetails?.ShuttleCapacity | odia
+            }}</strong>
+            <em class="bi bi-truck ml-2"></em>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-100">
+        <!-- <div class="last-child"> -->
+        <div class="img-hldr">
+          <img src="assets/images/icon-parking-area3.png" alt="" />
+        </div>
+        <div class="desc-hldr">
+          <p i18n="@@parking-parkingInfo-available">Available</p>
+        </div>
+        <div class="_ml-2 p-card">
+          <div *ngIf="parkingDetails?.twoWheelerVacancy" class="card">
+            <span i18n="@@two-wheeler">Two Wheeler</span><br /><strong>{{
+              parkingDetails?.twoWheelerVacancy | odia
+            }}</strong>
+            <em class="bi bi-bicycle ml-2"></em>
+          </div>
+          <div *ngIf="parkingDetails?.fourWheelerVacancy" class="card ml-2">
+            <span i18n="@@four-wheeler">Four Wheeler</span><br /><strong>{{
+              parkingDetails?.fourWheelerVacancy | odia
+            }}</strong>
+            <em class="bi bi-car-front-fill ml-2"></em>
+          </div>
+          <div *ngIf="parkingDetails?.BusVacancy" class="card ml-2">
+            <span i18n="@@bus">Bus</span><br /><strong>{{
+              parkingDetails?.BusVacancy | odia
+            }}</strong>
+            <em class="bi bi-bus-front-fill ml-2"></em>
+          </div>
+          <div *ngIf="parkingDetails?.ShuttleVacancy" class="card ml-2">
+            <span i18n="@@shuttle">Shuttle</span><br /><strong>{{
+              parkingDetails?.ShuttleVacancy | odia
+            }}</strong>
+            <em class="bi bi-truck ml-2"></em>
+          </div>
+        </div>
+        <!-- </div> -->
+      </div>
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="d-flex justify-content-center">
+      <a
+        styel="color:white"
+        [href]="
+          'https://maps.google.com/maps?z=12&t=m&q=loc:' +
+          parkingDetails?.latitude +
+          '+' +
+          parkingDetails?.longitude
+        "
+        target="_blank"
+        i18n="@@parking-parkingInfo-navigateToMap"
+        class="btn px-4 cmn-btn btn-dark ml-1"
+      >
+        NAVIGATE TO PARKING ZONE
+      </a>
+    </div>
+  </div>
+</div>
+<ng-template #not_found>
+  <div class="container no-data-found">
+    <p i18n="@@no-data" class="text-center">Sorry No data found ....</p>
+  </div>
+</ng-template>

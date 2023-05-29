@@ -1,0 +1,130 @@
+.item-holder {
+  background: #ffffff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.item-header {
+  display: inline-block;
+  width: 100%;
+}
+
+.item-header .item-titleImg {
+  width: calc(100% - 82px);
+}
+.item-header .item-titleImg .img-hldr {
+  width: 43px;
+  height: 43px;
+  border-radius: 100%;
+  border: 3px solid #dbdada;
+}
+.item-header .item-titleImg .img-hldr img {
+  width: 37px;
+  height: 37px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.item-details-holder div {
+  position: relative;
+  padding-left: 30px !important;
+}
+
+.item-details-holder .img-hldr {
+  position: absolute;
+  left: 0;
+}
+
+.item-details-holder h3,
+.item-details-holder p {
+  margin-bottom: -4px !important;
+}
+
+.btn-hldr {
+  /* margin-top: -24px; */
+  margin-left: -39px;
+}
+.btn-link {
+  color: #808080;
+  text-decoration: none;
+}
+.btn-pink {
+  background-color: #ff6b6f;
+  color: white;
+  border-radius: 100px;
+}
+.offcanvas-bottom {
+  height: 60% !important;
+}
+.img-lost-hldr {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: -61px;
+  flex-wrap: wrap;
+}
+
+.img-lost-hldr div {
+  max-width: 100px;
+  height: 55px;
+  margin: 0 5px 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-left: 0px !important;
+}
+
+.img-lost-hldr div img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+div {
+  word-break: break-all;
+}
+.refresh-button {
+  float: right;
+  background: #e9ecef;
+  border-radius: 15px;
+  /* min-width: 28%; */
+  /* min-height: 49%; */
+  text-align: center;
+  padding: 2px 10px;
+  cursor: pointer;
+}
+.find-duty-hldr {
+  background: #f9f9f9;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  padding: 5px 10px;
+  position: relative;
+}
+
+.time-picker-hldr {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.time-picker-hldr .time-hldr {
+  background: #161616;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 3px;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time-picker-hldr .time-hldr .time {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  color: #fff;
+}
+.time-picker-hldr .date-selected {
+  background: rgba(173, 0, 4, 0.97);
+}

@@ -1,0 +1,127 @@
+<!-- navbar section start -->
+
+<!-- // navbar section end -->
+<div *ngIf="loading" class="loading">
+  <mat-spinner color="accent"></mat-spinner>
+</div>
+<!-- about section -->
+<div *ngIf="medicalSpot" class="banner-mask">
+  <img
+    [src]="
+      'assets/images/facilities/medical/' +
+      medicalSpot.medicalFacilityId +
+      '.jpg'
+    "
+    alt=""
+  />
+</div>
+<div *ngIf="medicalSpot; else not_found" class="container banner-curve">
+  <!-- <span class="header-icon"><img src="assets/images/about-jaganath-icon.png" alt=""></span> -->
+
+  <h2 style="text-align: left">
+    {{ medicalSpot?.name }}
+    <span style="float: right">
+      <a
+        style="padding: 0px 15px; border-radius: 20px"
+        i18n-title="@@back-btn"
+        routerLink="/facility/medical-list"
+        class="btn dark-btn"
+        title="go back"
+      >
+        <mat-icon>arrow_back</mat-icon>
+      </a>
+    </span>
+  </h2>
+  <div class="d-flex justify-content-between mb-2">
+    <!-- <p>Health Camp</p> -->
+    <!-- <div class="filter-icon">
+      <img src="assets/images/24x7-available-btn.png" alt="Available" />
+    </div> -->
+  </div>
+
+  <div class="container innerHldr">
+    <div class="d-flex flex-wrap justify-content-end parking-rate-hldr">
+      <div class="w-50">
+        <div class="img-hldr img-hldr2">
+          <img src="assets/images/icon-emergency.png" alt="" />
+
+          <!-- <img src="assets/images/icon-coronavirus.png" alt="" /> -->
+        </div>
+        <div class="desc-hldr">
+          <!-- <p>Immediate</p> -->
+          <p>
+            <strong>{{ medicalSpot.message }}</strong>
+          </p>
+        </div>
+      </div>
+      <div class="w-50">
+        <div class="img-hldr img-hldr img-hldr2">
+          <!-- <img src="assets/images/icon-emergency.png" alt="" /> -->
+        </div>
+        <!-- <div class="desc-hldr">
+          <p>Included</p>
+          <p><strong>Covid Facilities</strong></p>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="w-100 mb-5">
+      <h3 class="mb-2">Facilities They Have</h3>
+      <div class="h-scroll">
+        <div
+          *ngFor="let facility of medicalSpot.facilities"
+          class="slider-hldr"
+        >
+          <div class="img-hldr" [ngSwitch]="facility.facilityLogoId">
+            <img *ngSwitchCase="10" src="assets/images/online.png" alt="" />
+            <img
+              *ngSwitchCase="9"
+              src="assets/images/icon-ambulance.png"
+              alt=""
+            />
+            <img
+              *ngSwitchCase="6"
+              src="assets/images/cashless-payment.png"
+              alt=""
+            />
+            <img *ngSwitchDefault src="assets/images/online.png" alt="" />
+          </div>
+          <div class="desc-hldr">
+            <p>{{ facility.facilityName }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <a
+        [href]="
+          'https://maps.google.com/maps?z=12&t=m&q=loc:' +
+          medicalSpot?.latitude +
+          '+' +
+          medicalSpot?.longitude
+        "
+        target="_blank"
+        i18n="@@facilities-medicalDetails-getDirection"
+        class="btn px-4 cmn-btn dark-btn ml-1"
+      >
+        GET DIRECTION
+      </a>
+      <a
+        [href]="'tel:' + medicalSpot.contactNumber"
+        target="_blank"
+        i18n="@@facilities-medicalDetails-callNow"
+        class="btn px-4 cmn-btn green-btn ml-1"
+      >
+        CALL NOW
+        <img src="assets/images/phone-btn.png" alt="" class="ml-2" />
+      </a>
+    </div>
+  </div>
+</div>
+<ng-template #not_found>
+  <div class="container no-data-found">
+    <p i18n="@@no-data" class="text-center">Sorry No data found ....</p>
+  </div>
+</ng-template>
+<!-- // about section end -->

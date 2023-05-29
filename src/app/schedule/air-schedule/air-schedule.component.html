@@ -1,0 +1,133 @@
+<div class="banner-mask">
+  <picture>
+    <source
+      srcset="assets/images/banner/d-banner_airSchedule.jpg"
+      media="(max-width: 992px)"
+    />
+    <source
+      srcset="assets/images/banner/d-banner_airSchedule.jpg"
+      media="(min-width: 992px)"
+    />
+    <source srcset="assets/images/banner/d-banner_airSchedule.jpg" />
+    <img
+      src="assets/images/banner/d-banner_airSchedule.jpg"
+      alt="Ratha Yatra Image"
+    />
+  </picture>
+</div>
+<div class="container banner-curve">
+  <h2 i18n>Air Schedule</h2>
+  <p i18n>
+    The nearest airport is Biju Patnaik International Airport in Bhubaneswar,
+    located around 58 km away from the city.The airport is well-connected with
+    major Indian and International cities.
+  </p>
+
+  <h3 i18n>Check Out Some Air Flights Information Listed Below :</h3>
+  <div class="container">
+    <div class="row s-img-grid mb-4">
+      <div class="col-6">
+        <button
+          i18n
+          (click)="inbound = true; outbound = false"
+          class="cmn-btn brown-btn bdr-adjst"
+          [ngClass]="{ 'brown-btn': inbound, 'dark-btn': outbound }"
+        >
+          Inbound Flight
+        </button>
+      </div>
+      <div class="col-6">
+        <button
+          i18n
+          (click)="outbound = true; inbound = false"
+          class="cmn-btn dark-btn bdr-adjst"
+          [ngClass]="{ 'brown-btn': outbound, 'dark-btn': inbound }"
+        >
+          Outbound Flight
+        </button>
+      </div>
+    </div>
+    <div class="form-group">
+      <label *ngIf="inbound" i18n="@@schedule-airSchedule-origin"
+        >Select Origin</label
+      >
+      <label *ngIf="outbound" i18n="@@schedule-airSchedule-destination"
+        >Select Destination</label
+      >
+
+      <select (change)="filterData($event.target)" class="form-select air">
+        <option i18n="@@select-placeholder" value="">Select</option>
+        <ng-container *ngIf="outbound">
+          <option *ngFor="let item of outboundDropdown" [value]="item">
+            {{ item }}
+          </option>
+        </ng-container>
+        <ng-container *ngIf="inbound">
+          <option
+            class="airOption"
+            *ngFor="let item of inboundDropdown"
+            [value]="item"
+          >
+            {{ item }}
+          </option>
+        </ng-container>
+      </select>
+    </div>
+    <table aria-hidden="true" class="table mb-5">
+      <thead>
+        <tr>
+          <th i18n scope="col">Flight Name</th>
+          <th i18n scope="col">Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngIf="inbound">
+          <tr *ngFor="let item of filterInbound">
+            <td>
+              {{ item.flightName }}
+              <span i18n="@@origin"> / Origin :</span>
+              {{ item.origin }}
+            </td>
+            <td>
+              <span i18n="@@departure">Dep. </span>
+              {{ item.departureTime }}
+              <span i18n="@@arrival">Arr. </span> {{ item.arrivalTime }}
+
+              <span i18n="@@destination"> Destination : </span>
+              <span>Bhubaneswar</span>
+            </td>
+          </tr>
+        </ng-container>
+        <ng-container *ngIf="outbound">
+          <tr *ngFor="let item of filterOutbound">
+            <td>
+              {{ item.flightName }}
+              <span i18n="@@origin"> / Origin :</span>
+              <span>Bhubaneswar</span>
+            </td>
+            <td>
+              <span i18n="@@arrival">Arr. </span> {{ item.arrivalTime }}
+              <span i18n="@@departure">Dep. </span>
+              {{ item.departureTime }}
+              <span i18n="@@destination"> Destination : </span>
+              {{ item.destination }}
+            </td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+    <div class="row s-img-grid mb-4">
+      <div class="col">
+        <a
+          rel="noopener"
+          i18n="@@continue-toSite"
+          class="cmn-btn dark-btn mx-auto px-4"
+          [href]="'https://www.air.irctc.co.in/'"
+          target="_blank"
+        >
+          Continue To Booking Site
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<ng-container style="margin-bottom: 80px" *ngIf="!noHeader">
+  <app-navbar-back></app-navbar-back>
+</ng-container>
+<div class="body-content">
+  <router-outlet></router-outlet>
+</div>
+<ng-container *ngIf="!noHeader">
+  <app-footer></app-footer>
+</ng-container>
+<button
+  *ngIf="!noHeader"
+  class="cmn-btn dark-btn planner-btn"
+  routerLink="/etc/planner"
+>
+  <img src="assets/images/uiw_date.png" alt="" />
+</button>

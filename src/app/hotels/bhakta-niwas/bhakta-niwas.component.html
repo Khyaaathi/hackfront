@@ -1,0 +1,86 @@
+<!-- section -->
+<div class="container">
+  <p i18n="@@hotel-bhaktaNivas-text">
+    Puri, the land of Jagannatha is also known for its pristine beaches,
+    colourful festivals, and numerous points of tourist attraction. Every year
+    millions of tourists from across the globe come here for leisure, pleasure
+    and devotion. The Jagannatha Temple Administration, keeping in mind the
+    needs of the devotees has come up with Bhakta Niwas near to Jagannath
+    Temple.
+  </p>
+  <p>
+    <span i18n="@@totalCount"> Total</span>
+    <strong class="txt-brown mx-1">{{ data.length }}</strong>
+    <span i18n="@@hotels-bhaktaNiwas-length"> Bhakta Nivas found in Puri</span>
+  </p>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-4 mb-4" *ngFor="let item of data">
+        <div class="px-2 item-holder">
+          <div class="row">
+            <div class="col-4 pr-0">
+              <div class="img-hldr">
+                <img [ngSrc]="item.imageUrl" fill alt="" />
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="desc-hldr">
+                <h3>{{ item.name }}</h3>
+                <h4 i18n="@@hotels-bhaktaNiwas-location">Location</h4>
+                <p>{{ item.location }}</p>
+
+                <p class="call-icon d-flex">
+                  <em class="bi bi-telephone brown-btn"></em>
+                  {{ item.phone | odia }}
+                </p>
+                <p class="mail-icon d-flex">
+                  <em class="bi bi-envelope dark-btn"></em>
+                  {{ item.email }}
+                </p>
+
+                <div class="container p-0">
+                  <div class="row">
+                    <div class="col-6">
+                      <a
+                        target="_blank"
+                        i18n="@@hotels-bhaktaNiwas-bookNow"
+                        class="btn cmn-btn dark-btn"
+                        [href]="item.bookingUrl"
+                      >
+                        Book Now
+                      </a>
+                    </div>
+                    <div class="col-6">
+                      <a
+                        i18n="@@hotels-bhaktaNiwas-viewMap"
+                        [href]="
+                          'https://maps.google.com/maps?z=12&t=m&q=' +
+                          item.place
+                        "
+                        target="_blank"
+                        class="btn cmn-btn brown-btn"
+                      >
+                        View Map
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <a
+          i18n="@@hotels-bhaktaNiwas-bookingSite"
+          target="_blank"
+          class="btn cmn-btn dark-btn mx-auto booking-btn"
+          [href]="'https://www.shreejagannatha.in/accomodation/'"
+        >
+          CONTINUE TO BOOKING SITE
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

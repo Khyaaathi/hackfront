@@ -1,0 +1,106 @@
+.item-holder {
+  background: #f9f9f9;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 12px;
+  height: 100%;
+}
+
+.item-holder .img-hldr {
+  width: auto;
+  height: 125px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid #e7e5e5;
+}
+
+.item-holder .img-hldr img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.desc-hldr h3 {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  line-height: 100%;
+  font-size: 15px;
+}
+
+.desc-hldr h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  letter-spacing: 0.005em;
+  text-align: left;
+  margin-bottom: 5px;
+}
+/* .number-title {
+  display: flex;
+  color: #808080;
+}
+.number-title img {
+  width: 30px;
+  margin-right: 10px;
+}
+.number-title span.brown-txt {
+  color: #ad0004;
+  font-weight: 600;
+} */
+.cmn-btn {
+  min-width: 100%;
+  height: auto;
+  font-size: 12px;
+  padding: 5px 0;
+}
+.open-close-style {
+  padding-left: 30px;
+  background: url(../../../assets/images/clock.png) left top / contain no-repeat;
+  background-size: 18px;
+}
+.service-style {
+  padding-left: 30px;
+  background: url(../../../assets/images/repair-tool.png) left top / contain
+    no-repeat;
+  background-size: 18px;
+}
+.call-btn img {
+  width: 18px;
+  margin-right: 5px;
+}
+.circle-btn {
+  border-radius: 100%;
+  min-width: auto;
+  width: 36px;
+  height: 36px;
+}
+.circle-btn img {
+  max-height: 20px;
+  max-width: 20px;
+}
+.grey-btn,
+.grey-btn:hover {
+  text-decoration: none;
+  background: #d9d9d9;
+  color: #161616;
+  cursor: default;
+}
+.green-btn,
+.green-btn:hover {
+  text-decoration: none;
+  background-color: #08ab1b;
+  color: #ffffff;
+  cursor: default;
+}
+.brown-btn,
+.brown-btn:hover {
+  text-decoration: none;
+  background-color: #ad0004;
+  color: white;
+  cursor: default;
+}

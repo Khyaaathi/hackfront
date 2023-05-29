@@ -1,0 +1,64 @@
+<div *ngIf="loading" class="loading">
+  <mat-spinner color="accent"></mat-spinner>
+</div>
+<!-- section -->
+<div *ngIf="items" class="banner-mask">
+  <picture>
+    <source
+      srcset="assets/images/banner/m-banner_places-around.jpg"
+      media="(max-width: 992px)"
+    />
+    <source
+      srcset="assets/images/banner/d-banner_placesAroundPuri.jpg"
+      media="(min-width: 992px)"
+    />
+    <source srcset="assets/images/banner/d-banner_placesAroundPuri.jpg" />
+    <img
+      src="assets/images/banner/d-banner_placesAroundPuri.jpg"
+      alt="Ratha Yatra Image"
+    />
+  </picture>
+</div>
+<div *ngIf="items; else not_found" class="container banner-curve">
+  <h2 i18n="@@facilities-waterSpot-title">Water Distribution Spot</h2>
+  <p i18n="@@facilities-waterSpot-content">
+    Drinking Water Facility has been made available in the following places
+  </p>
+
+  <!-- <h3 i18n="@@facilities-waterSpot-listPlace">Listed Places</h3> -->
+  <ul class="place-link">
+    <li *ngFor="let place of items">
+      <div>
+        <span class="r-desc mr-3">{{ place.location }}</span>
+      </div>
+      <a
+        [href]="
+          'https://maps.google.com/maps?z=12&t=m&q=loc:' +
+          place?.latitude +
+          '+' +
+          place?.longitude
+        "
+        target="_blank"
+      >
+        <img
+          style="margin-left: auto; margin-right: 0"
+          src="assets/images/place-visit-arow.png"
+          alt=""
+        />
+      </a>
+    </li>
+  </ul>
+</div>
+<ng-container *ngIf="items?.length">
+  <app-paginator-goto
+    [length]="dataCount"
+    [pageIndex]="0"
+    [pageSize]="20"
+    (page)="PageChange($event)"
+  ></app-paginator-goto>
+</ng-container>
+<ng-template #not_found>
+  <div class="container no-data-found">
+    <p i18n="@@no-data" class="text-center">Sorry No data found ....</p>
+  </div>
+</ng-template>

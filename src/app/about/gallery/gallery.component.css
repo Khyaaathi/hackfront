@@ -1,0 +1,116 @@
+h2 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 19px;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.tab-holder {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+}
+
+.masonry {
+  /* Masonry container */
+  -webkit-column-count: 4;
+  -moz-column-count: 4;
+  column-count: 4;
+  margin: 1.5em;
+  padding: 0;
+  -moz-column-gap: 1.5em;
+  -webkit-column-gap: 1.5em;
+  column-gap: 1.5em;
+  font-size: 0.85em;
+}
+
+.item {
+  display: inline-block;
+  margin: 0 0 1.5em;
+  width: 100%;
+  -webkit-transition: 1s ease all;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.item img {
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 320px) {
+  .masonry {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 768px) {
+  .masonry {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .masonry {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  .masonry {
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+  }
+}
+
+.popup-holder {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  /* height: calc(100vh - 144px);
+  left: 0px;
+  top: 146px; */
+  background: rgba(173, 0, 4, 0.97);
+  border-radius: 50px;
+  padding: 4rem 1.4rem;
+  z-index: 1;
+  overflow: scroll;
+}
+
+.popup-holder .img-hldr {
+  width: 100%;
+  padding: 1rem;
+  background-color: white;
+  position: relative;
+}
+.popup-holder .img-hldr .closebtn {
+  width: 44px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.popup-holder .img-hldr img {
+  max-width: 100%;
+  max-height: 100%;
+}
+@media (min-width: 992px) {
+  .popup-holder {
+    height: calc(100vh - 0px);
+    left: 0px;
+    top: 0px;
+  }
+  .popup-holder .img-hldr {
+    height: 100%;
+    text-align: center;
+  }
+}

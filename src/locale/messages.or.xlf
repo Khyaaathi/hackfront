@@ -1,0 +1,1681 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="about-aboutNavigation-briefHistory" datatype="html">
+        <source>Brief History</source>
+        <target>ସଂକ୍ଷିପ୍ତ ଇତିହାସ</target>
+      </trans-unit>
+      <trans-unit id="about-aboutNavigation-placesAround" datatype="html">
+        <source>Places around Puri</source>
+        <target state="new"> ପୁରୀ ନିକଟବର୍ତ୍ତୀ ପର୍ଯ୍ୟଟନ ସ୍ଥଳୀ </target>
+      </trans-unit>
+      <trans-unit id="about-aboutNavigation-specialDays" datatype="html">
+        <source>Special Days</source>
+        <target> ଘୋଷଯାତ୍ରାର ବିଶେଷଦିନ</target>
+      </trans-unit>
+      <trans-unit id="auth-auth-pwd" datatype="html">
+        <source>Password</source>
+        <target>ପାସୱାର୍ଡ</target>
+      </trans-unit>
+      <trans-unit id="auth-auth-pwdPlaceHolder" datatype="html">
+        <source>Password</source>
+        <target>ପାସୱାର୍ଡ</target>
+      </trans-unit>
+      <trans-unit id="auth-auth-loginButton" datatype="html">
+        <source> Enter </source>
+        <target>ପ୍ରବେଶ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-foundItem-heading" datatype="html">
+        <source>List of Found Item/Person</source>
+        <target state="new">ମିଳିଥିବା ବସ୍ତୁର ତାଲିକା </target>
+      </trans-unit>
+      <trans-unit id="lostFound-foundItem-length" datatype="html">
+        <source>Item/Person Listed</source>
+        <target state="new"> ବସ୍ତୁ ତାଲିକାଭୁକ୍ତ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-foundItem-category" datatype="html">
+        <source>Category</source>
+        <target> ବର୍ଗ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-foundItem-description" datatype="html">
+        <source>Description</source>
+        <target>ବର୍ଣ୍ଣନା </target>
+      </trans-unit>
+      <trans-unit id="lostFound-foundItem-beatBox" datatype="html">
+        <source>Beat Box</source>
+        <target>ବିଟ୍ ବାକ୍ସ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-foundItem-location" datatype="html">
+        <source>Location</source>
+        <target>ଅବସ୍ଥାନ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-foundItem-filterHeading" datatype="html">
+        <source> Filter Your Search </source>
+        <target>ଆପଣଙ୍କର ସନ୍ଧାନ ଫିଲ୍ଟର୍ କର </target>
+      </trans-unit>
+      <trans-unit id="lostFound-foundItem-filterCategory" datatype="html">
+        <source>Filter By Category</source>
+        <target>ବର୍ଗ ଅନୁଯାୟୀ ଫିଲ୍ଟର୍ କରନ୍ତୁ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-foundItem-filterStatus" datatype="html">
+        <source>Filter By Status</source>
+        <target>ସ୍ଥିତି ଅନୁଯାୟୀ ଫିଲ୍ଟର୍ କରନ୍ତୁ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-foundItem-filtertoDate" datatype="html">
+        <source>Filter By To Date</source>
+        <target state="new">ତାରିଖ ପର୍ଯ୍ୟନ୍ତ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-foundItem-searchButton" datatype="html">
+        <source> Search </source>
+        <target> ସନ୍ଧାନ କରନ୍ତୁ</target>
+      </trans-unit>
+      <trans-unit id="lostFound-lostItemList-heading" datatype="html">
+        <source>List of Lost Item/Person</source>
+        <target state="new">ନିଖୋଜ ବ୍ୟକ୍ତି ଏବଂ ବସ୍ତୁ ତାଲିକା </target>
+      </trans-unit>
+      <trans-unit id="lostFound-lostItemList-length" datatype="html">
+        <source> Item/Person Listed</source>
+        <target state="new"> ବ୍ୟକ୍ତି ଏବଂ ବସ୍ତୁ ତାଲିକାଭୁକ୍ତ</target>
+      </trans-unit>
+      <trans-unit id="lostFound-lostItemList-tokenNo" datatype="html">
+        <source>Token No</source>
+        <target state="new">ଟୋକେନ୍ ନଂ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-lostItemList-category" datatype="html">
+        <source>Category</source>
+        <target>ବର୍ଗ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-lostItemList-description" datatype="html">
+        <source>Description</source>
+        <target>ବର୍ଣ୍ଣନା </target>
+      </trans-unit>
+      <trans-unit id="lostFound-lostItemList-beatBox" datatype="html">
+        <source>Beat Box</source>
+        <target> ବିଟ୍ ବାକ୍ସ</target>
+      </trans-unit>
+      <trans-unit id="lostFound-lostItemList-location" datatype="html">
+        <source>Location</source>
+        <target>ଅବସ୍ଥାନ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-lostItemList-status" datatype="html">
+        <source> Status </source>
+        <target>ସ୍ଥିତି </target>
+      </trans-unit>
+      <trans-unit id="lostFound-lostItemList-filterHeading" datatype="html">
+        <source> Filter Your Search </source>
+        <target>ଆପଣଙ୍କର ସନ୍ଧାନ ଫିଲ୍ଟର୍ କରନ୍ତୁ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-lostItemList-filterCategory" datatype="html">
+        <source>Filter By Category</source>
+        <target>ବର୍ଗ ଅନୁଯାୟୀ ଫିଲ୍ଟର୍ କରନ୍ତୁ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-lostItemList-filterStatus" datatype="html">
+        <source>Filter By Status</source>
+        <target>ସ୍ଥିତି ଅନୁଯାୟୀ ଫିଲ୍ଟର୍ କରନ୍ତୁ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-lostItemList-filtertoDate" datatype="html">
+        <source>Filter By To Date</source>
+        <target state="new">ତାରିଖ ପର୍ଯ୍ୟନ୍ତ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-lostItemList-filterButton" datatype="html">
+        <source> Search </source>
+        <target> ସନ୍ଧାନ କର </target>
+      </trans-unit>
+      <trans-unit id="lostFound-policeMenu-sosList" datatype="html">
+        <source>Grievance</source>
+        <target state="new">ଅଭିଯୋଗ</target>
+      </trans-unit>
+      <trans-unit id="lostFound-policeMenu-reportFoundItem" datatype="html">
+        <source>Report Found Item/Person</source>
+        <target state="new">ମିଳୁଥିବା ବ୍ୟକ୍ତି ଏବଂ ବସ୍ତୁ ରିପୋର୍ଟ କରନ୍ତୁ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-policeMenu-LostItem" datatype="html">
+        <source>Lost Item/Person List</source>
+        <target state="new">ନିଖୋଜ ବ୍ୟକ୍ତି ଏବଂ ବସ୍ତୁ ତାଲିକା </target>
+      </trans-unit>
+      <trans-unit id="lostFound-policeMenu-foundItemList" datatype="html">
+        <source>Found Item/person List</source>
+        <target state="new">ମିଳିଥିବା ବ୍ୟକ୍ତି ଏବଂ ବସ୍ତୁ ତାଲିକା </target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportFound-heading" datatype="html">
+        <source> Enter info of found Item/Person</source>
+        <target state="new">ମିଳିଥିବା ବ୍ୟକ୍ତି ଏବଂ ବସ୍ତୁର ସୂଚନା ପ୍ରବେଶ କରନ୍ତୁ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportFound-categoryLabel" datatype="html">
+        <source>Select Category</source>
+        <target state="new"> ବର୍ଗ ଚୟନ କରନ୍ତୁ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportFound-imageLabel" datatype="html">
+        <source>Upload Image</source>
+        <target> ପ୍ରତିଛବି ଅପଲୋଡ୍ କରନ୍ତୁ</target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportFound-descLabel" datatype="html">
+        <source>Description</source>
+        <target>ବର୍ଣ୍ଣନା </target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportFound-locationLabel" datatype="html">
+        <source>Found Location</source>
+        <target state="new"> ମିଳିଥିବା ସ୍ଥାନ</target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportFound-category" datatype="html">
+        <source>Enter Found Location</source>
+        <target state="new">ମିଳିଥିବା ସ୍ଥାନ ପ୍ରବେଶ କରନ୍ତୁ | </target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportFound-enterButton" datatype="html">
+        <source> Enter </source>
+        <target>ପ୍ରବେଶ</target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportLost-title" datatype="html">
+        <source>Report Your Lost Item/Person</source>
+        <target state="new">ଆପଣଙ୍କର ହଜିଯାଇଥିବା ବ୍ୟକ୍ତି ଏବଂ ବସ୍ତୁ ସମ୍ବନ୍ଧରେ ରିପୋର୍ଟ କରନ୍ତୁ |</target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportLost-category" datatype="html">
+        <source>Select Category</source>
+        <target state="new">ବର୍ଗ ଚୟନ କରନ୍ତୁ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportLost-image" datatype="html">
+        <source>Upload Image</source>
+        <target>ପ୍ରତିଛବି ଅପଲୋଡ୍ କରନ୍ତୁ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportLost-desc" datatype="html">
+        <source>Description</source>
+        <target> ବର୍ଣ୍ଣନା</target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportLost-foundLocation" datatype="html">
+        <source>Location where Item is Found</source>
+        <target>ଯେଉଁଠାରେ ବସ୍ତୁ ମିଳୁଛି </target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportLost-name" datatype="html">
+        <source>Name</source>
+        <target>ନାମ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportLost-primaryPhone" datatype="html">
+        <source>Primary Phone </source>
+        <target state="new">ପ୍ରାଥମିକ ଫୋନ୍ ନମ୍ବର </target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportLost-primaryTenDigitErr" datatype="html">
+        <source> *Phone number should be of 10 digits </source>
+        <target>* ଫୋନ୍ ନମ୍ବର ୧୦ ଅଙ୍କ ବିଶିଷ୍ଟ ହେବା ଉଚିତ୍ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportLost-secondaryPhone" datatype="html">
+        <source>Secondary Phone</source>
+        <target> ଦ୍ଵିତୀୟ ଫୋନ୍ ନମ୍ବର</target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportLost-secondaryTenDigitErr" datatype="html">
+        <source> *Phone number should be of 10 digits </source>
+        <target>* ଫୋନ୍ ନମ୍ବର ୧୦ ଅଙ୍କ ବିଶିଷ୍ଟ ହେବା ଉଚିତ୍ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportLost-location" datatype="html">
+        <source>Location</source>
+        <target>ଅବସ୍ଥାନ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportLost-submitButton" datatype="html">
+        <source> Enter </source>
+        <target> ପ୍ରବେଶ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportLost-successMessageTitle" datatype="html">
+        <source>SUCCESS !</source>
+        <target>ସଫଳ! </target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportLost-successMessage" datatype="html">
+        <source> Your Information is submitted </source>
+        <target>ଆପଣଙ୍କର ସୂଚନା ଦାଖଲ ହୋଇଛି |</target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportLost-successMessageToken" datatype="html">
+        <source> Your token ID is </source>
+        <target>ଆପଣଙ୍କର ଟୋକେନ୍ ID ହେଉଛି |</target>
+      </trans-unit>
+      <trans-unit id="lostFound-searchLost-title" datatype="html">
+        <source>Status of Your Complaints</source>
+        <target state="new">ଆପଣଙ୍କର ଅଭିଯୋଗର ସ୍ଥିତି</target>
+      </trans-unit>
+      <trans-unit id="lostFound-searchLost-PhoneNo" datatype="html">
+        <source>Phone Number</source>
+        <target> ଫୋନ୍ ନମ୍ବର</target>
+      </trans-unit>
+      <trans-unit id="lostFound-searchLost-searchButton" datatype="html">
+        <source> Search </source>
+        <target state="new"> ପ୍ରବେଶ</target>
+      </trans-unit>
+      <trans-unit id="navigation-text-reportLost" datatype="html">
+        <source>Report The Lost Item/Person</source>
+        <target state="new">ନିଖୋଜ ବ୍ୟକ୍ତି ଏବଂ ବସ୍ତୁ ସମ୍ବନ୍ଧରେ ରିପୋର୍ଟ କରନ୍ତୁ |</target>
+      </trans-unit>
+      <trans-unit id="navigation-text-searchLost" datatype="html">
+        <source>Track Your Complaints / Grievances</source>
+        <target state="new">ଆପଣଙ୍କର ଅଭିଯୋଗର ସ୍ଥିତି ଟ୍ରାକ୍ କରନ୍ତୁ</target>
+      </trans-unit>
+      <trans-unit id="navigation-text-airSchedule" datatype="html">
+        <source>Air Schedule</source>
+        <target state="new"> ବିମାନ ସେବା ସୂଚୀ</target>
+      </trans-unit>
+      <trans-unit id="navigation-text-railSchedule" datatype="html">
+        <source>Train Schedule</source>
+        <target state="new">ରେଳସେବା କାର୍ଯ୍ୟସୂଚୀ </target>
+      </trans-unit>
+      <trans-unit id="navigation-text-busSchedule" datatype="html">
+        <source>Bus Schedule</source>
+        <target state="new">ବସ ସେବା କାର୍ଯ୍ୟସୂଚୀ </target>
+      </trans-unit>
+      <trans-unit id="navigation-text-bhaktaNiwas" datatype="html">
+        <source> Bhaktanivas</source>
+        <target state="new"> ଭକ୍ତ ନିବାସ</target>
+      </trans-unit>
+      <trans-unit id="navigation-text-hotels" datatype="html">
+        <source>Hotels</source>
+        <target state="new">ହୋଟେଲ </target>
+      </trans-unit>
+      <trans-unit id="navigation-text-medicalFacility" datatype="html">
+        <source>Medical Facilities</source>
+        <target state="new"> ଚିକିତ୍ସା ସୁବିଧା</target>
+      </trans-unit>
+      <trans-unit id="navigation-text-foodSpot" datatype="html">
+        <source>Food Distribution Spots</source>
+        <target state="new"> ଖାଦ୍ୟ ଯୋଗାଣ ସ୍ଥାନ </target>
+      </trans-unit>
+      <trans-unit id="navigation-text-toilet" datatype="html">
+        <source>Toilet / Washrooms</source>
+        <target state="new"> ଶୌଚାଳୟ </target>
+      </trans-unit>
+      <trans-unit id="navigation-text-shoeStand" datatype="html">
+        <source>Shoe Stand</source>
+        <target state="new"> ଜୋତା ଷ୍ଟାଣ୍ଡ</target>
+      </trans-unit>
+      <trans-unit id="parking-parkingInfo-parkingZone" datatype="html">
+        <source>Parking Zone</source>
+        <target> ପାର୍କିଂ ଜୋନ୍</target>
+      </trans-unit>
+      <trans-unit id="parking-parkingInfo-avlButton" datatype="html">
+        <source> Available </source>
+        <target> ଉପଲବ୍ଧ</target>
+      </trans-unit>
+      <trans-unit id="parking-parkingInfo-unavlButton" datatype="html">
+        <source> Not Available </source>
+        <target> ଉପଲବ୍ଧ ନୁହେଁ</target>
+      </trans-unit>
+      <trans-unit id="parking-parkingInfo-twoWheelerCharge" datatype="html">
+        <source> Charges For Two Wheelers </source>
+        <target>ଦୁଇ ଚକିଆ ଯାନ ପାଇଁ ଦେୟ </target>
+      </trans-unit>
+      <trans-unit id="parking-parkingInfo-fourWheelerCharge" datatype="html">
+        <source> Charges For Four Wheelers </source>
+        <target> ଚାରି ଚକିଆ ଯାନ ପାଇଁ ଦେୟ </target>
+      </trans-unit>
+      <trans-unit id="parking-parkingInfo-available" datatype="html">
+        <source>Available</source>
+        <target>ଉପଲବ୍ଧ </target>
+      </trans-unit>
+      <trans-unit id="parking-parkingInfo-navigateToMap" datatype="html">
+        <source> NAVIGATE TO PARKING ZONE </source>
+        <target>ପାର୍କିଂ ଜୋନ୍ ପାଇଁ ନାଭିଗେଟ୍ କରନ୍ତୁ </target>
+      </trans-unit>
+      <trans-unit id="parking-parkingSpace-length" datatype="html">
+        <source> Parking Area Found </source>
+        <target state="new"> ଗୋଟି ପାର୍କିଂ ସ୍ଥାନ ଉପଲବ୍ଧ :</target>
+      </trans-unit>
+      <trans-unit id="parking-parkingSpace-location" datatype="html">
+        <source>Location</source>
+        <target>ଅବସ୍ଥାନ </target>
+      </trans-unit>
+      <trans-unit id="parking-parkingSpace-parkingTime" datatype="html">
+        <source> Parking Timings </source>
+        <target> ପାର୍କିଂ ସମୟ </target>
+      </trans-unit>
+      <trans-unit id="parking-parkingSpace-viewDetails" datatype="html">
+        <source> View Details </source>
+        <target> ବିବରଣୀ ଦେଖନ୍ତୁ</target>
+      </trans-unit>
+      <trans-unit id="parking-parkingSpace-viewMap" datatype="html">
+        <source> View Map </source>
+        <target> ମାନଚିତ୍ର ଦେଖନ୍ତୁ</target>
+      </trans-unit>
+      <trans-unit id="home-header-title" datatype="html">
+        <source> Shree Jagannatha <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Rathayatra<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> 2023 </source>
+        <target state="new"> ଶ୍ରୀଜଗନ୍ନାଥ <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>ରଥଯାତ୍ରା<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> ୨୦୨୩ </target>
+      </trans-unit>
+      <trans-unit id="sos-reportSOS-location" datatype="html">
+        <source>Occurrence Location</source>
+        <target state="new">ଘଟଣାର ଅବସ୍ଥାନ </target>
+      </trans-unit>
+      <trans-unit id="sos-reportSOS-categoryLabel" datatype="html">
+        <source>Select category</source>
+        <target state="new">ବର୍ଗ ଚୟନ କରନ୍ତୁ </target>
+      </trans-unit>
+      <trans-unit id="sos-reportSOS-descriptionLabel" datatype="html">
+        <source>Description</source>
+        <target> ବର୍ଣ୍ଣନା </target>
+      </trans-unit>
+      <trans-unit id="sos-reportSOS-nameLabel" datatype="html">
+        <source>Name</source>
+        <target>ନାମ </target>
+      </trans-unit>
+      <trans-unit id="sos-reportSOS-namePlaceHolder" datatype="html">
+        <source>Enter your Name</source>
+        <target>ଆପଣଙ୍କର ନାମ ପ୍ରବେଶ କରନ୍ତୁ </target>
+      </trans-unit>
+      <trans-unit id="sos-reportSOS-primaryPhoneNoLabel" datatype="html">
+        <source>Primary Phone</source>
+        <target> ପ୍ରାଥମିକ ଫୋନ୍ ନମ୍ବର</target>
+      </trans-unit>
+      <trans-unit id="sos-reportSos-primaryTenDigitErr" datatype="html">
+        <source> *Phone number should be of 10 digits </source>
+        <target>* ଫୋନ୍ ନମ୍ବର ୧୦ ଅଙ୍କ ବିଶିଷ୍ଟ ହେବା ଉଚିତ୍ </target>
+      </trans-unit>
+      <trans-unit id="sos-reportSOS-secondaryPhoneNoLabel" datatype="html">
+        <source>Secondary Phone</source>
+        <target> ଦ୍ଵିତୀୟ ଫୋନ୍ ନମ୍ବର</target>
+      </trans-unit>
+      <trans-unit id="sos-reportSos-secondaryTenDigitErr" datatype="html">
+        <source> *Phone number should be of 10 digits </source>
+        <target> * ଫୋନ୍ ନମ୍ବର ୧୦ ଅଙ୍କ ବିଶିଷ୍ଟ ହେବା ଉଚିତ୍ </target>
+      </trans-unit>
+      <trans-unit id="sos-reportSos-secondaryNumericErr" datatype="html">
+        <source> *Only numeric digits are allowed </source>
+        <target> * କେବଳ ସାଂଖ୍ୟିକ ସଂଖ୍ୟାଗୁଡିକ ଅନୁମତିପ୍ରାପ୍ତ </target>
+      </trans-unit>
+      <trans-unit id="sos-reportSos-submitButton" datatype="html">
+        <source> Enter </source>
+        <target>ପ୍ରବେଶ</target>
+      </trans-unit>
+      <trans-unit id="sos-reportSos-successTitle" datatype="html">
+        <source>SUCCESS !</source>
+        <target>ସଫଳ! </target>
+      </trans-unit>
+      <trans-unit id="sos-reportSos-successMessage" datatype="html">
+        <source> Your Information is submitted </source>
+        <target>ଆପଣଙ୍କର ସୂଚନା ଦାଖଲ ହୋଇଛି </target>
+      </trans-unit>
+      <trans-unit id="sos-reportSos-successToken" datatype="html">
+        <source>Your token ID is</source>
+        <target>ଆପଣଙ୍କର ଟୋକେନ୍ ID ହେଉଛି </target>
+      </trans-unit>
+      <trans-unit id="sos-sosList-title" datatype="html">
+        <source>Grievance List</source>
+        <target state="new"> ଅଭିଯୋଗ ତାଲିକା</target>
+      </trans-unit>
+      <trans-unit id="sos-sosList-length" datatype="html">
+        <source>Item Listed</source>
+        <target state="new"> ଅଭିଯୋଗ ତାଲିକାଭୁକ୍ତ </target>
+      </trans-unit>
+      <trans-unit id="sos-sosList-token" datatype="html">
+        <source>Token No</source>
+        <target state="new">ଟୋକେନ୍ ନଂ </target>
+      </trans-unit>
+      <trans-unit id="sos-sosList-category" datatype="html">
+        <source>Category</source>
+        <target>ବର୍ଗ </target>
+      </trans-unit>
+      <trans-unit id="sos-sosList-description" datatype="html">
+        <source>Description</source>
+        <target>ବର୍ଣ୍ଣନା </target>
+      </trans-unit>
+      <trans-unit id="sos-sosList-location" datatype="html">
+        <source>Location</source>
+        <target>ଅବସ୍ଥାନ </target>
+      </trans-unit>
+      <trans-unit id="sos-reportSOS-title" datatype="html">
+        <source>Grievance</source>
+        <target state="new">ଅଭିଯୋଗ </target>
+      </trans-unit>
+      <trans-unit id="about-aboutNavigation-rituals" datatype="html">
+        <source>Day Wise Rituals (Niti)</source>
+        <target state="new">ନୀତି ନିର୍ଘଣ୍ଟ </target>
+      </trans-unit>
+      <trans-unit id="about-about-title" datatype="html">
+        <source> About Ratha Yatra (<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Brief History<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>) </source>
+        <target state="new"> ରଥଯାତ୍ରା ସମ୍ପର୍କରେ ବିବରଣୀ (<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>ସଂକ୍ଷିପ୍ତଇତିହାସ <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>) </target>
+      </trans-unit>
+      <trans-unit id="about-about-firstPara" datatype="html">
+        <source> As per description in the Skanda Purana , among the twelve Yatras of Shree Jagannatha, Ratha Yatra or Shree Gundicha Yatra is considered the most famous one. </source>
+        <target state="new"> ସ୍କନ୍ଦ ପୁରାଣର ବର୍ଣ୍ଣନା ଅନୁଯାୟୀ, ମହାପ୍ରଭୁଙ୍କ ଦ୍ବାଦଶ ଯାତ୍ରା ମଧ୍ୟରୁ ରଥଯାତ୍ରା କିମ୍ବା ଶ୍ରୀଗୁଣ୍ଡିଚା ଯାତ୍ରା ସବୁଠାରୁ ପ୍ରସିଦ୍ଧ ଅଟେ |</target>
+      </trans-unit>
+      <trans-unit id="about-about-secondPara" datatype="html">
+        <source> According to ‘Bamadev Samhita’ those who can witness the four deities on the Simhasana (the sacred seat) of Gundicha Temple for a week, they along with their ancestors would get a place in the heavenly abode i.e. Baikuntha for all time to come. As per this text those who can hear about this great festival they also get the desired result. Besides this, those who study the rituals of the divine festival and make others aware of the same they can also get a place in his holy abode. </source>
+        <target state="new"> ବାମଦେବ ସଁହିତା ଅନୁସାରେ , ରଥଯାତ୍ରା ସମୟରେ ଯେଉଁ ଭକ୍ତମାନେ ଶ୍ରୀଗୁଣ୍ଡିଚା ମନ୍ଦିର ଜନ୍ମବେଦୀରେ ଉପବିଷ୍ଟ ଚତୁର୍ଧାମୂର୍ତ୍ତିଙ୍କୁ ଏକ ସପ୍ତାହ ପାଇଁ ଦର୍ଶନ କରନ୍ତି , ତାଙ୍କ ଓ ତାଙ୍କର ପୂର୍ବ ପୁରୁଷଙ୍କର ଵୈକୁଣ୍ଠପ୍ରାପ୍ତି ହେଇଥାଏ | ଯେଉଁ ଭକ୍ତମାନେ ଏହି ମହାପର୍ବ କଥା ଶ୍ରବଣ କରନ୍ତି ସେମାନଙ୍କର ମନସ୍କାମନା ପୂରଣ ହୋଇଥାଏ |</target>
+      </trans-unit>
+      <trans-unit id="about-about-thirdPara" datatype="html">
+        <source> The Ratha Yatra of the ‘four deities’ takes place on the 2nd day of the bright fortnight of Ashadha for the overall well-being of the mankind. In the Skanda purana it has been described that no festival of Mahaprabhu is more important than that of the Shree Gundicha Yatra. Because, Shree Hari the supreme Lord of the cosmos rides &amp; his chariot in a very delightful mood to the Gundicha Temple to fulfill His pledged command. </source>
+        <target state="new"> ମାନବ ସମାଜର କଲ୍ୟାଣ ନିମନ୍ତେ ,ଚତୁର୍ଧାମୂର୍ତ୍ତିଙ୍କର ରଥଯାତ୍ରା ଆଷାଢ଼ ଶୁକ୍ଲପକ୍ଷ ଦ୍ୱିତୀୟା ତିଥିରେ ଅନୁଷ୍ଠିତ ହୋଇଥାଏ | ସ୍କନ୍ଦ ପୁରାଣ ଅନୁସାରେ ମହାପ୍ରଭୁଙ୍କର ଶ୍ରୀଗୁଣ୍ଡିଚା ଯାତ୍ରା ସମସ୍ତ ପର୍ବପର୍ବାଣୀ ମଧ୍ୟରେ ଶ୍ରେଷ୍ଠ ଅଟେ କାରଣ ଏହି ଦିନ ପରମାତ୍ମା ଶ୍ରୀହରି ତାଙ୍କ କଥା ରକ୍ଷା କରି ରଥ ଆରୋହଣ କରି ହର୍ସଉଲ୍ଲାସରେ ଶ୍ରୀଗୁଣ୍ଡିଚା ମନ୍ଦିରକୁ ଯାତ୍ରା କରିଥାନ୍ତି | </target>
+      </trans-unit>
+      <trans-unit id="about-about-fourthPara" datatype="html">
+        <source> As the chariot is a symbol of “Sandhini Sakti” mere touch of the chariot would confer compassion of Lord Shree Jagannatha on the devotees. The famous verse in this context is as follows: </source>
+        <target state="new">ଏହି ରଥ ସଂଧିନୀ ଶକ୍ତିର ପ୍ରତୀକ ହୋଇଥିବାରୁ ଏହାର ସାମାନ୍ୟ ସ୍ପର୍ଶରେ ଭକ୍ତମାନେ ମହାପ୍ରଭୁ ଶ୍ରୀଜଗନ୍ନାଥଙ୍କର କୃପାଲାଭ କରିଥାନ୍ତି | ଏହି ମର୍ମରେ ନିମ୍ନଲିଖିତ ଶ୍ଳୋକରେ ଉଲ୍ଲେଖ ଅଛି: </target>
+      </trans-unit>
+      <trans-unit id="about-about-fifthPara" datatype="html">
+        <source>“Ratha tu Vamanam drustva purnarjanma na vidyate.”</source>
+        <target state="new"> &quot;ରଥତୁ ବାମନଂ ଦୃଷ୍ଟା ପୁନର୍ଜନ୍ମ ନ ବିଦ୍ୟତେ &quot; </target>
+      </trans-unit>
+      <trans-unit id="about-about-galleryButton" datatype="html">
+        <source> Chariot Making </source>
+        <target state="new">ରଥ ନିର୍ମାଣ କାର୍ଯ୍ୟ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportLost-foundLocationPlaceholder" datatype="html">
+        <source>Enter Details</source>
+        <target state="new">ବିବରଣୀ ପ୍ରବେଶ କରନ୍ତୁ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportLost-namePlaceHolder" datatype="html">
+        <source>Enter your Name</source>
+        <target state="new">ଆପଣଙ୍କର ନାମ ପ୍ରବେଶ କରନ୍ତୁ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportLost-locationPlaceholder" datatype="html">
+        <source>Enter Lost Item Location</source>
+        <target state="new">ସ୍ଥାନ ଯେଉଁଠାରେ ବସ୍ତୁ ହଜିଥିଲା </target>
+      </trans-unit>
+      <trans-unit id="about-placeVisit-title" datatype="html">
+        <source>Places Around Puri</source>
+        <target state="new"> ପୁରୀ ନିକଟବର୍ତ୍ତୀ ପର୍ଯ୍ୟଟନ ସ୍ଥଳୀ </target>
+      </trans-unit>
+      <trans-unit id="about-placeVisit-content" datatype="html">
+        <source> Holding the stature of one of the revered Char Dhams of India, Puri the ancient city of Odisha brims with the magic of tourist places that can win hearts in a blink. It&apos;s only when one walks along the many pilgrimages in Puri, chanting the name of Lord Jagannath, that he feels the outpour of peace in his soul. With every changing day, the city brings a new experience for its travellers, sometimes through its famous wildlife sanctuary, at the other with its scenic lake setting and most of all with its gripping waves and sun-toasted sand. </source>
+        <target state="new"> ଭାରତବର୍ଷର ପ୍ରସିଦ୍ଧ ଚାରିଧାମ ମଧ୍ୟରେ ଅନ୍ୟତମ ଭାବରେ ପରିଗଣିତ ଓଡ଼ିଶାର ପ୍ରାଚୀନ ସହର ପୁରୀ ଏପରି ଏକ ପର୍ଯ୍ୟଟନ ସ୍ଥଳୀ ,ଯାହାର ଚମତ୍କାରିତା ହୃଦୟକୁ ମୁହୂର୍ତ୍ତକ ମଧ୍ୟରେ ଭାବାଛନ୍ନ କରିପାରେ | ପ୍ରଭୁ ଶ୍ରୀଜଗନ୍ନାଥଙ୍କ ନାମ ସ୍ମରଣ କରି ଯେତେବେଳେ କେହି ପୁରୀର ବିଭିନ୍ନ ତୀର୍ଥ ଦର୍ଶନ କରେ ସେ ତାର ହୃଦୟରେ ଅପାର ଶାନ୍ତି ଅନୁଭବ କରେ | ଏହି ସହର ପର୍ଯ୍ୟଟକ ମାନଙ୍କୁ ପ୍ରତିଦିନ କିଛି ନା କିଛି ନୂଆ ଅନୁଭୂତି ଦେଇଥାଏ ,କେତେବଳେ ଏହାର ବନ୍ୟଜନ୍ତୁ ସଂରକ୍ଷଣକେନ୍ଦ୍ର ମାଧ୍ୟମରେ ତ କେତେବେଳେ ସୌନ୍ଦର୍ଯ୍ୟମୟୀ ହ୍ରଦର ଉତ୍ତାଳ ତରଙ୍ଗ ଓ ସୂର୍ଯ୍ୟସ୍ନାତ ବେଳାଭୂମି ମାଧ୍ୟମରେ |</target>
+      </trans-unit>
+      <trans-unit id="about-placeVisit-topPlaces" datatype="html">
+        <source>Top Tourist Places</source>
+        <target state="new">ପ୍ରମୁଖ ପର୍ଯ୍ୟଟନ ସ୍ଥାନଗୁଡିକ </target>
+      </trans-unit>
+      <trans-unit id="about-placeVisit-Balighai" datatype="html">
+        <source>Balighai(Seabeach,Balukhanda Sanctuary)</source>
+        <target state="new">ବାଲିଘାଈ (ସାଗର ବେଳାଭୂମି, ବାଲୁଖଣ୍ଡ ଅଭୟାରଣ୍ୟ) </target>
+      </trans-unit>
+      <trans-unit id="about-placeVisit-Beleswar" datatype="html">
+        <source>Beleswar</source>
+        <target state="new">ବେଲେଶ୍ୱର </target>
+      </trans-unit>
+      <trans-unit id="about-placeVisit-Ramachandi" datatype="html">
+        <source>Ramachandi</source>
+        <target state="new"> ରାମଚଣ୍ଡୀ </target>
+      </trans-unit>
+      <trans-unit id="about-placeVisit-Kakatapur" datatype="html">
+        <source>Kakatapur,maa mangala temple</source>
+        <target state="new">କାକଟପୁର (ମା ମଙ୍ଗଲା ମନ୍ଦିର) </target>
+      </trans-unit>
+      <trans-unit id="about-placeVisit-Chaurashi" datatype="html">
+        <source>Chaurashi(Barahi devi mandira)</source>
+        <target state="new">ଚୌରାଶି (ବାରହି ଦେବୀ ମନ୍ଦିର) </target>
+      </trans-unit>
+      <trans-unit id="about-placeVisit-Astaranga" datatype="html">
+        <source>Astaranga</source>
+        <target state="new"> ଅସ୍ତରଙ୍ଗ </target>
+      </trans-unit>
+      <trans-unit id="about-placeVisit-Satapada" datatype="html">
+        <source>Satapada</source>
+        <target state="new">ସାତପଡା </target>
+      </trans-unit>
+      <trans-unit id="about-placeVisit-Brahmagiri" datatype="html">
+        <source>Brahmagiri,Alaranath Mandira</source>
+        <target state="new">ବ୍ରହ୍ମଗିରି, ଆଲାରନାଥ ମନ୍ଦିର </target>
+      </trans-unit>
+      <trans-unit id="about-placeVisit-Raghurajpur" datatype="html">
+        <source>Raghurajpur(Patachitra&amp; Gotipua dance)</source>
+        <target state="new">ରଘୁରାଜପୁର (ପଟ୍ଟଚିତ୍ର ଏବଂ ଗୋଟିପୁଅ ନୃତ୍ୟ) </target>
+      </trans-unit>
+      <trans-unit id="about-placeVisit-Sakhi" datatype="html">
+        <source>Sakhi Gopala Temple</source>
+        <target state="new">ସାକ୍ଷୀ ଗୋପାଳ ମନ୍ଦିର </target>
+      </trans-unit>
+      <trans-unit id="about-placeVisit-Biswanath" datatype="html">
+        <source>Biswanath Pahada</source>
+        <target state="new">ବିଶ୍ୱନାଥ ପାହାଡ </target>
+      </trans-unit>
+      <trans-unit id="about-placeVisit-Barala" datatype="html">
+        <source>Barala Balunkeswar</source>
+        <target state="new"> ବରାଳ ବାଲୁଙ୍କେଶ୍ୱର </target>
+      </trans-unit>
+      <trans-unit id="about-placeVisit-Baligaon" datatype="html">
+        <source>Baligaan(Bhakta Dasia bauri pitha)</source>
+        <target state="new">ବାଲିଗାଁ (ଭକ୍ତ ଦାସିଆ ବାଉରୀ ପୀଠ)</target>
+      </trans-unit>
+      <trans-unit id="about-placeVisit-Siruli" datatype="html">
+        <source>Siruli Mahavir Temple</source>
+        <target state="new"> ସିରୁଳି ମହାବୀର ମନ୍ଦିର</target>
+      </trans-unit>
+      <trans-unit id="about-placeVisit-Pipili" datatype="html">
+        <source>Pipili(Applique work) </source>
+        <target state="new">ପିପିଲି (ଚାନ୍ଦୁଆ କାରିଗରୀ )</target>
+      </trans-unit>
+      <trans-unit id="sos-reportSOS-Bullying" datatype="html">
+        <source> Bullying </source>
+        <target state="new"> ଗାଳିଗୁଲଜ</target>
+      </trans-unit>
+      <trans-unit id="sos-reportSOS-Harassment" datatype="html">
+        <source> Harassment </source>
+        <target state="new"> ନିର୍ଯ୍ୟାତନା</target>
+      </trans-unit>
+      <trans-unit id="sos-reportSOS-Discrimination" datatype="html">
+        <source> Discrimination </source>
+        <target state="new"> ଭେଦଭାବ</target>
+      </trans-unit>
+      <trans-unit id="sos-reportSOS-healthAndSafety" datatype="html">
+        <source> Health and Safety </source>
+        <target state="new"> ସ୍ୱାସ୍ଥ୍ୟ ଏବଂ ସୁରକ୍ଷା</target>
+      </trans-unit>
+      <trans-unit id="about-placeVisit-Kuruma" datatype="html">
+        <source>Kuruma(Boudha Kirti)</source>
+        <target state="new"> କୁରୁମ (ବୌଦ୍ଧ କୀର୍ତ୍ତି )</target>
+      </trans-unit>
+      <trans-unit id="km" datatype="html">
+        <source>km</source>
+        <target state="new">କି.ମି.</target>
+      </trans-unit>
+      <trans-unit id="open" datatype="html">
+        <source> Open:</source>
+        <target state="new"> ଖୋଲା:</target>
+      </trans-unit>
+      <trans-unit id="close" datatype="html">
+        <source>Close:</source>
+        <target state="new">ବନ୍ଦ:</target>
+      </trans-unit>
+      <trans-unit id="select-placeholder" datatype="html">
+        <source>Select</source>
+        <target state="new">ଚୟନ କରନ୍ତୁ |</target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportFound-successTitle" datatype="html">
+        <source>SUCCESS !</source>
+        <target state="new">ସଫଳ !</target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportFound-successContent" datatype="html">
+        <source> Your Information is submitted </source>
+        <target state="new"> ଆପଣଙ୍କର ସୂଚନା ଦାଖଲ ହୋଇଛି | </target>
+      </trans-unit>
+      <trans-unit id="sos-reportSOS-locationPlaceHolder" datatype="html">
+        <source>Enter Your Occurrence Location</source>
+        <target state="new">ଆପଣଙ୍କର ଘଟଣାର ଅବସ୍ତିଥି ପ୍ରବେଶ କରନ୍ତୁ |</target>
+      </trans-unit>
+      <trans-unit id="phoneNo-placeHolder" datatype="html">
+        <source>(0000) 000000</source>
+        <target state="new">(୦୦୦୦) ୦୦୦୦୦୦</target>
+      </trans-unit>
+      <trans-unit id="totalCount" datatype="html">
+        <source> Total</source>
+        <target state="new"> ସମୁଦାୟ</target>
+      </trans-unit>
+      <trans-unit id="8086208854749242598" datatype="html">
+        <source>Ratha Yatra Image Gallery</source>
+        <target state="new">ରଥଯାତ୍ରା ପ୍ରତିଛବି ଗ୍ୟାଲେରୀ |</target>
+        <note priority="1" from="description">about-imageGallery-title</note>
+      </trans-unit>
+      <trans-unit id="auth-login-errorMessage" datatype="html">
+        <source> *Invalid Credentials </source>
+        <target state="new"> *ଅବଧ ପରିଚୟପତ୍ର </target>
+      </trans-unit>
+      <trans-unit id="facilities-foodDistributor-location" datatype="html">
+        <source>Location</source>
+        <target state="new">ଅବସ୍ଥାନ</target>
+      </trans-unit>
+      <trans-unit id="facilities-foodDistributor-timing" datatype="html">
+        <source>Timings</source>
+        <target state="new">ସମୟ</target>
+      </trans-unit>
+      <trans-unit id="facilities-foodDistributor-viewMap" datatype="html">
+        <source> View Map </source>
+        <target state="new"> ମାନଚିତ୍ର ଦେଖନ୍ତୁ | </target>
+      </trans-unit>
+      <trans-unit id="facilities-medicalDetails-getDirection" datatype="html">
+        <source> GET DIRECTION </source>
+        <target state="new"> ଦିଗ ଖୋଜନ୍ତୁ | </target>
+      </trans-unit>
+      <trans-unit id="facilities-medicalDetails-callNow" datatype="html">
+        <source> CALL NOW <x id="TAG_IMG" ctype="image" equiv-text="&lt;img src=&quot;assets/images/phone-btn.png&quot; alt=&quot;&quot; class=&quot;ml-2&quot; /&gt;"/></source>
+        <target state="new"> କଲ୍ କରନ୍ତୁ | <x id="TAG_IMG" ctype="image" equiv-text="&lt;img src=&quot;assets/images/phone-btn.png&quot; alt=&quot;&quot; class=&quot;ml-2&quot; /&gt;"/></target>
+      </trans-unit>
+      <trans-unit id="facilities-medicalList-location" datatype="html">
+        <source>Location</source>
+        <target state="new">ଅବସ୍ଥାନ</target>
+      </trans-unit>
+      <trans-unit id="facilities-medicalList-viewDetails" datatype="html">
+        <source> View Details </source>
+        <target state="new"> ବିବରଣୀ ଦେଖନ୍ତୁ | </target>
+      </trans-unit>
+      <trans-unit id="facilities-medicalList-viewMap" datatype="html">
+        <source> View Map </source>
+        <target state="new"> ମାନଚିତ୍ର ଦେଖନ୍ତୁ | </target>
+      </trans-unit>
+      <trans-unit id="facilities-shoeStand-Paid" datatype="html">
+        <source> Paid </source>
+        <target state="new"> ଦେୟ </target>
+      </trans-unit>
+      <trans-unit id="facilities-shoeStand-map" datatype="html">
+        <source> Map </source>
+        <target state="new"> ମାନଚିତ୍ର </target>
+      </trans-unit>
+      <trans-unit id="facilities-toilets-length" datatype="html">
+        <source>Washroom/Toilet Found</source>
+        <target state="new"> ଗୋଟି ଶୌଚାଳୟ ଉପଲବ୍ଧ :</target>
+      </trans-unit>
+      <trans-unit id="facilities-toilets-Paid" datatype="html">
+        <source> Paid </source>
+        <target state="new"> ଦେୟ </target>
+      </trans-unit>
+      <trans-unit id="facilities-toilets-map" datatype="html">
+        <source> Map </source>
+        <target state="new"> ମାନଚିତ୍ର </target>
+      </trans-unit>
+      <trans-unit id="facilities-medicalList-timing" datatype="html">
+        <source>Timings</source>
+        <target state="new">ସମୟ</target>
+      </trans-unit>
+      <trans-unit id="auth-login-title" datatype="html">
+        <source>Enter your credentials</source>
+        <target state="new">ଆପଣଙ୍କର ପରିଚୟପତ୍ର ପ୍ରବେଶ କରନ୍ତୁ |</target>
+      </trans-unit>
+      <trans-unit id="home-guestBtn" datatype="html">
+        <source> Enter </source>
+        <target state="new"> ପ୍ରବେଶ | </target>
+      </trans-unit>
+      <trans-unit id="parkingCharge-perHuour" datatype="html">
+        <source>Per Hour</source>
+        <target state="new">ପ୍ରତି ଘଣ୍ଟା</target>
+      </trans-unit>
+      <trans-unit id="parking-parkingInfo-facilities" datatype="html">
+        <source> Facilities They Have </source>
+        <target state="new"> ସୁବିଧା ଉପଲବ୍ଧ </target>
+      </trans-unit>
+      <trans-unit id="four-wheeler" datatype="html">
+        <source>Four Wheeler</source>
+        <target state="new">ଚାରି ଚକିଆ ଯାନ |</target>
+      </trans-unit>
+      <trans-unit id="two-wheeler" datatype="html">
+        <source>Two Wheeler</source>
+        <target state="new">ଦୁଇ ଚକିଆ ଯାନ |</target>
+      </trans-unit>
+      <trans-unit id="refresh" datatype="html">
+        <source>Refresh</source>
+        <target state="new">ପୁନଃ ଲୋଡ କରନ୍ତୁ</target>
+      </trans-unit>
+      <trans-unit id="common-err-msg" datatype="html">
+        <source>Something Went Wrong</source>
+        <target state="new">କିଛି ଭୁଲ ହୋଇ ଗଲା</target>
+      </trans-unit>
+      <trans-unit id="common-err-title" datatype="html">
+        <source>Server Error</source>
+        <target state="new">ସର୍ଭର ତୃଟି</target>
+      </trans-unit>
+      <trans-unit id="hotels-bhaktaNiwas-length" datatype="html">
+        <source> Bhakta Nivas found in Puri</source>
+        <target state="new"> ଗୋଟି ଭକ୍ତ ନିବାସ ପୁରୀ ସହରରେ ଉପଲବ୍ଧ |</target>
+      </trans-unit>
+      <trans-unit id="hotels-bhaktaNiwas-location" datatype="html">
+        <source>Location</source>
+        <target state="new"> ଅବସ୍ଥାନ</target>
+      </trans-unit>
+      <trans-unit id="hotels-bhaktaNiwas-bookNow" datatype="html">
+        <source> Book Now </source>
+        <target state="new">ବର୍ତ୍ତମାନ ବୁକ୍ କରନ୍ତୁ | </target>
+      </trans-unit>
+      <trans-unit id="hotels-bhaktaNiwas-viewMap" datatype="html">
+        <source> View Map </source>
+        <target state="new"> ମାନଚିତ୍ର ଦେଖନ୍ତୁ | </target>
+      </trans-unit>
+      <trans-unit id="hotels-bhaktaNiwas-bookingSite" datatype="html">
+        <source> CONTINUE TO BOOKING SITE </source>
+        <target state="new"> ବୁକିଂ ସାଇଟ୍ କୁ ଯାଆନ୍ତୁ | </target>
+      </trans-unit>
+      <trans-unit id="3142778447337332223" datatype="html">
+        <source>Purushottam Bhakta Nivas</source>
+        <target state="new">ପୁରୁଷୋତ୍ତମ ଭକ୍ତ ନିବାସ |</target>
+      </trans-unit>
+      <trans-unit id="4255632852566695193" datatype="html">
+        <source>Near Old Jail , Puri</source>
+        <target state="new">ପୁରାତନ ଜେଲ ନିକଟରେ ,ପୁରୀ |</target>
+      </trans-unit>
+      <trans-unit id="152442141567925877" datatype="html">
+        <source>Neeladri Bhakta Nivas</source>
+        <target state="new">ନୀଳାଦ୍ରି ଭକ୍ତ ନିବାସ |</target>
+      </trans-unit>
+      <trans-unit id="8991740964876165788" datatype="html">
+        <source>Near Town Police Station, Grand Road, Puri</source>
+        <target state="new">ଟାଉନ୍ ପୋଲିସ୍ ଷ୍ଟେସନ, ଗ୍ରାଣ୍ଡ ରୋଡ୍, ପୁରୀ |</target>
+      </trans-unit>
+      <trans-unit id="2255751561957711963" datatype="html">
+        <source>Nilachala Bhakta And Yatri Nivas</source>
+        <target state="new">ନୀଳାଚଳ ଭକ୍ତ ଏବଂ ଯାତ୍ରୀ ନିବାସ </target>
+      </trans-unit>
+      <trans-unit id="4002071545431133367" datatype="html">
+        <source>In front of Town Police Station, Grand Road, Puri</source>
+        <target state="new">ଟାଉନ ପୋଲିସ୍ ଷ୍ଟେସନ ସମୁଖରେ, ଗ୍ରାଣ୍ଡ ରୋଡ୍, ପୁରୀ |</target>
+      </trans-unit>
+      <trans-unit id="2054111069575903100" datatype="html">
+        <source>Shree Gundicha Bhakta Nivas</source>
+        <target state="new">ଶ୍ରୀ ଗୁଣ୍ଡିଚା ଭକ୍ତ ନିବାସ |</target>
+      </trans-unit>
+      <trans-unit id="2217523519624822459" datatype="html">
+        <source>Near Shree Gundicha Temple, Grand Road, Puri</source>
+        <target state="new">ଶ୍ରୀ ଗୁଣ୍ଡିଚା ମନ୍ଦିର ନିକଟରେ ,ଗ୍ରାଣ୍ଡ ରୋଡ୍, ପୁରୀ |</target>
+      </trans-unit>
+      <trans-unit id="hotels-panthaNiwas-length" datatype="html">
+        <source>Pantha Nivas found in Puri</source>
+        <target state="new">ଗୋଟି ପାନ୍ଥ ନିବାସ ପୁରୀରେ ଉପଲବ୍ଧ :</target>
+      </trans-unit>
+      <trans-unit id="hotels-panthaNiwas-location" datatype="html">
+        <source>Location</source>
+        <target state="new">ଅବସ୍ଥାନ</target>
+      </trans-unit>
+      <trans-unit id="hotels-panthaNiwas-viewMap" datatype="html">
+        <source> View Map </source>
+        <target state="new"> ମାନଚିତ୍ର ଦେଖନ୍ତୁ | </target>
+      </trans-unit>
+      <trans-unit id="hotels-panthaNiwas-bookingSite" datatype="html">
+        <source> CONTINUE TO BOOKING SITE </source>
+        <target state="new"> ବୁକିଂ ସାଇଟ୍ କୁ ଯାଆନ୍ତୁ | </target>
+      </trans-unit>
+      <trans-unit id="5383296329736125887" datatype="html">
+        <source>Panthanivas Puri</source>
+        <target state="new">ପାନ୍ଥନିବାସ ପୁରୀ |</target>
+      </trans-unit>
+      <trans-unit id="6191773119805956834" datatype="html">
+        <source>Panthanivas Puri, at/po-Konark, Puri- 752111</source>
+        <target state="new">ପାନ୍ଥନିବାସ ପୁରୀ, / ପୋ-କୋଣାର୍କ, ପୁରୀ ୭୫୨୧୧୧ |</target>
+      </trans-unit>
+      <trans-unit id="872110856629365339" datatype="html">
+        <source>Yatranivas Konark</source>
+        <target state="new">ଯାତ୍ରୀନିବାସ କୋଣାର୍କ | |</target>
+      </trans-unit>
+      <trans-unit id="334513656312797043" datatype="html">
+        <source>Yatranivas Konark, at/po-konark, Puri- 752111</source>
+        <target state="new">ଯାତ୍ରୀନିବାସ କୋଣାର୍କ, /ପୋ :କୋଣାର୍କ ,ପୁରୀ- ୭୫୨୧୧୧ |</target>
+      </trans-unit>
+      <trans-unit id="817632282927698133" datatype="html">
+        <source>Yatranivas Satpada</source>
+        <target state="new">ଯାତ୍ରୀନିବାସ ସାତପଡ଼ା |</target>
+      </trans-unit>
+      <trans-unit id="7733250880931922625" datatype="html">
+        <source>Yatranivas Satpada, via- Bramhagiri, Puri- 752001</source>
+        <target state="new">ଯାତ୍ରୀନିବାସ ସାତପଡ଼ା, ଭାୟା- ବ୍ରହ୍ମଗିରି, ପୁରୀ- ୭୫୨୦୦୧ |</target>
+      </trans-unit>
+      <trans-unit id="about-aboutNavigation-aboutYatra" datatype="html">
+        <source>About Ratha Yatra</source>
+        <target state="new">ରଥଯାତ୍ରା ସମ୍ବନ୍ଧରେ</target>
+      </trans-unit>
+      <trans-unit id="navigation-text-grievance" datatype="html">
+        <source>Grievance</source>
+        <target state="new">ଅଭିଯୋଗ</target>
+      </trans-unit>
+      <trans-unit id="navigation-text-lostFound" datatype="html">
+        <source>Lost &amp; Found</source>
+        <target state="new">ନିଖୋଜ ବସ୍ତୁ ଏବଂ ସନ୍ଧାନ ପୃଷ୍ଠା</target>
+      </trans-unit>
+      <trans-unit id="navigation-text-yatraPlan" datatype="html">
+        <source>Planning For Yatra</source>
+        <target state="new">ଯାତ୍ରା ପାଇଁ ଯୋଜନା</target>
+      </trans-unit>
+      <trans-unit id="navigation-text-parkingArea" datatype="html">
+        <source> Parking Area</source>
+        <target state="new"> ପାର୍କିଂ ସ୍ଥାନ</target>
+      </trans-unit>
+      <trans-unit id="navigation-text-facilities" datatype="html">
+        <source>Facilities</source>
+        <target state="new">ସୁବିଧା</target>
+      </trans-unit>
+      <trans-unit id="navigation-text-accomodation" datatype="html">
+        <source>Accommodation</source>
+        <target state="new">ଆବାସ</target>
+      </trans-unit>
+      <trans-unit id="navigation-text-panthaNivas" datatype="html">
+        <source>OTDC Panthanivas</source>
+        <target state="new">ଓଟିଡିସି ପାନ୍ଥନିବାସ </target>
+      </trans-unit>
+      <trans-unit id="navigation-text-logout" datatype="html">
+        <source> Log Out</source>
+        <target state="new"> ଲଗ ଆଉଟ</target>
+      </trans-unit>
+      <trans-unit id="facilities-shoeStand-free" datatype="html">
+        <source> Free </source>
+        <target state="new"> ମାଗଣା | </target>
+      </trans-unit>
+      <trans-unit id="facilities-toilets-free" datatype="html">
+        <source> Free </source>
+        <target state="new"> ମାଗଣା | </target>
+      </trans-unit>
+      <trans-unit id="about-placeVisit-Manika" datatype="html">
+        <source>Manika Patna</source>
+        <target state="new">ମାଣିକ ପାଟଣା</target>
+      </trans-unit>
+      <trans-unit id="1870749302872165737" datatype="html">
+        <source>Bike</source>
+        <target state="new">ଦୁଇ ଚକିଆ ଯାନ</target>
+      </trans-unit>
+      <trans-unit id="1601325288134771573" datatype="html">
+        <source>Car</source>
+        <target state="new">ଚାରି ଚକିଆ ଯାନ </target>
+      </trans-unit>
+      <trans-unit id="5539102139398381855" datatype="html">
+        <source>Entry</source>
+        <target state="new">ପ୍ରବେଶ</target>
+      </trans-unit>
+      <trans-unit id="5045200874122539692" datatype="html">
+        <source>Exit</source>
+        <target state="new">ପ୍ରସ୍ଥାନ</target>
+      </trans-unit>
+      <trans-unit id="1683229545832313634" datatype="html">
+        <source>Vehicles Entry / Exit</source>
+        <target state="new">ଯାନବାହାନ ପ୍ରବେଶ / ପ୍ରସ୍ଥାନ</target>
+      </trans-unit>
+      <trans-unit id="auth-signup-title" datatype="html">
+        <source>Enter your Details (SIGN UP)</source>
+        <target state="new">ଆପଣଙ୍କର ବିବରଣୀ ପ୍ରବେଶ କରନ୍ତୁ (ସାଇନ୍ ଅପ୍)</target>
+      </trans-unit>
+      <trans-unit id="auth-signup-errorMessage" datatype="html">
+        <source> *Something Went wrong </source>
+        <target state="new"> *କିଛି ଭୁଲ ହୋଇ ଗଲା </target>
+      </trans-unit>
+      <trans-unit id="auth-signup-firstName" datatype="html">
+        <source>First Name</source>
+        <target state="new">ପ୍ରଥମ ନାମ</target>
+      </trans-unit>
+      <trans-unit id="auth-signup-firstNamePlaceHolder" datatype="html">
+        <source>Enter First Name</source>
+        <target state="new">ପ୍ରଥମ ନାମ ପ୍ରବେଶ କରନ୍ତୁ |</target>
+      </trans-unit>
+      <trans-unit id="auth-signup-mameerr" datatype="html">
+        <source> *Should be more than 3 and less than 30 character </source>
+        <target state="new"> *3 ରୁ ଅଧିକ ଏବଂ 30 ଅକ୍ଷରରୁ କମ୍ ହେବା ଉଚିତ୍ | </target>
+      </trans-unit>
+      <trans-unit id="auth-signup-lastName" datatype="html">
+        <source>Last Name</source>
+        <target state="new">ଶେଷ ନାମ</target>
+      </trans-unit>
+      <trans-unit id="auth-signup-lastNamePlaceHolder" datatype="html">
+        <source>Enter Last Name</source>
+        <target state="new">ଶେଷ ନାମ ପ୍ରବେଶ କରନ୍ତୁ |</target>
+      </trans-unit>
+      <trans-unit id="auth-signup-contactNo" datatype="html">
+        <source>Contact Number</source>
+        <target state="new">ଯୋଗାଯୋଗ ନମ୍ବର |</target>
+      </trans-unit>
+      <trans-unit id="auth-signup-contactNoPlaceHolder" datatype="html">
+        <source>Enter Contact Number</source>
+        <target state="new">ଯୋଗାଯୋଗ ନମ୍ବର ପ୍ରବେଶ କରନ୍ତୁ |</target>
+      </trans-unit>
+      <trans-unit id="auth-signup-Email" datatype="html">
+        <source>Email</source>
+        <target state="new">ଇମେଲ୍</target>
+      </trans-unit>
+      <trans-unit id="auth-signup-emailPlaceHolder" datatype="html">
+        <source>Enter Email Id</source>
+        <target state="new">ଇମେଲ୍ ପ୍ରବେଶ କରନ୍ତୁ |</target>
+      </trans-unit>
+      <trans-unit id="auth-signup-emailErr" datatype="html">
+        <source> *Should be a valid email </source>
+        <target state="new"> *ଏକ ସଠିକ୍ ଇମେଲ୍ ହେବା ଉଚିତ୍ | </target>
+      </trans-unit>
+      <trans-unit id="auth-signup-pwdErr" datatype="html">
+        <source> *Should be more than 6 and less than 30 character </source>
+        <target state="new"> *6 ରୁ ଅଧିକ ଏବଂ 30 ଅକ୍ଷରରୁ କମ୍ ହେବା ଉଚିତ୍ | </target>
+      </trans-unit>
+      <trans-unit id="auth-signup-cnfPwd" datatype="html">
+        <source>Confirm Password</source>
+        <target state="new">ପାସୱାର୍ଡ ନିସ୍ଚିତ କରନ୍ତୁ</target>
+      </trans-unit>
+      <trans-unit id="auth-auth-confirmPwdPlaceHolder" datatype="html">
+        <source>Confirm Password</source>
+        <target state="new">ପାସୱାର୍ଡ ନିସ୍ଚିତ କରନ୍ତୁ </target>
+      </trans-unit>
+      <trans-unit id="auth-signup-pwdmatchErr" datatype="html">
+        <source> *Password didn&apos;t match </source>
+        <target state="new"> *ପାସୱାର୍ଡ ମେଳ ଖାଉ ନାହିଁ | </target>
+      </trans-unit>
+      <trans-unit id="signin" datatype="html">
+        <source>Sign In</source>
+        <target state="new">ସାଇନ୍ ଇନ୍ </target>
+      </trans-unit>
+      <trans-unit id="about-dayWiseRitual-title" datatype="html">
+        <source>Ratha Yatra 2023 Day wise rituals</source>
+        <target state="new">ରଥଯାତ୍ରା ୨୦୨୩ ଦିନର ନୀତିକାନ୍ତି |</target>
+      </trans-unit>
+      <trans-unit id="auth-auth-contactNumber" datatype="html">
+        <source>Phone No</source>
+        <target state="new">ଫୋନ୍ ନଂ</target>
+      </trans-unit>
+      <trans-unit id="auth-auth-contactNumberPlaceHolder" datatype="html">
+        <source>Phone No</source>
+        <target state="new">ଫୋନ୍ ନଂ</target>
+      </trans-unit>
+      <trans-unit id="common-success-msg" datatype="html">
+        <source>Data received</source>
+        <target state="new">ତଥ୍ୟ ଗ୍ରହଣ କରାଯାଇଛି |</target>
+      </trans-unit>
+      <trans-unit id="common-success-title" datatype="html">
+        <source>Success</source>
+        <target state="new">ସଫଳ |</target>
+      </trans-unit>
+      <trans-unit id="no-data" datatype="html">
+        <source>Sorry No data found ....</source>
+        <target state="new"> ତଥ୍ୟ ମିଳିଲା ନାହିଁ | ....</target>
+      </trans-unit>
+      <trans-unit id="welcome" datatype="html">
+        <source>Welcome</source>
+        <target state="new">ସ୍ୱାଗତ |</target>
+      </trans-unit>
+      <trans-unit id="back-btn" datatype="html">
+        <source>go back</source>
+        <target state="new">ଫେରନ୍ତୁ</target>
+      </trans-unit>
+      <trans-unit id="select-person" datatype="html">
+        <source>Person</source>
+        <target state="new">ବ୍ୟକ୍ତି</target>
+      </trans-unit>
+      <trans-unit id="select-item" datatype="html">
+        <source>Item</source>
+        <target state="new">ବସ୍ତୁ |</target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportLost-tokenNo" datatype="html">
+        <source>Token No</source>
+        <target state="new">ଟୋକେନ୍ ନଂ</target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportLost-beatBoxId" datatype="html">
+        <source>Beat Box No</source>
+        <target state="new">ବିଟ୍ ବକ୍ସ ନଂ</target>
+      </trans-unit>
+      <trans-unit id="lostFound-foundItem-tokenNo" datatype="html">
+        <source>Token No</source>
+        <target state="new">ଟୋକେନ୍ ନଂ</target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportFound-tokenNo" datatype="html">
+        <source>Lost Token No</source>
+        <target state="new">ହଜିଯାଇଥିବା ଟୋକେନ୍ ନଂ</target>
+      </trans-unit>
+      <trans-unit id="8689985290657079571" datatype="html">
+        <source>First Week</source>
+        <target state="new">ପ୍ରଥମ ସପ୍ତାହ</target>
+      </trans-unit>
+      <trans-unit id="1385509456365982797" datatype="html">
+        <source>Second Week</source>
+        <target state="new">ଦ୍ୱିତୀୟ ସପ୍ତାହ |</target>
+      </trans-unit>
+      <trans-unit id="4615968528337636169" datatype="html">
+        <source>Third Week</source>
+        <target state="new">ତୃତୀୟ ସପ୍ତାହ |</target>
+      </trans-unit>
+      <trans-unit id="3696115750329272246" datatype="html">
+        <source>Fourth Week</source>
+        <target state="new">ଚତୁର୍ଥ ସପ୍ତାହ |</target>
+      </trans-unit>
+      <trans-unit id="choose-file" datatype="html">
+        <source> Choose Files </source>
+        <target state="new"> ଫାଇଲ୍ ବାଛନ୍ତୁ | </target>
+      </trans-unit>
+      <trans-unit id="no-file-choosen" datatype="html">
+        <source>No file Choosen</source>
+        <target state="new">କିଛି ଫାଇଲ୍ ଚୟନ ହୋଇନାହିଁ |</target>
+      </trans-unit>
+      <trans-unit id="status-open" datatype="html">
+        <source>Open</source>
+        <target state="new">ଖୋଲା:</target>
+      </trans-unit>
+      <trans-unit id="about-placeVisit-KonarkSunTemple" datatype="html">
+        <source>Konark Sun Temple</source>
+        <target state="new">କୋଣାର୍କ ସୂର୍ଯ୍ୟ ମନ୍ଦିର</target>
+      </trans-unit>
+      <trans-unit id="characterErr" datatype="html">
+        <source> *Only characters are allowed </source>
+        <target state="new"> *କେବଳ ବର୍ଣ୍ଣଗୁଡିକ ଅନୁମତିପ୍ରାପ୍ତ | </target>
+      </trans-unit>
+      <trans-unit id="continue-toSite" datatype="html">
+        <source> Continue To Booking Site </source>
+        <target state="new"> ବୁକିଂ ସାଇଟକୁ ଯାଆନ୍ତୁ | </target>
+      </trans-unit>
+      <trans-unit id="5415864383481929346" datatype="html">
+        <source>Bus Schedule</source>
+        <target state="new">ବସ ସେବା କାର୍ଯ୍ୟସୂଚୀ </target>
+      </trans-unit>
+      <trans-unit id="912289306600828748" datatype="html">
+        <source> Inbound Bus </source>
+        <target state="new"> ଇନବାଉଣ୍ଡ ବସ୍ | </target>
+      </trans-unit>
+      <trans-unit id="3113611547242571248" datatype="html">
+        <source> Outbound Bus </source>
+        <target state="new"> ଆଉଟବାଉଣ୍ଡ ବସ୍ </target>
+      </trans-unit>
+      <trans-unit id="8448950801376269228" datatype="html">
+        <source>Bus Name</source>
+        <target state="new">ବସ୍ ନାମ</target>
+      </trans-unit>
+      <trans-unit id="8497528947328199741" datatype="html">
+        <source>Time</source>
+        <target state="new">ସମୟ</target>
+      </trans-unit>
+      <trans-unit id="6900110031688366812" datatype="html">
+        <source>Air Schedule</source>
+        <target state="new">ବିମାନ ସେବା ସୂଚୀ </target>
+      </trans-unit>
+      <trans-unit id="7843855945883624234" datatype="html">
+        <source>Check Out Some Air Flights Information Listed Below :</source>
+        <target state="new">ନିମ୍ନରେ ତାଲିକାଭୁକ୍ତ କେତେକ ବିମାନ ଉଡ଼ାଣ ସୂଚନା ଯାଞ୍ଚ କରନ୍ତୁ :</target>
+      </trans-unit>
+      <trans-unit id="1237130199405077011" datatype="html">
+        <source> Inbound Flight </source>
+        <target state="new"> ଇନବାଉଣ୍ଡ ବିମାନ | </target>
+      </trans-unit>
+      <trans-unit id="7053131946229753747" datatype="html">
+        <source> Outbound Flight </source>
+        <target state="new"> ଆଉଟବାଉଣ୍ଡ ବିମାନ | </target>
+      </trans-unit>
+      <trans-unit id="7674429001758094996" datatype="html">
+        <source>Flight Name</source>
+        <target state="new">ବିମାନ ନାମ</target>
+      </trans-unit>
+      <trans-unit id="origin" datatype="html">
+        <source> / Origin :</source>
+        <target state="new"> / ଆରମ୍ଭ ସ୍ଥାନ :</target>
+      </trans-unit>
+      <trans-unit id="arrival" datatype="html">
+        <source>Arr. </source>
+        <target state="new">ଆଗମନ. </target>
+      </trans-unit>
+      <trans-unit id="departure" datatype="html">
+        <source>Dep. </source>
+        <target state="new">ପ୍ରସ୍ଥାନ. </target>
+      </trans-unit>
+      <trans-unit id="1273717034757323662" datatype="html">
+        <source>Train Schedule</source>
+        <target state="new">ରେଳସେବା କାର୍ଯ୍ୟସୂଚୀ </target>
+      </trans-unit>
+      <trans-unit id="327937575622650924" datatype="html">
+        <source>Check Out Some Train Time Information Listed Below :</source>
+        <target state="new">ନିମ୍ନରେ ତାଲିକାଭୁକ୍ତ କେତେକ ରେଳସେବା କାର୍ଯ୍ୟସୂଚୀ ଯାଞ୍ଚ କରନ୍ତୁ :</target>
+      </trans-unit>
+      <trans-unit id="8768879820811108831" datatype="html">
+        <source> Inbound Train </source>
+        <target state="new"> ଇନବାଉଣ୍ଡ ରେଳ </target>
+      </trans-unit>
+      <trans-unit id="6961151350832636863" datatype="html">
+        <source> Outbound Train </source>
+        <target state="new"> ଆଉଟବାଉଣ୍ଡ ରେଳ </target>
+      </trans-unit>
+      <trans-unit id="7912801788220294881" datatype="html">
+        <source>Train Name</source>
+        <target state="new">ରେଳ ନାମ</target>
+      </trans-unit>
+      <trans-unit id="2909283185832170515" datatype="html">
+        <source> Shree<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/>Jagannatha<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Ratha Yatra<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> 2023 </source>
+        <target state="new"> ଶ୍ରୀଜଗନ୍ନାଥ <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>ରଥଯାତ୍ରା <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> ୨୦୨୩ </target>
+      </trans-unit>
+      <trans-unit id="destination" datatype="html">
+        <source> Destination : </source>
+        <target state="new"> ଗନ୍ତବ୍ୟସ୍ଥଳ : </target>
+      </trans-unit>
+      <trans-unit id="navigation-text-foundLost" datatype="html">
+        <source>Found Item/person List</source>
+        <target state="new">ମିଳିଥିବା ବ୍ୟକ୍ତି ଏବଂ ବସ୍ତୁ ତାଲିକା</target>
+      </trans-unit>
+      <trans-unit id="7357882993009007494" datatype="html">
+        <source>Ritual Name</source>
+        <target state="new">ନୀତିକାନ୍ତି</target>
+      </trans-unit>
+      <trans-unit id="footer-disclaimer-title" datatype="html">
+        <source>Disclaimer</source>
+        <target state="new">ଅସ୍ୱିକାରୋକ୍ତି</target>
+      </trans-unit>
+      <trans-unit id="footer-disclaimer-firstPara" datatype="html">
+        <source> The information contained in this website is for general information purposes only. The information is provided by [Website Name], a property of [Business Name]. While we endeavour to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose. Any reliance you place on such information is therefore strictly at your own risk. </source>
+        <target state="new"> The information contained in this website is for general information purposes only. The information is provided by [Website Name], a property of [Business Name]. While we endeavour to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose. Any reliance you place on such information is therefore strictly at your own risk. </target>
+      </trans-unit>
+      <trans-unit id="footer-disclaimer-secondPara" datatype="html">
+        <source> In no event will we be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with, the use of this website. Through this website you are able to link to other websites which are not under the control of [Business Name]. We have no control over the nature, content and availability of those sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them. Every effort is made to keep the website up and running smoothly. However, [Business Name] takes no responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control. </source>
+        <target state="new"> In no event will we be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with, the use of this website. Through this website you are able to link to other websites which are not under the control of [Business Name]. We have no control over the nature, content and availability of those sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them. Every effort is made to keep the website up and running smoothly. However, [Business Name] takes no responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control. </target>
+      </trans-unit>
+      <trans-unit id="footer-impContact-title" datatype="html">
+        <source>Important Contacts</source>
+        <target state="new">ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ଯୋଗାଯୋଗ</target>
+      </trans-unit>
+      <trans-unit id="footer-impContact-desc" datatype="html">
+        <source> Check Out Some Important Contacts Information Listed Below : </source>
+        <target state="new"> କିଛି ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ଯୋଗାଯୋଗ ନିମ୍ନରେ ତାଲିକାଭୁକ୍ତ: </target>
+      </trans-unit>
+      <trans-unit id="2218082343053095278" datatype="html">
+        <source>Service</source>
+        <target state="new">ସେବା </target>
+      </trans-unit>
+      <trans-unit id="5742490761992045833" datatype="html">
+        <source>Phone No</source>
+        <target state="new"> ଫୋନ୍ ନମ୍ବର </target>
+      </trans-unit>
+      <trans-unit id="status-Returned" datatype="html">
+        <source> Returned </source>
+        <target state="new"> ଫେରସ୍ତ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-foundItem-filterLostToken" datatype="html">
+        <source>Filter By Lost Token</source>
+        <target state="new">ହଜିଯାଇଥିବା ଟୋକେନ୍ ଦ୍ୱାରା ଫିଲ୍ଟର୍ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-foundItem-filterFoundToken" datatype="html">
+        <source>Filter By Found Token</source>
+        <target state="new">ମିଳିଥିବା ଟୋକେନ୍ ଦ୍ୱାରା ଫିଲ୍ଟର୍ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-foundItem-filterBeatBox" datatype="html">
+        <source>Filter By Beatbox No</source>
+        <target state="new">ବିଟ୍ ବକ୍ସ ନମ୍ବର ଦ୍ୱାରା ଫିଲ୍ଟର୍ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-foundItem-filterfromDate" datatype="html">
+        <source>Filter By From Date</source>
+        <target state="new">ତାରିଖ ଠାରୁ </target>
+      </trans-unit>
+      <trans-unit id="status-found" datatype="html">
+        <source>Found</source>
+        <target state="new"> ମିଳିଲା</target>
+      </trans-unit>
+      <trans-unit id="lostFound-lostItemList-filterToken" datatype="html">
+        <source>Filter By Token</source>
+        <target state="new">ଟୋକେନ୍ ଦ୍ୱାରା ଫିଲ୍ଟର୍ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-lostItemList-filterfromDate" datatype="html">
+        <source>Filter By From Date</source>
+        <target state="new"> ତାରିଖ ଠାରୁ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportFound-date" datatype="html">
+        <source>Found Date Time</source>
+        <target state="new">ମିଳିଥିବା ତାରିଖ ସମୟ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-foundItem-Status" datatype="html">
+        <source> Status</source>
+        <target state="new">ସ୍ଥିତି </target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportLost-date" datatype="html">
+        <source>Lost Date Time</source>
+        <target state="new">ହଜିଯାଇଥିବା ତାରିଖ ସମୟ </target>
+      </trans-unit>
+      <trans-unit id="sos-sosList-filterStatus" datatype="html">
+        <source>Filter By Status</source>
+        <target state="new">ସ୍ଥିତି ଦ୍ୱାରା ଫିଲ୍ଟର </target>
+      </trans-unit>
+      <trans-unit id="status-attended" datatype="html">
+        <source> Attended </source>
+        <target state="new"> ଧ୍ୟାନ ଦିଆଯାଇଥିବା</target>
+      </trans-unit>
+      <trans-unit id="sos-sosList-filterfromDate" datatype="html">
+        <source>Filter By From Date</source>
+        <target state="new">ତାରିଖ ଠାରୁ </target>
+      </trans-unit>
+      <trans-unit id="sos-sosList-filterToDate" datatype="html">
+        <source>Filter By To Date</source>
+        <target state="new">ତାରିଖ ପର୍ଯ୍ୟନ୍ତ ଫିଲ୍ଟର୍</target>
+      </trans-unit>
+      <trans-unit id="status-reportReturned" datatype="html">
+        <source> Returned </source>
+        <target state="new"> ଫେରସ୍ତ </target>
+      </trans-unit>
+      <trans-unit id="sos-sosList-tokenFilter" datatype="html">
+        <source>Filter By Token</source>
+        <target state="new">ଟୋକେନ୍ ଦ୍ୱାରା ଫିଲ୍ଟର୍ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-lostItemList-primaryPh" datatype="html">
+        <source>Primary Phone</source>
+        <target state="new">ପ୍ରାଥମିକ ଫୋନ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-lostItemList-secondaryPh" datatype="html">
+        <source>Secondary Phone</source>
+        <target state="new">ଦ୍ଵିତୀୟ ଫୋନ </target>
+      </trans-unit>
+      <trans-unit id="lostFound-lostItemList-reportDate" datatype="html">
+        <source> Report Date &amp; Time </source>
+        <target state="new"> ରିପୋର୍ଟର ତାରିଖ ଏବଂ ସମୟ |</target>
+      </trans-unit>
+      <trans-unit id="lostFound-lostItemList-occurancedate" datatype="html">
+        <source> Occurrence Date &amp; Time </source>
+        <target state="new"> ଘଟଣା ତାରିଖ ଏବଂ ସମୟ | </target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportLost-dateErr" datatype="html">
+        <source> *Please Enter a Valid Date </source>
+        <target state="new"> *ଦୟାକରି ସଠିକ ତାରିଖ ପ୍ରଦାନ କରନ୍ତୁ </target>
+      </trans-unit>
+      <trans-unit id="sos-reportSOS-dateTimeLabel" datatype="html">
+        <source>Occurrence Date Time</source>
+        <target state="new">ଘଟଣା ତାରିଖ ଏବଂ ସମୟ </target>
+      </trans-unit>
+      <trans-unit id="5236615040287209661" datatype="html">
+        <source>Beat Box No</source>
+        <target state="new"> ବିଟ ବାକ୍ସ ନମ୍ବର</target>
+      </trans-unit>
+      <trans-unit id="2177194222940999235" datatype="html">
+        <source>View Map</source>
+        <target state="new"> ମାନଚିତ୍ର ଦେଖନ୍ତୁ</target>
+      </trans-unit>
+      <trans-unit id="7825570888384392250" datatype="html">
+        <source>Capacity</source>
+        <target state="new">କ୍ଷମତା </target>
+        <note priority="1" from="description">parking-parkingEntryGate-capacity</note>
+      </trans-unit>
+      <trans-unit id="parking-parkingSpace-avaialble" datatype="html">
+        <source>Available</source>
+        <target state="new">ଉପଲବ୍ଧତା </target>
+      </trans-unit>
+      <trans-unit id="about-specialDays-title" datatype="html">
+        <source>Ratha Yatra Special Days</source>
+        <target state="new">ଘୋଷଯାତ୍ରାର ବିଶେଷ ଦିନ</target>
+      </trans-unit>
+      <trans-unit id="parking-parkingInfo-capacity" datatype="html">
+        <source>Capacity</source>
+        <target state="new">କ୍ଷମତା</target>
+      </trans-unit>
+      <trans-unit id="about-placeVisit-blueFlag" datatype="html">
+        <source>Blue Flag Beach </source>
+        <target state="new">ନୀଳ ଫ୍ଲାଗ ବେଳାଭୂମି </target>
+      </trans-unit>
+      <trans-unit id="hotels-panthaNiwas-bookNow" datatype="html">
+        <source> Book Now </source>
+        <target state="new"> ବୁକ୍ କରନ୍ତୁ | </target>
+      </trans-unit>
+      <trans-unit id="lostFound-lostItemList-filterPhone" datatype="html">
+        <source>Filter By PhoneNo</source>
+        <target state="new">ଫୋନ୍ ନଂ ଦ୍ୱାରା ଫିଲ୍ଟର୍ କରନ୍ତୁ |</target>
+      </trans-unit>
+      <trans-unit id="4867019051205818299" datatype="html">
+        <source>Search For: </source>
+        <target state="new">Search For: </target>
+      </trans-unit>
+      <trans-unit id="2788973582284284305" datatype="html">
+        <source> Grievance </source>
+        <target state="new"> ଅଭିଯୋଗ </target>
+      </trans-unit>
+      <trans-unit id="8601805162935145508" datatype="html">
+        <source> Person / Item </source>
+        <target state="new"> ବ୍ୟକ୍ତି / ବସ୍ତୁ </target>
+      </trans-unit>
+      <trans-unit id="4071222469431073252" datatype="html">
+        <source>Location: </source>
+        <target state="new">ଅବସ୍ଥାନ: </target>
+      </trans-unit>
+      <trans-unit id="5569987835600497006" datatype="html">
+        <source>Lost Date: </source>
+        <target state="new">ହଜିଥିବା ତାରିଖ: </target>
+      </trans-unit>
+      <trans-unit id="7074055017267673022" datatype="html">
+        <source>Description :</source>
+        <target state="new">ବର୍ଣ୍ଣନା :</target>
+      </trans-unit>
+      <trans-unit id="8028116132597477213" datatype="html">
+        <source>Collect item from</source>
+        <target state="new">ସଂଗ୍ରହ କରନ୍ତୁ |</target>
+      </trans-unit>
+      <trans-unit id="1399813192929027789" datatype="html">
+        <source>Occurrence Date: </source>
+        <target state="new">ଘଟଣା ତାରିଖ: </target>
+      </trans-unit>
+      <trans-unit id="common-warning-msg" datatype="html">
+        <source>No data found</source>
+        <target state="new">ତଥ୍ୟ ମିଳିଲା ନାହିଁ |</target>
+      </trans-unit>
+      <trans-unit id="common-warning-title" datatype="html">
+        <source>No Data</source>
+        <target state="new">ତଥ୍ୟ ନାହିଁ |</target>
+      </trans-unit>
+      <trans-unit id="schedule-busSchedule-origin" datatype="html">
+        <source>Select Origin</source>
+        <target state="new">ଆରମ୍ଭ ସ୍ଥାନ ଚୟନ କରନ୍ତୁ |</target>
+      </trans-unit>
+      <trans-unit id="schedule-busSchedule-destination" datatype="html">
+        <source>Select Destination</source>
+        <target state="new">ଗନ୍ତବ୍ୟସ୍ଥଳ ଚୟନ କରନ୍ତୁ |</target>
+      </trans-unit>
+      <trans-unit id="sos-sosList-status" datatype="html">
+        <source>Change Status: </source>
+        <target state="new">ସ୍ଥିତି ପରିବର୍ତ୍ତନ କରନ୍ତୁ : </target>
+      </trans-unit>
+      <trans-unit id="sos-sosList-attended" datatype="html">
+        <source> Attended </source>
+        <target state="new"> ଧ୍ୟାନ ଦିଆଯାଇଥିବା </target>
+      </trans-unit>
+      <trans-unit id="sos-sosList-Open" datatype="html">
+        <source> Open </source>
+        <target state="new"> ଖୋଲା </target>
+      </trans-unit>
+      <trans-unit id="sos-sosList-phoneFilter" datatype="html">
+        <source>Filter By Phone No</source>
+        <target state="new">ଫୋନ୍ ନଂ ଦ୍ୱାରା ଫିଲ୍ଟର୍ କରନ୍ତୁ |</target>
+      </trans-unit>
+      <trans-unit id="117661888608204797" datatype="html">
+        <source>Status Change</source>
+        <target state="new"> ସ୍ଥିତି ପରିବର୍ତ୍ତନ</target>
+      </trans-unit>
+      <trans-unit id="sos-sosList-commentLabel" datatype="html">
+        <source>Comments</source>
+        <target state="new">ମନ୍ତବ୍ୟ ଦିଅନ୍ତୁ |</target>
+      </trans-unit>
+      <trans-unit id="3938187896150514094" datatype="html">
+        <source>Are you sure, want to change the status?</source>
+        <target state="new">ଆପଣ ନିଶ୍ଚିତ କି, ସ୍ଥିତି ପରିବର୍ତ୍ତନ କରିବାକୁ ଚାହୁଁଛନ୍ତି ?</target>
+      </trans-unit>
+      <trans-unit id="3603720768157919481" datatype="html">
+        <source> No </source>
+        <target state="new"> ନା </target>
+      </trans-unit>
+      <trans-unit id="4861926948802653243" datatype="html">
+        <source> Yes </source>
+        <target state="new"> ହଁ </target>
+      </trans-unit>
+      <trans-unit id="common-success-statusmsg" datatype="html">
+        <source>Status Updated</source>
+        <target state="new">ସ୍ଥିତି ଅଦ୍ୟତନ ହୋଇଛି |</target>
+      </trans-unit>
+      <trans-unit id="common-success-statustitle" datatype="html">
+        <source>Success</source>
+        <target state="new">ସଫଳ |</target>
+      </trans-unit>
+      <trans-unit id="schedule-airSchedule-origin" datatype="html">
+        <source>Select Origin</source>
+        <target state="new">ଆରମ୍ଭ ସ୍ଥାନ ଚୟନ କରନ୍ତୁ |</target>
+      </trans-unit>
+      <trans-unit id="schedule-airSchedule-destination" datatype="html">
+        <source>Select Destination</source>
+        <target state="new">ଗନ୍ତବ୍ୟସ୍ଥଳ ଚୟନ କରନ୍ତୁ |</target>
+      </trans-unit>
+      <trans-unit id="schedule-railSchedule-origin" datatype="html">
+        <source>Select Origin</source>
+        <target state="new">ଆରମ୍ଭ ସ୍ଥାନ ଚୟନ କରନ୍ତୁ |</target>
+      </trans-unit>
+      <trans-unit id="schedule-railSchedule-destination" datatype="html">
+        <source>Select Destination</source>
+        <target state="new">ଗନ୍ତବ୍ୟସ୍ଥଳ ଚୟନ କରନ୍ତୁ |</target>
+      </trans-unit>
+      <trans-unit id="hotel-panthaNivas-text" datatype="html">
+        <source> The Odisha Tourism Development Corporation (OTDC) is a Government of Odisha undertaking corporation in the Indian state of Odisha. It was incorporated in the year 1979[1] to promote tourism in the state and operate some of the existing tourist bungalows and transport fleets in commercial line. OTDC&apos;s Tourist Bungalows are called as Panthanivas. OTDC provides customised tour packages. </source>
+        <target state="new"> ଭାରତରେ ,ଓଡ଼ିଶା ପର୍ଯ୍ୟଟନ ବିକାଶ ନିଗମ (ଓ ଟି ଡ଼ି ସି ) ହେଉଛି ଓଡିଶା ସରକାରଙ୍କର ଅଧିକୃତ ଏକ ନିଗମ। ୧୯୭୯ ମସିହାରେ ରାଜ୍ୟରେ ପର୍ଯ୍ୟଟନକୁ ପ୍ରୋତ୍ସାହନ ଦେବା ନିମନ୍ତେ କେତେକ ବିଦ୍ୟମାନ ପର୍ଯ୍ୟଟନ ବଙ୍ଗଳା ଏବଂ ପରିବହନ ଚଳାଚଳକୁ ଅନ୍ତର୍ଭୁକ୍ତ କରାଯାଇଥିଲା | ଓ ଟି ଡ଼ି ସିର ଟୁରିଷ୍ଟ ବଙ୍ଗଳାଗୁଡିକ ପାନ୍ଥାନିଭାସ୍ ଭାବରେ ପରିଚିତ | ଏହି ସଂସ୍ଥା କଷ୍ଟୋମାଇଜ୍ ଟୁର୍ ପ୍ୟାକେଜ୍ ପ୍ରଦାନ କରେ | </target>
+      </trans-unit>
+      <trans-unit id="hotel-bhaktaNivas-text" datatype="html">
+        <source> Puri, the land of Jagannatha is also known for its pristine beaches, colourful festivals, and numerous points of tourist attraction. Every year millions of tourists from across the globe come here for leisure, pleasure and devotion. The Jagannatha Temple Administration, keeping in mind the needs of the devotees has come up with Bhakta Niwas near to Jagannath Temple. </source>
+        <target state="new"> ମହାପ୍ରଭୁ ଶ୍ରୀ ଜଗନ୍ନାଥଙ୍କର ଭୂମି ଭାବରେ ପ୍ରସିଦ୍ଧ ପୁରୀ,ଏପରି ଏକ ସହର ଯାହା ନିଜର ନିର୍ମଳ ବେଳାଭୂମି, ରଙ୍ଗୀନ ପର୍ବ ପର୍ବାଣିଏବଂ ଅନେକ ପର୍ଯ୍ୟଟନ ସ୍ଥଳୀ ପାଇଁ ମଧ୍ୟ ଜଣାଶୁଣା | ପ୍ରତିବର୍ଷ ପୃଥିବୀର ବିଭିନ୍ନ ସ୍ଥାନରୁ ଲକ୍ଷ ଲକ୍ଷ ପର୍ଯ୍ୟଟକ ଅବକାଶ, ଆନନ୍ଦ ଏବଂ ଭକ୍ତି ପାଇଁ ଏଠାକୁ ଆସିଥାନ୍ତି | ଜଗନ୍ନାଥ ମନ୍ଦିର ପ୍ରଶାସନ, ଏହାକୁ ଦୃଷ୍ଟିରେ ରଖି ଭକ୍ତଙ୍କ ଆବଶ୍ୟକତା ନିମନ୍ତେ ଜଗନ୍ନାଥ ମନ୍ଦିର ନିକଟରେ ଭକ୍ତ ନିବାସ ର ବ୍ୟବସ୍ଥା ଉପଲବ୍ଧ କରାଇଛି | </target>
+      </trans-unit>
+      <trans-unit id="8199093605928574216" datatype="html">
+        <source>Comments :</source>
+        <target state="new">ମନ୍ତବ୍ୟ :</target>
+      </trans-unit>
+      <trans-unit id="4607512524084842737" datatype="html">
+        <source>Plan Your Day</source>
+        <target state="new">ଆପଣଙ୍କର ଦିନ ଯୋଜନା କରନ୍ତୁ</target>
+      </trans-unit>
+      <trans-unit id="3068861288536137541" datatype="html">
+        <source>Select your preferable date &amp; plan your Yatra.</source>
+        <target state="new">ଆପଣଙ୍କର ପସନ୍ଦଯୋଗ୍ୟ ତାରିଖ ଚୟନ କରନ୍ତୁ ଏବଂ ଯାତ୍ରା ଯୋଜନା କରନ୍ତୁ |</target>
+      </trans-unit>
+      <trans-unit id="9028910937709421715" datatype="html">
+        <source> Parking Area Found In Puri</source>
+        <target state="new"> ଗୋଟି ପାର୍କିଂ ସ୍ଥାନ ପୁରୀରେ ଉପଲବ୍ଧ</target>
+      </trans-unit>
+      <trans-unit id="216210375502311848" datatype="html">
+        <source> Food Distribution Spots Found In Puri</source>
+        <target state="new"> ଗୋଟି ଖାଦ୍ୟ ଯୋଗାଣ ଅବସ୍ଥାନ ପୁରୀରେ ଉପଲବ୍ଧ :</target>
+      </trans-unit>
+      <trans-unit id="1859958918173363897" datatype="html">
+        <source>Ratha Yatra 2023 </source>
+        <target state="new">ରଥଯାତ୍ରା ୨୦୨୩</target>
+      </trans-unit>
+      <trans-unit id="navigation-text-dayPlanner" datatype="html">
+        <source>Day Planner</source>
+        <target state="new">ଦିନ ଯୋଜନାକାରୀ</target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportFound-imageViewLabel" datatype="html">
+        <source>View Image</source>
+        <target state="new">ପ୍ରତିଛବି ଦେଖନ୍ତୁ |</target>
+      </trans-unit>
+      <trans-unit id="lostFound-reportFound-editheading" datatype="html">
+        <source> Edit info of found Item/Person</source>
+        <target state="new"> ମିଳିଥିବା ବ୍ୟକ୍ତି ଏବଂ ବସ୍ତୁର ସୂଚନା ପରିବର୍ତ୍ତନ କରନ୍ତୁ |</target>
+      </trans-unit>
+      <trans-unit id="2740423825230281324" datatype="html">
+        <source> Parking </source>
+        <target state="new"> ପାର୍କିଂ </target>
+      </trans-unit>
+      <trans-unit id="1097723931196159327" datatype="html">
+        <source> Food Distribution </source>
+        <target state="new"> ଖାଦ୍ୟ ଯୋଗାଣ </target>
+      </trans-unit>
+      <trans-unit id="8905796782289813904" datatype="html">
+        <source> Rituals </source>
+        <target state="new"> ନୀତିକାନ୍ତି </target>
+      </trans-unit>
+      <trans-unit id="facilities-waterSpot-title" datatype="html">
+        <source>Water Distribution Spot</source>
+        <target state="new">ଜଳ ବିତରଣ ସ୍ଥାନ</target>
+      </trans-unit>
+      <trans-unit id="facilities-waterSpot-content" datatype="html">
+        <source> Drinking Water Facility has been made available in the following places </source>
+        <target state="new"> ନିମ୍ନଲିଖିତ ସ୍ଥାନରେ ପାନୀୟ ଜଳ ସୁବିଧା ଉପଲବ୍ଧ କରାଯାଇଛି | </target>
+      </trans-unit>
+      <trans-unit id="facilities-waterSpot-listPlace" datatype="html">
+        <source>Listed Places</source>
+        <target state="new">Listed Places</target>
+      </trans-unit>
+      <trans-unit id="3945318949999633875" datatype="html">
+        <source/>
+        <target state="new"/>
+      </trans-unit>
+      <trans-unit id="6597879378007410304" datatype="html">
+        <source>Token No</source>
+        <target state="new">ଟୋକେନ୍ ନଂ</target>
+      </trans-unit>
+      <trans-unit id="miscellaneous-divyangaDarshan-title" datatype="html">
+        <source>Divyanga Darshan</source>
+        <target state="new">ଦିବ୍ୟାଙ୍ଗ ଦର୍ଶନ</target>
+      </trans-unit>
+      <trans-unit id="miscellaneous-divyangaDarshan-firstPara" datatype="html">
+        <source> The physically challenged people are allowed to go on wheelchairs upto Singha Dwara (Lion’s Gate) in front of the temple. </source>
+        <target state="new"> The physically challenged people are allowed to go on wheelchairs upto Singha Dwara (Lion’s Gate) in front of the temple. </target>
+      </trans-unit>
+      <trans-unit id="miscellaneous-divyangaDarshan-secondPara" datatype="html">
+        <source> In a partial relief, physically challenged and elderly people can now make ‘parikrama’ (going around) of Jagannath temple here on wheelchair, while their demand for the facility to have darshan of the deities inside remains unanswered. </source>
+        <target state="new"> In a partial relief, physically challenged and elderly people can now make ‘parikrama’ (going around) of Jagannath temple here on wheelchair, while their demand for the facility to have darshan of the deities inside remains unanswered. </target>
+      </trans-unit>
+      <trans-unit id="miscellaneous-divyangaDarshan-facilities" datatype="html">
+        <source> MORE FACILITIES</source>
+        <target state="new"> ଅଧିକ ସୁବିଧା</target>
+      </trans-unit>
+      <trans-unit id="navigation-text-divyangadarshan" datatype="html">
+        <source>Divyanga Darshan</source>
+        <target state="new">ଦିବ୍ୟାଙ୍ଗ ଦର୍ଶନ</target>
+      </trans-unit>
+      <trans-unit id="navigation-text-waterSpot" datatype="html">
+        <source>Water Distribution Spots</source>
+        <target state="new">ଜଳ ବିତରଣ ସ୍ଥାନ</target>
+      </trans-unit>
+      <trans-unit id="common-imgErr-msg" datatype="html">
+        <source>Maximum 3 image is allowed</source>
+        <target state="new">ସର୍ବାଧିକ ୩ ଗୋଟି ପ୍ରତିଛବି ଅନୁମୋଦିତ</target>
+      </trans-unit>
+      <trans-unit id="common-imgErr-title" datatype="html">
+        <source>Error</source>
+        <target state="new">ତ୍ରୁଟି</target>
+      </trans-unit>
+      <trans-unit id="1703802734256316288" datatype="html">
+        <source> Food Distribution Spots Found </source>
+        <target state="new"> ଖାଦ୍ୟ ବିତରଣ ସ୍ଥାନ </target>
+      </trans-unit>
+      <trans-unit id="2661141190151286082" datatype="html">
+        <source> Medical Facilities Found </source>
+        <target state="new"> ମିଳିଥିବା ଚିକିତ୍ସା ସୁବିଧା </target>
+      </trans-unit>
+      <trans-unit id="8080745976532181045" datatype="html">
+        <source> Shoe Stand Found </source>
+        <target state="new"> ମିଳିଥିବା ଜୋତା ଷ୍ଟାଣ୍ଡ </target>
+      </trans-unit>
+      <trans-unit id="facilities-foodDistributorList-foodType" datatype="html">
+        <source>Filter By Food Type</source>
+        <target state="new">ଖାଦ୍ୟ ପ୍ରକାର ଅନୁଯାୟୀ ଫିଲ୍ଟର୍ </target>
+      </trans-unit>
+      <trans-unit id="facilities-foodDistributor-filterLocation" datatype="html">
+        <source>Filter By Location</source>
+        <target state="new">ସ୍ଥାନ ଅନୁଯାୟୀ ଫିଲ୍ଟର୍</target>
+      </trans-unit>
+      <trans-unit id="facilities-foodDistributor-filterDate" datatype="html">
+        <source>Filter By Date</source>
+        <target state="new">ତାରିଖ ଅନୁଯାୟୀ ଫିଲ୍ଟର୍</target>
+      </trans-unit>
+      <trans-unit id="facilities-foodDistributor-filterButton" datatype="html">
+        <source> Search </source>
+        <target state="new"> ସନ୍ଧାନ </target>
+      </trans-unit>
+      <trans-unit id="auth-auth-oldPwd" datatype="html">
+        <source>Old Password</source>
+        <target state="new">ପୁରୁଣା ପାସୱାର୍ଡ</target>
+      </trans-unit>
+      <trans-unit id="auth-auth-oldpwdPlaceHolder" datatype="html">
+        <source>Old Password</source>
+        <target state="new">ପୁରୁଣା ପାସୱାର୍ଡ</target>
+      </trans-unit>
+      <trans-unit id="2712450188026175718" datatype="html">
+        <source> Wheel Chair Distribution Spot Found in Puri </source>
+        <target state="new"> ହ୍ୱିଲ୍ ଚେୟାର ସୁବିଧା ଉପଲବ୍ଧ ସ୍ଥାନ | </target>
+      </trans-unit>
+      <trans-unit id="471816275243265264" datatype="html">
+        <source>Location</source>
+        <target state="new">ଅବସ୍ଥାନ</target>
+      </trans-unit>
+      <trans-unit id="4643335668306156244" datatype="html">
+        <source>Timings</source>
+        <target state="new">ସମୟ</target>
+      </trans-unit>
+      <trans-unit id="2258703031386801880" datatype="html">
+        <source> There&apos;s a variety of options for you to stay at from Star Rated Hotels, Eco Tour Nature Camps equipped with state of the art swiss tents and facilities to OTDC Government Hotels, Bed Breakfasts and Homestays to choose from. Browse the hotel list below to choose your preferred accomodation. </source>
+        <target state="new"> ଏଠାରେ ରହିବା ପାଇଁ ଆପଣଙ୍କ ପାଖରେ ବିଭିନ୍ନ ପ୍ରକାରର ବିକଳ୍ପ ଅଛି | ଷ୍ଟାର୍ ରେଟେଡ୍ ହୋଟେଲ ଠାରୁ ଆରମ୍ଭ କରି ଇକୋ ଟୁର୍ ପ୍ରକୃତି ଶିବିର ଯାହାକି ଆର୍ଟ ସ୍ୱିସ୍ ଟେଣ୍ଟ ସୁବିଧା ରେସଜ୍ଜିତ ତଥା ଓ ଟି ଡି ସି ସରକାରୀ ହୋଟେଲ, ଏବଂ ହୋମଷ୍ଟେସ୍ ପର୍ଯ୍ୟନ୍ତ ପ୍ରଦାନ କରାଯାଇଛି | ଆପଣଙ୍କର ପସନ୍ଦିତ ଆକୋମୋଡେସନ୍ ବାଛିବା ପାଇଁ ନିମ୍ନରେ ତାଲିକାଭୁକ୍ତ କିଛି ହୋଟେଲ ବ୍ରାଉଜ୍ କରନ୍ତୁ | </target>
+      </trans-unit>
+      <trans-unit id="upload" datatype="html">
+        <source>You can upload up to 3 images</source>
+        <target state="new">ଆପଣ ୩ ଟି ପ୍ରତିଛବି ଅପଲୋଡ୍ କରିପାରିବେ</target>
+      </trans-unit>
+      <trans-unit id="6371427310215099829" datatype="html">
+        <source> The nearest airport is Biju Patnaik International Airport in Bhubaneswar, located around 58 km away from the city.The airport is well-connected with major Indian and International cities. </source>
+        <target state="new"> ପୁରୀ ସହରର ନିକଟତମ ବିମାନବନ୍ଦର ହେଉଛି ଭୁବନେଶ୍ୱରର ବିଜୁ ପଟ୍ଟନାୟକ ଅନ୍ତର୍ଜାତୀୟ ବିମାନବନ୍ଦର, ଯାହାକି ପ୍ରାୟ ୫୮ କିଲୋମିଟର ଦୂରରେ ଅବସ୍ଥିତ। ଏହି ବିମାନ ବନ୍ଦର ପ୍ରମୁଖ ଭାରତୀୟ ଏବଂ ଆନ୍ତର୍ଜାତୀୟ ସହର ସହିତ ଭଲ ଭାବରେ ସଂଯୁକ୍ତ। </target>
+      </trans-unit>
+      <trans-unit id="3471708778720390647" datatype="html">
+        <source> The bus stand near the Gundicha Temple provides connections to Bhubaneswar and Cuttack, service every 10-15 minutes. Minibuses to Konark leave every 20-30 minutes . There are direct buses for Kolkata and Visakhapatnam. Mo BUS Service connects Puri to nearby places while OSRTC(Odisha State Road Transport Corporation )connects Puri to far flung areas and other States. </source>
+        <target state="new"> ଗୁଣ୍ଡିଚା ମନ୍ଦିର ନିକଟରେ ଥିବା ବସଷ୍ଟାଣ୍ଡ ଭୁବନେଶ୍ୱର ଏବଂ କଟକକୁ ପ୍ରତି ୧0-୧୫ ମିନିଟରେ ସେବା ଯୋଗାଇଥାଏ | କୋଣାର୍କକୁ ମିନିବସ୍ ପ୍ରତି ୨0-୩0 ମିନିଟରେ ଯାତୟାତ କରିଥାଏ | କୋଲକାତା ଏବଂ ବିଶାଖାପାଟନମ୍ ପାଇଁ ସିଧାସଳଖ ବସ୍ ସେବା ମଧ୍ୟ ଉପଲବ୍ଧ |ମୋ ବସ ସେବା ପୁରୀକୁ ନିକଟସ୍ଥ ସ୍ଥାନ ସହିତ ସଂଯୋଗ କରୁଥିବାବେଳେ ଓ ଏସ ଆର ଟି ସି (ଓଡିଶା ରାଜ୍ୟ ସଡକ ପରିବହନ ନିଗମ) ପୁରୀକୁ ସୁଦୂର ଅଞ୍ଚଳ ଏବଂ ଅନ୍ୟାନ୍ୟ ରାଜ୍ୟ ସହିତ ସଂଯୋଗ କରିଥାଏ | </target>
+      </trans-unit>
+      <trans-unit id="7695919106198288547" datatype="html">
+        <source> Puri is a terminus on the East Coast Railway having direct express and super fast train links with New Delhi, Mumbai, Kolkata, Okha, Ahmedabad, Tirupati etc. Some important trains are Kolkata (Howrah) Puri Howrah Express, Jagannath Express; New Delhi; Purushottam Express. Khurda Road Station, 44 km, from Puri is convenient rail head for train to Chennai and Western India. </source>
+        <target state="new"> ପୁରୀ ହେଉଛି ପୂର୍ବ ତଟ ରେଳବାଇର ଏକ ଟର୍ମିନସ୍ ଯାହାକି ନୂଆଦିଲ୍ଲୀ, ମୁମ୍ବାଇ, କୋଲକାତା, ଓଖା , ଅହମ୍ମଦାବାଦ, ତିରୁପତି ଇତ୍ୟାଦି ସହର ସହିତ ସିଧାସଳଖ ଏକ୍ସପ୍ରେସ କିମ୍ବା ଏବଂ ସୁପର ଫାଷ୍ଟ ଟ୍ରେନ୍ର ଯୋଗେ ସଂଯୋଗ କରିବାରେ ସୁବିଧା ପ୍ରଦାନ କରେ | କିଛି ଗୁରୁତ୍ୱପୂର୍ଣ ଟ୍ରେନଗୁଡିକ ମଧ୍ୟରୁ କୋଲକାତା (ହାୱଡା ) ପୁରୀ ଏକ୍ସପ୍ରେସ ,ଜଗନ୍ନାଥ ଏକ୍ସପ୍ରେସ,ନୂଆଦିଲ୍ଲୀ ପୁରୁଷୋତ୍ତମ ଏକ୍ସପ୍ରେସ ଅନ୍ୟତମ ଅଟେ |ଚେନ୍ନାଇ ଏବଂ ପଶ୍ଚିମ ଭାରତକୁ ଟ୍ରେନ୍ ଯୋଗେ ଯାତ୍ରା କରିବା ନିମନ୍ତେ ଖୋର୍ଦ୍ଧା ରୋଡ୍ ଷ୍ଟେସନ୍ ସର୍ବୋତ୍ତମ ଯାହାକି ପୁରୀଠାରୁ ୪୪ କିଲୋମିଟର ଦୂରରେ ଅବସ୍ଥିତ | </target>
+      </trans-unit>
+      <trans-unit id="3010244725975800874" datatype="html">
+        <source>Railway Enquiry</source>
+        <target state="new">ରେଳ ଅନୁସନ୍ଧାନ</target>
+      </trans-unit>
+      <trans-unit id="5385333912706189740" datatype="html">
+        <source>Bus stand Enquiry</source>
+        <target state="new">ବସ୍ ଷ୍ଟାଣ୍ଡ ଅନୁସନ୍ଧାନ</target>
+      </trans-unit>
+      <trans-unit id="4657963932080773171" datatype="html">
+        <source>Jagannath Temple Office</source>
+        <target state="new">ଜଗନ୍ନାଥ ମନ୍ଦିର କାର୍ଯ୍ୟାଳୟ </target>
+      </trans-unit>
+      <trans-unit id="5090938186699934236" datatype="html">
+        <source>Temple Administration</source>
+        <target state="new">ମନ୍ଦିର ପ୍ରଶାସନ</target>
+      </trans-unit>
+      <trans-unit id="4297657497391163607" datatype="html">
+        <source>State Bank</source>
+        <target state="new">ଷ୍ଟେଟ ବ୍ୟାଙ୍କ</target>
+      </trans-unit>
+      <trans-unit id="5494587570190626640" datatype="html">
+        <source>Foreign Registration Office</source>
+        <target state="new">ବିଦେଶୀ ପଞ୍ଜୀକରଣ କାର୍ଯ୍ୟାଳୟ </target>
+      </trans-unit>
+      <trans-unit id="6259884669657872520" datatype="html">
+        <source>Fire Station</source>
+        <target state="new">ଅଗ୍ନିସମ କେନ୍ଦ୍ର</target>
+      </trans-unit>
+      <trans-unit id="3105581117477514014" datatype="html">
+        <source>Police Control Room</source>
+        <target state="new">ପୋଲିସ ନିୟନ୍ତ୍ରଣ କକ୍ଷ</target>
+      </trans-unit>
+      <trans-unit id="848783133501889049" datatype="html">
+        <source>Town Police</source>
+        <target state="new">ଟାଉନ୍ ପୋଲିସ୍</target>
+      </trans-unit>
+      <trans-unit id="8666888180500437814" datatype="html">
+        <source>GRP</source>
+        <target state="new">ସରକାରୀ ରେଳ ପୋଲିସ</target>
+      </trans-unit>
+      <trans-unit id="2833588456085489437" datatype="html">
+        <source>District Head Medical</source>
+        <target state="new">ଜିଲ୍ଲା ମୁଖ୍ୟ ଚିକିତ୍ସା</target>
+      </trans-unit>
+      <trans-unit id="3317964319000259642" datatype="html">
+        <source>CDMO</source>
+        <target state="new">ମୁଖ୍ୟ ଜିଲ୍ଲା ଚିକିତ୍ସା ଅଧିକାରୀ</target>
+      </trans-unit>
+      <trans-unit id="1774863001186847736" datatype="html">
+        <source>Additional CDMO</source>
+        <target state="new">ଅତିରିକ୍ତ ମୁଖ୍ୟ ଜିଲ୍ଲା ଚିକିତ୍ସା ଅଧିକାରୀ</target>
+      </trans-unit>
+      <trans-unit id="4718924455420146480" datatype="html">
+        <source>Seabeach Police</source>
+        <target state="new">ବେଳାଭୂମି ପୋଲିସ୍ </target>
+      </trans-unit>
+      <trans-unit id="563300750717602378" datatype="html">
+        <source> APPLY FILTERS</source>
+        <target state="new"> ଫିଲ୍ଟର୍ ପ୍ରୟୋଗ କରନ୍ତୁ</target>
+      </trans-unit>
+      <trans-unit id="2598703394778941061" datatype="html">
+        <source>Disclaimer</source>
+        <target state="new">ଅସ୍ୱିକାରୋକ୍ତି</target>
+      </trans-unit>
+      <trans-unit id="6873011109426959486" datatype="html">
+        <source>Important Contacts</source>
+        <target state="new">ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ଯୋଗାଯୋଗ</target>
+      </trans-unit>
+      <trans-unit id="hotels" datatype="html">
+        <source>Hotels</source>
+        <target state="new">ହୋଟେଲ</target>
+      </trans-unit>
+      <trans-unit id="6972105223770675605" datatype="html">
+        <source>Reset Password</source>
+        <target state="new">Reset Password</target>
+      </trans-unit>
+      <trans-unit id="max-desc-char" datatype="html">
+        <source>Maximum 1000 characters are allowed</source>
+        <target state="new">ସର୍ବାଧିକ ୧000 ଅକ୍ଷର ଅନୁମତିପ୍ରାପ୍ତ</target>
+      </trans-unit>
+      <trans-unit id="1705372801434840374" datatype="html">
+        <source>Cooked Food</source>
+        <target state="new">ରନ୍ଧା ଖାଦ୍ୟ</target>
+      </trans-unit>
+      <trans-unit id="6745062327005003037" datatype="html">
+        <source>Dry Food</source>
+        <target state="new">ଶୁଖିଲା ଖାଦ୍ୟ</target>
+      </trans-unit>
+      <trans-unit id="facilities-foodDistributor-foodType" datatype="html">
+        <source> Food Type </source>
+        <target state="new"> ଖାଦ୍ୟ ପ୍ରକାର </target>
+      </trans-unit>
+      <trans-unit id="facilities-foodDistributor-foodDate" datatype="html">
+        <source> Distribution Date </source>
+        <target state="new"> ବଣ୍ଟନ ତାରିଖ </target>
+      </trans-unit>
+      <trans-unit id="parking-parkingInfo-busCharge" datatype="html">
+        <source>Charges For Buses</source>
+        <target state="new">ବସ୍ ପାଇଁ ଦେୟ</target>
+      </trans-unit>
+      <trans-unit id="parking-parkingInfo-shuttleCharge" datatype="html">
+        <source>Charges For Shuttles</source>
+        <target state="new">ଶଟଲ୍ ପାଇଁ ଦେୟ</target>
+      </trans-unit>
+      <trans-unit id="bus" datatype="html">
+        <source>Bus</source>
+        <target state="new">ବସ୍</target>
+      </trans-unit>
+      <trans-unit id="shuttle" datatype="html">
+        <source>Shuttle</source>
+        <target state="new">ଶଟଲ୍</target>
+      </trans-unit>
+      <trans-unit id="8931291953507502185" datatype="html">
+        <source>Bus</source>
+        <target state="new">ବସ୍</target>
+      </trans-unit>
+      <trans-unit id="6785755506717537957" datatype="html">
+        <source>Shuttle</source>
+        <target state="new">ଶଟଲ୍</target>
+      </trans-unit>
+      <trans-unit id="1427976025517058012" datatype="html">
+        <source>Book MO BUS</source>
+        <target state="new">ମୋବସ ବୁକ କରନ୍ତୁ</target>
+      </trans-unit>
+      <trans-unit id="4718377824646551678" datatype="html">
+        <source> Book OSRTC </source>
+        <target state="new"> ଓଏସଆରଟିସି ବୁକ କରନ୍ତୁ </target>
+      </trans-unit>
+      <trans-unit id="3274042915766495334" datatype="html">
+        <source>A tentative timetable for interstate travel are provided below :</source>
+        <target state="new">ଅନ୍ତଃରାଜ୍ୟ ଭ୍ରମଣ ପାଇଁ ଏକ ଆନୁମାନିକ ସମୟ ସାରଣୀ ନିମ୍ନରେ ପ୍ରଦାନ କରାଯାଇଛି :</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

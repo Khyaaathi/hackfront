@@ -1,0 +1,117 @@
+.location-hldr {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    padding: 12px;
+    text-align: center;
+}
+
+.location-hldr .map-hldr {
+    border-radius: 6px;
+    height: 78px;
+    overflow: hidden;
+}
+
+.location-hldr .map-hldr img {
+    border-radius: 6px;
+    height: 78px;
+    object-fit: cover;
+}
+
+.location-hldr p {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.005em;
+    color: #161616;
+    margin: 5px 0 0;
+}
+
+.parking-rate-hldr>div {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.parking-rate-hldr>div .last-child {
+    background-color: #D8D8D8;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.parking-rate-hldr .img-hldr {
+    /* width: 64px;
+    height: 64px; */
+    /* overflow: hidden;
+    float: left; */
+    margin-right: 10px;
+    /* flex: 101px; */
+}
+
+.parking-rate-hldr .img-hldr img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+}
+
+/* .parking-rate-hldr .img-hldr2 {
+    width: 40px !important;
+} */
+.parking-rate-hldr .img-hldr2 img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain !important;
+}
+
+.parking-rate-hldr .desc-hldr {
+    float: left;
+}
+
+.parking-rate-hldr .desc-hldr p {
+    margin-bottom: 0;
+}
+
+.parking-rate-hldr .desc-hldr strong {
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.btn-green {
+    background-color: #08AB1B;
+    color: white;
+}
+
+.btn-red {
+    background-color: #AD0004;
+    color: white;
+}
+
+.h-scroll {
+    width: 100%;
+    height: 87px;
+    display: flex;
+    flex-flow: row;
+    overflow-x: auto;
+}
+.h-scroll>div {
+    padding: 10px 0;
+    background-color: white;
+    /* flex: 1; */
+    flex: none;
+    text-align: center;
+    width: 94px;
+    margin: 0 5px;
+}
+.h-scroll>div .img-hldr img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+.h-scroll>div .desc-hldr {
+    font-size: 12px;
+    line-height: .8rem;
+}

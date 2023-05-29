@@ -1,0 +1,122 @@
+<div class="container">
+  <div class="row mb-4 mt-4">
+    <div class="col-12">
+      <div class="mobileDatePicker">
+        <div class="month">
+          {{ currentMonth | uppercase }}
+          <i class="material-icons monthIcon">calendar_today</i>
+        </div>
+        <div class="cdk-virtual-scroll-data-source-example">
+          <cdk-virtual-scroll-viewport orientation="horizontal" itemSize="60" minBufferPx="400" maxBufferPx="1000"
+            class="example-viewport" (scrolledIndexChange)="changeMonth($event)">
+            <div *cdkVirtualFor="let item of items" class="example-item">
+              <div class="item" (click)="select(item)" [ngClass]="{ 'is-active': item === selectedItem }">
+                <span class="weekName">{{ returnWeekDay(item) }}</span>
+                <span> {{ item | date : "d" }}</span>
+              </div>
+            </div>
+          </cdk-virtual-scroll-viewport>
+        </div>
+        <div></div>
+      </div>
+    </div>
+
+    
+  </div>
+
+  <!-- 3 box section -->
+  <div class="row mb-4">
+    <div class="col-md-4 col-xl-4 mb-4">
+      <div class="card card-style order-card">
+        <div class="card-head d-flex">
+          <span class="icon-hldr"><em class="bi bi-search float-left"></em></span>
+          <h6>Grievance</h6>
+        </div>
+        <div class="card-block">
+          <p class="">Received <span class="f-right"><strong>351</strong></span></p>
+          <p class="">Total Attended <span class="f-right"><strong>486</strong></span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-xl-4 mb-4">
+      <div class="card card-style order-card">
+        <div class="card-head d-flex">
+          <span class="icon-hldr"><em class="bi bi-bag-dash float-left"></em></span>
+          <h6>Lost Request Received</h6>
+        </div>
+        <div class="card-block">
+          <p class="">Request Received <span class="f-right"><strong>351</strong></span></p>
+          <p class="">Total Recovered <span class="f-right"><strong>486</strong></span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-xl-4 mb-4">
+      <div class="card card-style order-card">
+        <div class="card-head d-flex">
+          <span class="icon-hldr"><em class="bi bi-bag-check float-left"></em></span>
+          <h6>Registered</h6>
+        </div>
+        <div class="card-block">
+          <p class="">Total Found Registered <span class="f-right"><strong>351</strong></span></p>
+          <p class="">Total Item returned <span class="f-right"><strong>486</strong></span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-5 mb-4">
+      <div class="card card-style order-card">
+        <div class="card-head d-flex">
+          <span class="icon-hldr"><em class="bi bi-bar-chart-steps float-left"></em></span>
+          <h6>Lost and Found Status</h6>
+        </div>
+
+        <div class="card-block">
+          <div class="mb-3">
+            <p><strong>Returned</strong></p>
+            <div class="progress">
+              <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                aria-valuemax="100" style="width: 30%">
+                <span>30</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <p><strong>Found</strong></p>
+            <div class="progress">
+              <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                aria-valuemax="100" style="width: 40%">
+                <span>40</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <p><strong>Open</strong></p>
+            <div class="progress">
+              <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                aria-valuemax="100" style="width: 60%">
+                <span>60</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/panel-body-->
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-4">
+      <div class="card card-style order-card">
+        <div class="card-head d-flex mb-3">
+          <span class="icon-hldr"><em class="bi bi-bar-chart float-left"></em></span>
+          <h6>Grievance Status</h6>
+        </div>
+        <canvas baseChart [type]="'pie'" [datasets]="pieChartDatasets" [labels]="pieChartLabels"
+          [options]="pieChartOptions" [plugins]="pieChartPlugins" [legend]="pieChartLegend">
+        </canvas>
+      </div>
+    </div>
+  </div>
+</div>

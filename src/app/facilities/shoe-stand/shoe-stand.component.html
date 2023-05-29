@@ -1,0 +1,155 @@
+<div *ngIf="loading" class="loading">
+  <mat-spinner color="accent"></mat-spinner>
+</div>
+<div *ngIf="items; else not_found" class="container">
+  <p class="number-title">
+    <!-- <span><img src="assets/images/icon-shoe-stand.png" alt="" /></span> -->
+    <span>
+      <span i18n="@@totalCount"> Total</span>
+      <span class="brown-txt"> {{ dataCount }}</span>
+      <span i18n> Shoe Stand Found </span>
+    </span>
+  </p>
+
+  <div class="container">
+    <div class="row">
+      <!-- repeat this section -->
+      <!-- <div *ngFor="let item of items" class="col-sm-1 col-md-4"> -->
+      <div *ngFor="let item of items" class="col-sm-12 col-md-6 col-lg-4 mb-4">
+        <div class="item-holder">
+          <div class="row">
+            <div class="col-3 pr-0">
+              <div class="img-hldr">
+                <a
+                  [href]="
+                    'https://maps.google.com/maps?z=12&t=m&q=loc:' +
+                    item?.latitude +
+                    '+' +
+                    item?.longitude
+                  "
+                  target="_blank"
+                >
+                  <img
+                    [src]="
+                      'assets/images/facilities/shoeStand/' +
+                      item.shoeStandId +
+                      '.jpg'
+                    "
+                    loading="lazy"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="desc-hldr">
+                <h3>{{ item.name }}</h3>
+                <p>{{ item.location }}</p>
+                <!-- <p>{{ item.message }}</p> -->
+
+                <p class="open-close-style">
+                  <span i18n="@@open"> Open:</span>
+                  {{ item.openingTime | odia }} -
+                  <span i18n="@@close">Close:</span>
+                  {{ item.closingTime | odia }}
+                </p>
+              </div>
+            </div>
+
+            <!-- button section -->
+            <div class="col-3 pl-0">
+              <div class="row">
+                <div class="col-12 mb-2">
+                  <button
+                    *ngIf="item.paid"
+                    i18n="@@facilities-shoeStand-Paid"
+                    type="button"
+                    name=""
+                    id=""
+                    class="btn cmn-btn brown-btn"
+                  >
+                    Paid
+                  </button>
+                  <button
+                    *ngIf="!item.paid"
+                    i18n="@@facilities-shoeStand-free"
+                    type="button"
+                    type="button"
+                    name=""
+                    id=""
+                    class="btn cmn-btn green-btn"
+                  >
+                    Free
+                  </button>
+                </div>
+                <div class="col-12 mb-2">
+                  <a
+                    i18n="@@facilities-shoeStand-map"
+                    [href]="
+                      'https://maps.google.com/maps?z=12&t=m&q=loc:' +
+                      item?.latitude +
+                      '+' +
+                      item?.longitude
+                    "
+                    target="_blank"
+                    type="button"
+                    name=""
+                    id=""
+                    class="btn cmn-btn dark-btn"
+                  >
+                    Map
+                  </a>
+                </div>
+                <!-- <div class="col-12 mb-2">
+                  <a
+                    href=""
+                    target="_blank"
+                    type="button"
+                    name=""
+                    id=""
+                    class="btn cmn-btn brown-btn call-btn"
+                    ><img src="assets/images/phone-btn.png" alt="" /> Call
+                  </a>
+                </div> -->
+
+                <div class="col-6 mb-2 px-0">
+                  <a
+                    *ngIf="item.mobileStore"
+                    class="btn cmn-btn grey-btn circle-btn"
+                  >
+                    <img src="assets/images/smartphone.png" alt="" />
+                  </a>
+                </div>
+                <div class="col-6 mb-2 px-0">
+                  <a
+                    type="button"
+                    name=""
+                    id=""
+                    class="btn cmn-btn grey-btn circle-btn"
+                  >
+                    <img src="assets/images/shoes.png" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- // button section -->
+          </div>
+        </div>
+      </div>
+      <!-- // repeat this section -->
+    </div>
+  </div>
+</div>
+<ng-container *ngIf="items?.length">
+  <app-paginator-goto
+    [length]="dataCount"
+    [pageIndex]="0"
+    [pageSize]="20"
+    (page)="PageChange($event)"
+  ></app-paginator-goto>
+</ng-container>
+<ng-template #not_found>
+  <div class="container no-data-found">
+    <p i18n="@@no-data" class="text-center">Sorry No data found ....</p>
+  </div>
+</ng-template>

@@ -1,0 +1,215 @@
+body {
+  margin-top: 20px;
+  background: #fafafa;
+}
+
+.order-card {
+  color: #fff;
+}
+
+.card-style {
+  background: #F9F9F9;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  color: #000000;
+  height: 100%;
+  padding: 1rem;
+}
+
+.card-style .card-head {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card-style .card-head h6 {
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+
+.card-style .card-head .icon-hldr {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  background-color: #ad0004;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.card-style .card-head .icon-hldr img {
+  width: 80%;
+}
+
+.card-style h6 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.card .card-block {
+  padding-top: 25px;
+}
+
+.order-card i {
+  font-size: 26px;
+}
+.pie-style {
+  height: 200px;
+}
+.f-left {
+  float: left;
+}
+
+.f-right {
+  float: right;
+}
+
+.mobileDatePicker {
+  display: flex;
+}
+
+.cdk-virtual-scroll-data-source-example .example-viewport {
+  height: 80px;
+  width: 250px;
+  overflow-y: hidden;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+}
+
+.cdk-virtual-scroll-data-source-example .example-viewport .cdk-virtual-scroll-content-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.cdk-virtual-scroll-data-source-example .example-item {
+  height: 100%;
+  /* writing-mode: horizontal-tb; */
+  margin-right: 0.2rem;
+}
+
+.item {
+  margin: 0.2rem 0rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: #000000;
+}
+
+.is-active {
+  background: #005ad2;
+  color: white !important;
+}
+
+.weekName {
+  font-size: 1rem;
+  color: #c1c0c9;
+}
+
+.month {
+  padding: 0 1.5rem;
+  background: #4a4a4a;
+  border-radius: 5px 0px 0px 5px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px !important;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+}
+
+.monthIcon {
+  margin-top: 0.2rem;
+}
+
+.cdk-virtual-scroll-viewport ::ng-deep .cdk-virtual-scroll-content-wrapper {
+  display: flex;
+}
+
+.cdk-virtual-scroll-data-source-example,
+.cdk-virtual-scroll-viewport {
+  width: 100% !important;
+}
+
+/* IMAGE SLIDER SECTION STARTS */
+.gallery-wrap {
+  width: 600px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  bottom: 100px;
+}
+.gallery {
+  width: 500px;
+  display: flex;
+  overflow-x: scroll;
+  bottom: 18%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.gallery div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 8px;
+  padding: 5px 0px 5px 8px;
+  flex: none;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.gallery div img {
+  width: 100%;
+  /* filter: grayscale(100%); */
+  transition: transform 0.5s;
+  border-radius: 5px;
+}
+
+.gallery::-webkit-scrollbar {
+  display: none;
+}
+
+#backBtn,
+#nextBtn {
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  border-radius: 50px;
+  bottom: 21%;
+  transition: 0.6s ease;
+  user-select: none;
+  left: 27%;
+  right: 27%;
+}
+
+.gallery div img:hover {
+  /* filter: grayscale(0); */
+  cursor: pointer;
+  transform: scale(1.1);
+  background: #ffffff;
+}
+
+.active {
+  filter: grayscale(100%) !important;
+  /* filter: grayscale(0) !important; */
+  /* border: 3px solid #e7a807 !important; */
+}

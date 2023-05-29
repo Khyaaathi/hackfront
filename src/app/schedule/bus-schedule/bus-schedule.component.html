@@ -1,0 +1,158 @@
+<!-- section -->
+<div class="banner-mask">
+  <picture>
+    <source
+      srcset="assets/images/banner/m-banner_busSchedule.jpg"
+      media="(max-width: 992px)"
+    />
+    <source
+      srcset="assets/images/banner/d-banner_busSchedule.jpg"
+      media="(min-width: 992px)"
+    />
+    <source srcset="assets/images/banner/d-banner_busSchedule.jpg" />
+    <img
+      src="assets/images/banner/d-banner_busSchedule.jpg"
+      alt="Ratha Yatra Image"
+    />
+  </picture>
+</div>
+<div class="container banner-curve">
+  <h2 i18n>Bus Schedule</h2>
+  <p i18n>
+    The bus stand near the Gundicha Temple provides connections to Bhubaneswar
+    and Cuttack, service every 10-15 minutes. Minibuses to Konark leave every
+    20-30 minutes . There are direct buses for Kolkata and Visakhapatnam. Mo BUS
+    Service connects Puri to nearby places while OSRTC(Odisha State Road
+    Transport Corporation )connects Puri to far flung areas and other States.
+  </p>
+  <div class="row s-img-grid mb-4">
+    <div class="col-6">
+      <a
+        i18n
+        href="https://capitalregiontransport.in/"
+        target="_blank"
+        class="cmn-btn dark-btn bdr-adjst"
+        >Book MO BUS</a
+      >
+    </div>
+    <div class="col-6">
+      <a
+        i18n
+        href="http://www.osrtc.in/"
+        target="_blank"
+        class="cmn-btn dark-btn bdr-adjst"
+      >
+        Book OSRTC
+      </a>
+    </div>
+  </div>
+  <h3 i18n>A tentative timetable for interstate travel are provided below :</h3>
+
+  <div class="container">
+    <div class="row s-img-grid mb-4">
+      <div class="col-6">
+        <button
+          i18n
+          (click)="inbound = true; outbound = false"
+          class="cmn-btn brown-btn bdr-adjst"
+          [ngClass]="{ 'brown-btn': inbound, 'dark-btn': outbound }"
+        >
+          Inbound Bus
+        </button>
+      </div>
+      <div class="col-6">
+        <button
+          i18n
+          (click)="outbound = true; inbound = false"
+          class="cmn-btn dark-btn bdr-adjst"
+          [ngClass]="{ 'brown-btn': outbound, 'dark-btn': inbound }"
+        >
+          Outbound Bus
+        </button>
+      </div>
+    </div>
+    <div class="form-group">
+      <label *ngIf="inbound" i18n="@@schedule-busSchedule-origin"
+        >Select Origin</label
+      >
+      <label *ngIf="outbound" i18n="@@schedule-busSchedule-destination"
+        >Select Destination</label
+      >
+
+      <select
+        (change)="filterData($event.target)"
+        class="form-select bus"
+        aria-label="Default select example "
+      >
+        <option i18n="@@select-placeholder" value="">Select</option>
+        <ng-container *ngIf="outbound">
+          <option *ngFor="let item of outboundDropdown" [value]="item">
+            {{ item }}
+          </option>
+        </ng-container>
+        <ng-container *ngIf="inbound">
+          <option *ngFor="let item of inboundDropdown" [value]="item">
+            {{ item }}
+          </option>
+        </ng-container>
+      </select>
+    </div>
+    <table aria-hidden="true" class="table mb-5">
+      <thead>
+        <tr>
+          <th i18n scope="col">Bus Name</th>
+          <th i18n scope="col">Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngIf="inbound">
+          <tr *ngFor="let item of filterInbound">
+            <td>
+              {{ item.busName }}
+              <span i18n="@@origin"> / Origin :</span>
+              {{ item.origin }}
+            </td>
+            <td>
+              <span i18n="@@departure">Dep. </span>
+              {{ item.departureTime }}
+              <span i18n="@@arrival">Arr. </span> {{ item.arrivalTime }}
+
+              <span i18n="@@destination"> Destination : </span>
+              <span>Puri</span>
+            </td>
+          </tr>
+        </ng-container>
+        <ng-container *ngIf="outbound">
+          <tr *ngFor="let item of filterOutbound">
+            <td>
+              {{ item.busName }}
+              <span i18n="@@origin"> / Origin :</span>
+              <span>Puri</span>
+            </td>
+            <td>
+              <span i18n="@@arrival">Arr. </span> {{ item.arrivalTime }}
+              <span i18n="@@departure">Dep. </span>
+              {{ item.departureTime }}
+              <span i18n="@@destination"> Destination : </span>
+              {{ item.destination }}
+            </td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+    <div class="row s-img-grid mb-4">
+      <div class="col">
+        <a
+          rel="noopener"
+          i18n="@@continue-toSite"
+          [href]="'http://www.osrtc.in/'"
+          target="_blank"
+          class="cmn-btn dark-btn mx-auto px-4"
+        >
+          Continue To Booking Site
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- // section end -->

@@ -1,0 +1,74 @@
+<div class="container">
+  <p class="total-count">
+    <span>
+      <span i18n="@@totalCount"> Total</span>
+      <span class="brown-txt"> {{ places.length }}</span>
+      <span i18n> Wheel Chair Distribution Spot Found in Puri </span>
+    </span>
+    <a
+      style="padding: 0px 15px; float: right; border-radius: 20px"
+      i18n-title="@@back-btn"
+      routerLink="/etc/divyanga-darshan"
+      class="btn dark-btn"
+      title="go back"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </a>
+  </p>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-4" *ngFor="let place of places">
+        <div class="px-2">
+          <div class="row item-holder">
+            <!-- <div class="col-4 pl-0">
+                <div class="img-hldr">
+                  <img src="../../assets/images/cuttack-img.jpg" alt="" />
+                </div>
+              </div> -->
+            <div class="col">
+              <div class="desc-hldr">
+                <h3>{{ place.name }}</h3>
+                <h4 i18n>Location</h4>
+                <p>{{ place.location }}</p>
+
+                <h4 i18n>Timings</h4>
+                <p>
+                  <span i18n="@@open"> Open:</span>
+                  {{ place.open | odia }} -
+                  <span i18n="@@close">Close:</span>
+                  {{ place.close | odia }}
+                </p>
+
+                <div class="container p-0">
+                  <div class="row">
+                    <div class="col-6">
+                      <p class="call-icon">
+                        <span class="span-call-icon"
+                          ><i class="bi bi-telephone brown-btn mr-2"></i
+                        ></span>
+                        <span class="phone-no">{{ place.phoneNo }}</span>
+                      </p>
+                    </div>
+                    <div class="col-6">
+                      <a
+                        class="btn cmn-btn brown-btn"
+                        [href]="
+                          'https://maps.google.com/maps?z=12&t=m&q=' +
+                          place.location
+                        "
+                        target="_blank"
+                      >
+                        View Map
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

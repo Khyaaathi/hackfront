@@ -1,0 +1,189 @@
+.location-hldr {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  padding: 12px;
+  text-align: center;
+}
+
+.location-hldr .map-hldr {
+  border-radius: 6px;
+  height: 78px;
+  overflow: hidden;
+}
+
+.location-hldr .map-hldr img {
+  border-radius: 6px;
+  height: 78px;
+  object-fit: cover;
+}
+
+.location-hldr p {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.005em;
+  color: #161616;
+  margin: 5px 0 0;
+}
+
+.parking-rate-hldr > div {
+  /* margin-bottom: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start; */
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.parking-rate-hldr > div .last-child {
+  background-color: #d8d8d8;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.parking-rate-hldr .img-hldr {
+  width: 64px;
+  height: 64px;
+  overflow: hidden;
+  float: left;
+  margin-right: 10px;
+}
+
+.parking-rate-hldr .img-hldr img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+}
+
+/* .parking-rate-hldr .img-hldr2 {
+    width: 40px !important;
+} */
+.parking-rate-hldr .img-hldr2 img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain !important;
+}
+
+.parking-rate-hldr .desc-hldr {
+  /* float: left; */
+  flex: 1;
+}
+
+.parking-rate-hldr .desc-hldr p {
+  margin-bottom: 0;
+}
+
+.parking-rate-hldr .desc-hldr strong {
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.btn-green {
+  background-color: #08ab1b;
+  color: white;
+}
+
+.btn-red {
+  background-color: #ad0004;
+  color: white;
+}
+
+.h-scroll {
+  width: 100%;
+  height: 87px;
+  display: flex;
+  flex-flow: row;
+  overflow-x: auto;
+}
+
+.h-scroll > div {
+  padding: 10px 0;
+  background-color: white;
+  /* flex: 1; */
+  flex: none;
+  text-align: center;
+  width: 94px;
+  margin: 0 5px;
+}
+
+.h-scroll > div .img-hldr img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.h-scroll > div .desc-hldr {
+  font-size: 12px;
+  line-height: 0.8rem;
+}
+
+.ref-btn {
+  height: auto;
+  min-width: auto;
+  padding: 5px 10px;
+}
+
+.ref-btn em {
+  width: 20px;
+  height: 20px;
+  background-color: #ad0004;
+  color: white;
+  border-radius: 100%;
+}
+
+.p-card {
+  float: right;
+  display: flex;
+}
+
+.p-card .card {
+  display: inline-block;
+  vertical-align: top;
+  width: 75px;
+  height: 76px;
+  box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.17);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.p-card .card em {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  background-color: #161616;
+  color: white;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 100%;
+}
+
+.btn-success:hover {
+  text-decoration: none;
+  background-color: #198754;
+  color: white;
+  cursor: default;
+}
+
+.btn-danger:hover {
+  text-decoration: none;
+  background-color: #dc3545;
+  color: white;
+  cursor: default;
+}
+
+.refresh {
+  margin-left: auto;
+  margin-right: 0;
+}
+.dark-btn,
+.btn-success,
+.btn-danger {
+  border-radius: 20px;
+}

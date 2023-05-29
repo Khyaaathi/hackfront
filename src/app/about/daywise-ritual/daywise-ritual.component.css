@@ -1,0 +1,85 @@
+.v-line {
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 16px;
+  background-color: #ffd443;
+  padding: 30px 0;
+  border-radius: 100px;
+}
+
+.ritual {
+  position: relative;
+  min-height: 120px;
+}
+
+.ritual:nth-child(even) {
+  left: 0px;
+}
+
+/* ritual time header */
+.r-time {
+  width: 170px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  background-color: #ffd443;
+  position: absolute;
+  top: 7px;
+  padding: 10px 21px;
+}
+
+.ritual::before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: -23px;
+  background: url(../../../assets/images/ritual-time.png) center / contain
+    no-repeat;
+  z-index: 1;
+}
+
+.ritual:nth-child(odd) .r-time {
+  border-radius: 0 10px 50px 0;
+  left: 15px;
+}
+
+.ritual:nth-child(odd)::before {
+  left: -23px;
+}
+
+.ritual:nth-child(even) .r-time {
+  border-radius: 10px 0px 0 50px;
+  left: -169px;
+}
+
+.ritual:nth-child(even)::before {
+  right: 0;
+}
+
+/* image holder */
+.ritual .img-hldr {
+  width: 111px;
+  height: 82px;
+  position: absolute;
+  /* background-color: red; */
+}
+
+.ritual .img-hldr img {
+  width: 111px;
+  height: 82px;
+  object-fit: cover;
+}
+
+.ritual:nth-child(odd) .img-hldr {
+  left: -160px;
+}
+
+.ritual:nth-child(even) .img-hldr {
+  left: 56px;
+}
+.current-ritual {
+  background: #ad0004;
+}

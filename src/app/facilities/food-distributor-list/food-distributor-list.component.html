@@ -1,0 +1,205 @@
+<div *ngIf="loading" class="loading">
+  <mat-spinner color="accent"></mat-spinner>
+</div>
+
+<div class="container">
+  <div *ngIf="items" class="d-flex justify-content-between m-2">
+    <p class="number-title">
+      <!-- <span><img src="assets/images/icon-food.png" alt="" /></span> -->
+      <span>
+        <span i18n="@@totalCount"> Total</span>
+        <span class="brown-txt"> {{ dataCount | odia }}</span>
+        <span i18n> Food Distribution Spots Found </span>
+      </span>
+    </p>
+    <div
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasBottom"
+      aria-controls="offcanvasBottom"
+      class="filter-icon"
+    >
+      <img src="assets/images/icon-filter.png" alt="" />
+    </div>
+  </div>
+  <!-- <p>
+    <span i18n="@@totalCount"> Total</span> {{ items.length }}
+    <span i18n="@@facilities-foodDistributor-length"
+      >Food Distribution Spots Found
+    </span>
+  </p> -->
+
+  <div *ngIf="items?.length; else not_found" class="container">
+    <div class="row">
+      <div *ngFor="let item of items" class="col-sm-12 col-md-6 col-lg-4 mb-4">
+        <div class="item-holder">
+          <div class="row">
+            <!-- <div class="col-4 pl-0">
+              <div class="img-hldr">
+                <img
+                  [src]="
+                    'assets/images/facilities/foodDistribution/' +
+                    item?.foodDistributionId +
+                    '.jpg'
+                  "
+                  loading="lazy"
+                  alt=""
+                />
+              </div>
+            </div> -->
+            <div class="col-12">
+              <div class="desc-hldr">
+                <h3>{{ item.name }}</h3>
+                <h4 i18n="@@facilities-foodDistributor-location">Location</h4>
+                <span>{{ item.location }}</span>
+                <!-- <p>
+                  <strong i18n="@@facilities-foodDistributor-serviceAvl"
+                    >Service Available:</strong
+                  >
+                </p>
+                <span>{{ item.message }}</span> -->
+                <h4
+                  *ngIf="item.foodType"
+                  i18n="@@facilities-foodDistributor-foodType"
+                >
+                  Food Type
+                </h4>
+                <p *ngIf="item.foodType">
+                  {{ item.foodType }}
+                </p>
+                <h4
+                  *ngIf="item.preferedDate"
+                  i18n="@@facilities-foodDistributor-foodDate"
+                >
+                  Distribution Date
+                </h4>
+                <p *ngIf="item.preferedDate">
+                  {{ item.preferedDate | date : "dd.MM.yy" }}
+                </p>
+                <h4 i18n="@@facilities-foodDistributor-timing">Timings</h4>
+                <p>
+                  <span i18n="@@open"> Open:</span>
+                  {{ item.openingTime | odia }} -
+                  <span i18n="@@close">Close:</span>
+                  {{ item.closingTime | odia }}
+                </p>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <a
+                    i18n="@@facilities-foodDistributor-viewMap"
+                    [href]="
+                      'https://maps.google.com/maps?z=12&t=m&q=loc:' +
+                      item?.latitude +
+                      '+' +
+                      item?.longitude
+                    "
+                    target="_blank"
+                    type="button"
+                    class="btn cmn-btn brown-btn"
+                  >
+                    View Map
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-container *ngIf="items?.length">
+  <app-paginator-goto
+    [length]="dataCount"
+    [pageIndex]="0"
+    [pageSize]="20"
+    (page)="PageChange($event)"
+  ></app-paginator-goto>
+</ng-container>
+<ng-template #not_found>
+  <div class="container no-data-found">
+    <p i18n="@@no-data" class="text-center">Sorry No data found ....</p>
+  </div>
+</ng-template>
+
+<div
+  class="offcanvas offcanvas-bottom"
+  tabindex="-1"
+  id="offcanvasBottom"
+  aria-labelledby="offcanvasBottomLabel"
+>
+  <div class="offcanvas-header">
+    <h5
+      i18n="@@lostFound-lostItemList-filterHeading"
+      class="offcanvas-title"
+      id="offcanvasBottomLabel"
+    >
+      Filter Your Search
+    </h5>
+    <button
+      type="button"
+      class="btn-close text-reset"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body small">
+    <form [formGroup]="filterItemForm" (ngSubmit)="filterData(1)">
+      <div class="row">
+        <div class="col-md-6 col-lg-6">
+          <div class="form-group">
+            <label i18n="@@facilities-foodDistributorList-foodType"
+              >Filter By Food Type</label
+            >
+            <select
+              formControlName="foodType"
+              class="form-select"
+              aria-label="Default select example"
+            >
+              <option i18n="@@select-placeholder" value="">Select</option>
+              <option i18n value="Cooked">Cooked Food</option>
+              <option i18n value="Dry">Dry Food</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6">
+          <div class="form-group">
+            <label
+              i18n="@@facilities-foodDistributor-filterLocation"
+              class="form-label"
+              >Filter By Location</label
+            >
+            <input
+              formControlName="location"
+              type="text"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <div class="form-group">
+            <label
+              i18n="@@facilities-foodDistributor-filterDate"
+              class="form-label"
+              >Filter By Date</label
+            >
+            <input formControlName="date" type="date" class="form-control" />
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <button
+          i18n="@@facilities-foodDistributor-filterButton"
+          data-bs-dismiss="offcanvas"
+          class="btn cmn-btn btn-lg btn-dark mx-auto"
+          type="submit"
+        >
+          Search
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

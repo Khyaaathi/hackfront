@@ -1,0 +1,56 @@
+<div *ngIf="loading" class="loading">
+  <mat-spinner color="accent"></mat-spinner>
+</div>
+<!-- about section -->
+<div *ngIf="ritualTime" class="banner-mask">
+  <picture>
+    <source
+      srcset="assets/images/ritual-banner.jpg"
+      media="(max-width: 992px)"
+    />
+    <source
+      srcset="assets/images/ritual-banner.jpg"
+      media="(min-width: 992px)"
+    />
+    <source srcset="assets/images/ritual-banner.jpg" />
+    <img src="assets/images/ritual-banner.jpg" alt="Ratha Yatra Image" />
+  </picture>
+  <!-- <img src="assets/images/ritual-banner.jpg" alt="" /> -->
+</div>
+<div *ngIf="ritualTime" class="container banner-curve">
+  <!-- <span class="header-icon"><img src="assets/images/about-jaganath-icon.png" alt=""></span> -->
+  <h2 style="text-align: left">
+    <span>{{ ritualName }}</span>
+    <span style="float: right">
+      <a
+        style="padding: 0px 15px; border-radius: 20px"
+        i18n-title="@@back-btn"
+        routerLink="/about/ritual"
+        class="btn dark-btn"
+        title="go back"
+      >
+        <mat-icon>arrow_back</mat-icon>
+      </a>
+    </span>
+  </h2>
+  <div *ngIf="ritualTime.length" class="table-resposive card">
+    <table class="table table-bordered" aria-hidden="true">
+      <thead>
+        <tr>
+          <th i18n scope="col">Ritual Name</th>
+          <th i18n scope="col">Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of ritualTime">
+          <td>{{ item.ritualName }}</td>
+          <td>{{ item.time | odia }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div *ngIf="!ritualTime?.length" class="container no-data-found">
+  <p i18n="@@no-data" class="text-center">Sorry No data found ....</p>
+</div>

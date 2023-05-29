@@ -1,0 +1,110 @@
+<div *ngIf="loading" class="loading">
+  <mat-spinner color="accent"></mat-spinner>
+</div>
+<div *ngIf="filteredData" class="banner-mask">
+  <picture>
+    <source
+      srcset="assets/images/banner/m-banner_about-img.jpg"
+      media="(max-width: 992px)"
+    />
+    <source
+      srcset="assets/images/banner/d-banner_aboutRathYatra.jpg"
+      media="(min-width: 992px)"
+    />
+    <source srcset="assets/images/banner/d-banner_aboutRathYatra.jpg" />
+    <img
+      src="assets/images/banner/d-banner_aboutRathYatra.jpg"
+      alt="Ratha Yatra Image"
+    />
+  </picture>
+</div>
+
+<div
+  *ngIf="filteredData; else not_found"
+  class="container banner-curve footer-gap"
+>
+  <h2 i18n="@@hotels">Hotels</h2>
+  <p i18n style="text-align: justify">
+    There's a variety of options for you to stay at from Star Rated Hotels, Eco
+    Tour Nature Camps equipped with state of the art swiss tents and facilities
+    to OTDC Government Hotels, Bed Breakfasts and Homestays to choose from.
+    Browse the hotel list below to choose your preferred accomodation.
+  </p>
+  <div class="">
+    <mat-form-field appearance="fill">
+      <mat-label i18n> APPLY FILTERS</mat-label>
+      <mat-select [formControl]="ratingFilter" multiple>
+        <mat-option
+          *ngFor="let item of ratingListKeys; let i = index"
+          [value]="item"
+          >{{ item }}
+          <span class="filter-option-rating">
+            <img src="assets/images/stars.png" alt="Hotel Images" />{{
+              ratingList[item] | odia
+            }}
+            <span i18n="@@hotels">Hotels</span></span
+          ></mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="container py-3" *ngIf="filteredData.length; else not_found">
+    <div class="row">
+      <div *ngFor="let item of filteredData" class="col-md-6 col-lg-6 p-0">
+        <div class="card card-holder">
+          <!-- <img
+            src="assets/images/icon-hotel-img.png"
+            class="card-img-top"
+            alt="Hotel Images"
+          /> -->
+          <div class="card-body">
+            <div class="d-flex justify-content-between desc-hldr">
+              <div>
+                <h3>{{ item.name }}</h3>
+                <p>
+                  {{ item.location }}
+                </p>
+              </div>
+              <div>
+                {{ item.starRating | odia }}
+                <!-- <img src="assets/images/icon-star.png" class="ml-1" alt="" /> -->
+              </div>
+            </div>
+            <div class="card-contact">
+              <div
+                *ngIf="item.contactNumber || item.alternateNumber"
+                class="d-flex mb-1"
+              >
+                <span><img src="assets/images/icon-phone.png" alt="" /></span>
+                <span
+                  >{{ item.contactNumber ? (item.contactNumber | odia) : "" }}
+                  {{
+                    item.alternateNumber ? (item.alternateNumber | odia) : ""
+                  }}</span
+                >
+              </div>
+              <div *ngIf="item.email" class="d-flex mb-1">
+                <span><img src="assets/images/icon-message.png" alt="" /></span>
+                <span>{{ item.email }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-container *ngIf="filteredData?.length">
+  <app-paginator-goto
+    [length]="dataCount"
+    [pageIndex]="0"
+    [pageSize]="20"
+    (page)="PageChange($event)"
+  ></app-paginator-goto>
+</ng-container>
+<ng-template #not_found>
+  <div class="container no-data-found">
+    <p i18n="@@no-data" class="text-center">Sorry No data found ....</p>
+  </div>
+</ng-template>

@@ -1,0 +1,378 @@
+<div *ngIf="loading" class="loading">
+  <mat-spinner color="accent"></mat-spinner>
+</div>
+<!-- about section -->
+<div class="banner-mask">
+  <picture>
+    <source
+      srcset="assets/images/banner/m-banner_about-img.jpg"
+      media="(max-width: 992px)"
+    />
+    <source
+      srcset="assets/images/banner/d-banner_aboutRathYatra.jpg"
+      media="(min-width: 992px)"
+    />
+    <source srcset="assets/images/banner/d-banner_aboutRathYatra.jpg" />
+    <img
+      src="assets/images/banner/d-banner_aboutRathYatra.jpg"
+      alt="Ratha Yatra Image"
+    />
+  </picture>
+</div>
+<div class="container banner-curve footer-gap">
+  <h2 i18n>Plan Your Day</h2>
+  <h3 i18n>Select your preferable date &amp; plan your Yatra.</h3>
+
+  <div class="container find-duty-hldr mb-4 py-3">
+    <div class="datepicker">
+      <div class="mb-3">
+        <input
+          [(ngModel)]="currentDate"
+          (change)="filterDate()"
+          type="date"
+          class="form-control"
+        />
+      </div>
+    </div>
+    <!-- <div class="time-picker-hldr">
+      <div class="time-hldr">
+        <div class="time">Wed, 03 May</div>
+        <div class="time-icon">
+          <img src="../../assets/images/icon-calender.png" alt="" />
+        </div>
+      </div>
+      <div class="time-hldr">
+        <div class="time">Wed, 03 May</div>
+        <div class="time-icon">
+          <img src="../../assets/images/icon-calender.png" alt="" />
+        </div>
+      </div>
+      <div class="time-hldr">
+        <div class="time">Wed, 03 May</div>
+        <div class="time-icon">
+          <img src="../../assets/images/icon-calender.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="container px-0">
+      <button class="find-btn cmn-btn">
+        <span><img src="../../assets/images/icon-search.png" alt="" /></span>
+        <div class="txt-hldr">Find Information As Per Selected Date</div>
+      </button>
+    </div> -->
+  </div>
+
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-4">
+        <button
+          i18n
+          [ngClass]="{
+            'brown-btn': tab == 'parking',
+            'dark-btn': tab != 'parking'
+          }"
+          (click)="tab = 'parking'; getParkings(1)"
+          class="cmn-btn brown-btn bdr-adjst"
+        >
+          Parking
+        </button>
+      </div>
+      <div class="col-4">
+        <button
+          i18n
+          [ngClass]="{ 'brown-btn': tab == 'food', 'dark-btn': tab != 'food' }"
+          (click)="tab = 'food'; getFoods(foodPage)"
+          class="cmn-btn dark-btn bdr-adjst"
+        >
+          Food Distribution
+        </button>
+      </div>
+      <div class="col-4">
+        <button
+          i18n
+          [ngClass]="{
+            'brown-btn': tab == 'ritual',
+            'dark-btn': tab != 'ritual'
+          }"
+          (click)="tab = 'ritual'; getRituals()"
+          class="cmn-btn dark-btn bdr-adjst"
+        >
+          Rituals
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- parking holder -->
+  <div *ngIf="tab == 'parking'" class="container">
+    <ng-template #not_found>
+      <div class="container no-data-found">
+        <p i18n="@@no-data" class="text-center">Sorry No data found ....</p>
+      </div>
+    </ng-template>
+    <ng-container *ngIf="parkingSpaces; else not_found" class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <select
+            class="form-select mb-3"
+            aria-label="Default select example"
+            [(ngModel)]="vehicleType"
+          >
+            <option i18n value="Bike">Bike</option>
+            <option i18n value="Car">Car</option>
+            <option i18n value="Bus">Bus</option>
+            <option i18n value="Shuttle">Shuttle</option>
+          </select>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between mb-2">
+        <p>
+          <span i18n="@@totalCount"> Total</span>
+          {{ parkingSpaces[vehicleType].length | odia }}
+          <span i18n> Parking Area Found In Puri</span>
+        </p>
+        <div class="filter-icon">
+          <span class="refresh-button" (click)="refreshData()">
+            <span i18n="@@refresh">Refresh</span>
+            <em class="b bi-arrow-clockwise ml-2"></em>
+          </span>
+        </div>
+      </div>
+      <div class="row" *ngIf="parkingSpaces[vehicleType]">
+        <div
+          *ngFor="let item of parkingSpaces[vehicleType]"
+          class="col-sm-12 col-md-6 mb-4"
+        >
+          <div class="item-holder">
+            <div class="row">
+              <div class="col-4 pr-0">
+                <div class="img-hldr">
+                  <a
+                    [href]="
+                      'https://maps.google.com/maps?z=12&t=m&q=loc:' +
+                      item?.latitude +
+                      '+' +
+                      item?.longitude
+                    "
+                    target="_blank"
+                  >
+                    <img
+                      [src]="'assets/images/parking/' + item.parkingId + '.jpg'"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+              <div class="col-8">
+                <div class="desc-hldr">
+                  <h3>{{ item.parkingName }}</h3>
+                  <h4 i18n="@@parking-parkingSpace-location">Location</h4>
+                  <p>
+                    {{ item.location }}
+                  </p>
+
+                  <h4 i18n="@@parking-parkingSpace-parkingTime">
+                    Parking Timings
+                  </h4>
+                  <p>
+                    <span i18n="@@open"> Open:</span>
+                    {{ item?.openingTime | odia }} -
+                    <span i18n="@@close">Close:</span>
+                    {{ item?.closingTime | odia }}
+                  </p>
+                  <h4 i18n="@@parking-parkingSpace-avaialble">Available</h4>
+                  <p>
+                    <span>
+                      <em
+                        *ngIf="vehicleType == 'Bike'"
+                        class="bi bi-bicycle mr-2"
+                      ></em>
+                      <em
+                        *ngIf="vehicleType == 'Car'"
+                        class="bi bi-car-front-fill ml-2 mr-2"
+                      ></em>
+                      <em
+                        *ngIf="vehicleType == 'Bus'"
+                        class="bi bi-bus-front-fill"
+                      ></em>
+                      <em
+                        *ngIf="vehicleType == 'Shuttle'"
+                        class="bi bi-truck"
+                      ></em>
+                      {{ item?.vacancy | odia }}</span
+                    >
+                    <!-- <span *ngIf="vehicleType=='Bike'"
+                      ><em class="bi bi-car-front-fill ml-2 mr-2"></em>
+                      {{ item?.fourWheelerVacancy | odia }}</span
+                    > -->
+                  </p>
+                </div>
+              </div>
+              <div class="container mt-3">
+                <div class="row">
+                  <div class="col-6">
+                    <button
+                      type="button"
+                      class="btn cmn-btn dark-btn"
+                      [routerLink]="['/parking/parking-info', item.parkingId]"
+                      i18n="@@parking-parkingSpace-viewDetails"
+                    >
+                      View Details
+                    </button>
+                  </div>
+                  <div class="col-6">
+                    <a
+                      [href]="
+                        'https://maps.google.com/maps?z=12&t=m&q=loc:' +
+                        item?.latitude +
+                        '+' +
+                        item?.longitude
+                      "
+                      target="_blank"
+                      type="button"
+                      class="btn cmn-btn brown-btn"
+                      i18n="@@parking-parkingSpace-viewMap"
+                    >
+                      View Map
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ng-container *ngIf="parkingSpaces?.length">
+        <app-paginator-goto
+          [length]="parkingCount"
+          [pageIndex]="0"
+          [pageSize]="20"
+          (page)="parkingPageChange($event)"
+        ></app-paginator-goto>
+      </ng-container>
+    </ng-container>
+  </div>
+  <!-- // parking holder -->
+
+  <!-- food distribution -->
+  <div *ngIf="tab == 'food'" class="container">
+    <ng-template #not_found>
+      <div class="container no-data-found">
+        <p i18n="@@no-data" class="text-center">Sorry No data found ....</p>
+      </div>
+    </ng-template>
+    <ng-container *ngIf="foods.length; else not_found" class="container">
+      <p>
+        <span i18n="@@totalCount"> Total</span>
+        <strong> {{ foods.length }}</strong>
+        <span i18n> Food Distribution Spots Found In Puri</span>
+      </p>
+      <div class="row card-holder">
+        <!-- loop holder -->
+        <div *ngFor="let item of foods" class="col-sm-12 col-md-6">
+          <div class="card card-style">
+            <div class="card-body d-flex">
+              <div class="img-hldr">
+                <img src="../../assets/images/hotel.png" alt="" />
+              </div>
+              <div class="desc-hldr">
+                <h3>{{ item.name }}</h3>
+                <h4 i18n="@@facilities-foodDistributor-location">Location</h4>
+                <p>{{ item.location }}</p>
+                <h4
+                  *ngIf="item.foodType"
+                  i18n="@@facilities-foodDistributor-foodType"
+                >
+                  Food Type
+                </h4>
+                <p *ngIf="item.foodType">
+                  {{ item.foodType }}
+                </p>
+                <h4
+                  *ngIf="item.preferedDate"
+                  i18n="@@facilities-foodDistributor-foodDate"
+                >
+                  Distribution Date
+                </h4>
+                <p *ngIf="item.preferedDate">
+                  {{ item.preferedDate | date : "dd.MM.yy" }}
+                </p>
+                <h4 i18n="@@facilities-foodDistributor-timing">Timings</h4>
+                <p>
+                  <span i18n="@@open"> Open:</span>
+                  {{ item.openingTime | odia }} -
+                  <span i18n="@@close">Close:</span>
+                  {{ item.closingTime | odia }}
+                </p>
+
+                <div class="d-flex justify-content-between">
+                  <!-- <button class="cmn-btn dark-btn">View Details</button> -->
+                  <a
+                    i18n="@@facilities-foodDistributor-viewMap"
+                    [href]="
+                      'https://maps.google.com/maps?z=12&t=m&q=loc:' +
+                      item?.latitude +
+                      '+' +
+                      item?.longitude
+                    "
+                    target="_blank"
+                    type="button"
+                    class="cmn-btn brown-btn"
+                  >
+                    View Map
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // loop holder -->
+      </div>
+      <ng-container *ngIf="foods?.length">
+        <app-paginator-goto
+          [length]="foodCount"
+          [pageIndex]="0"
+          [pageSize]="20"
+          (page)="foodPageChange($event)"
+        ></app-paginator-goto>
+      </ng-container>
+    </ng-container>
+  </div>
+  <!-- // food distribution -->
+
+  <!-- rituals -->
+  <div *ngIf="tab == 'ritual'" class="container container-ritual">
+    <ng-template #not_found>
+      <div class="container no-data-found">
+        <p i18n="@@no-data" class="text-center">Sorry No data found ....</p>
+      </div>
+    </ng-template>
+    <ng-container *ngIf="ritual; else not_found" class="container">
+      <h3>
+        <span i18n>Ratha Yatra 2023 </span>
+        <span
+          >{{ ritual.ritualName }}
+          {{ ritual.date | date : "dd.MM.yy" | odia }}</span
+        >
+      </h3>
+      <table *ngIf="ritualTime" class="table table-timing" aria-hidden="true">
+        <thead>
+          <tr>
+            <th i18n scope="col">Ritual Name</th>
+            <th i18n scope="col">Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of ritualTime">
+            <td>{{ item.ritualName }}</td>
+            <td>{{ item.time | odia }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </ng-container>
+  </div>
+  <!-- // rituals -->
+</div>
+
+<!-- // about section end -->

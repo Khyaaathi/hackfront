@@ -1,0 +1,10 @@
+.r-desc {
+  display: inline-block;
+  width: calc(100% - 104px);
+  vertical-align: middle;
+}
+
+.km-text {
+  display: inline-block;
+  color: #ad0004;
+}

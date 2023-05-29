@@ -1,0 +1,26 @@
+<div class="container pt-4 home-header">
+  <div class="row justify-content-md-center">
+    <div class="col-4 col-sm-2">
+      <div class="logo" routerLink="/home">
+        <img src="assets/images/flag.gif" alt="" />
+      </div>
+    </div>
+    <div class="col-8 col-sm-10 d-flex" style="align-items: center">
+      <div class="logo-txt" i18n="@@home-header-title">
+        Shree Jagannatha <span>Rathayatra</span> 2023
+      </div>
+    </div>
+  </div>
+  <div class="form-chec form-switch text-right">
+    <label class="language-change-text">{{
+      checked ? "Switch to English" : "ଓଡିଆକୁ ପରିବର୍ତ୍ତନ କରନ୍ତୁ |"
+    }}</label>
+    <input
+      style="width: 37px; height: 22px; margin: 0px"
+      class="form-check-input"
+      type="checkbox"
+      (change)="changeLang($event)"
+      [checked]="checked"
+    />
+  </div>
+</div>

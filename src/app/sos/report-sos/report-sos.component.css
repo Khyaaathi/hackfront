@@ -1,0 +1,68 @@
+.form-group {
+  margin-bottom: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+  .img-fluid {
+    width: 90%;
+  }
+  .banner-mask {
+    text-align: center;
+  }
+}
+.modal-header {
+  border: none;
+}
+.modal-content {
+  background: #ad0004;
+}
+.token {
+  color: yellow;
+  font-weight: bold;
+}
+.success-image {
+  width: 60px;
+  margin-bottom: 10px;
+}
+.invalid-feedback {
+  display: block;
+  font-weight: bold;
+}
+.modal-button {
+  display: none;
+}
+.cmn-btn {
+  border-radius: 30px;
+}
+.preview-img {
+  display: inline;
+  /* margin: 10px 0px 0px 30px; */
+  max-width: 110px;
+  height: auto;
+}
+
+.uploaded-image-hldr {
+  width: 110px;
+  height: 75px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.uploaded-image-hldr .close-btn {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 0px;
+  top: -2px;
+}
+
+.uploaded-image-hldr .close-btn img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+.btn-dark {
+  background: black;
+  color: white;
+}

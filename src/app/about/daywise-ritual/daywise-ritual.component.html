@@ -1,0 +1,53 @@
+<div *ngIf="loading" class="loading">
+  <mat-spinner color="accent"></mat-spinner>
+</div>
+<div *ngIf="items.length" class="banner-mask">
+  <picture>
+    <source
+      srcset="assets/images/banner/m-banner_ritual-banner.jpg"
+      media="(max-width: 992px)"
+    />
+    <source
+      srcset="assets/images/banner/d-banner_daywiseRituals.jpg"
+      media="(min-width: 992px)"
+    />
+    <source srcset="assets/images/d-banner_daywiseRituals.jpg" />
+    <img
+      src="assets/images/d-banner_daywiseRituals.jpg"
+      alt="Ratha Yatra Image"
+    />
+  </picture>
+</div>
+<div *ngIf="items.length; else not_found" class="container banner-curve">
+  <h2 i18n="@@about-dayWiseRitual-title">Ratha Yatra 2023 Day wise rituals</h2>
+
+  <div class="container">
+    <div class="v-line">
+      <div
+        *ngFor="let item of items"
+        (click)="navigateTo(item.dayWiseRitualId)"
+        class="ritual"
+      >
+        <div
+          class="r-time"
+          [ngClass]="{ 'current-ritual': checkDate(item.date) }"
+        >
+          {{ item.ritualName | slice : 0 : 50 }}
+          {{ item.date | date : "dd.MM.yy" | odia }}
+        </div>
+        <div class="img-hldr">
+          <img
+            [src]="'assets/images/rituals/' + item.dayWiseRitualId + '.jpg'"
+            loading="lazy"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #not_found>
+  <div class="container no-data-found">
+    <p i18n="@@no-data" class="text-center">Sorry No data found ....</p>
+  </div></ng-template
+>

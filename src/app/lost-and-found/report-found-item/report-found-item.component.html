@@ -1,0 +1,402 @@
+<div *ngIf="loading" class="loading">
+  <mat-spinner color="accent"></mat-spinner>
+</div>
+<div class="banner-mask">
+  <picture>
+    <source
+      srcset="assets/images/banner/m-banner_lostAndFound.jpg"
+      media="(max-width: 992px)"
+    />
+    <source
+      srcset="assets/images/banner/d-banner_lostAndFound.jpg"
+      media="(min-width: 992px)"
+    />
+    <source srcset="assets/images/banner/d-banner_lostAndFound.jpg" />
+    <img
+      src="assets/images/banner/d-banner_lostAndFound.jpg"
+      alt="Ratha Yatra Image"
+    />
+  </picture>
+  <!-- <img src="assets/images/lostfound-banner.jpg" alt="" /> -->
+</div>
+<div class="container banner-curve">
+  <h2>
+    <span *ngIf="isAddMode" i18n="@@lostFound-reportFound-heading">
+      Enter info of found Item/Person</span
+    >
+    <span *ngIf="!isAddMode" i18n="@@lostFound-reportFound-editheading">
+      Edit info of found Item/Person</span
+    >
+  </h2>
+
+  <form [formGroup]="reportItemForm" (ngSubmit)="submitForm()">
+    <div class="form-group">
+      <label i18n="@@lostFound-reportFound-categoryLabel">Select Category</label
+      ><span class="mandatory-mark">*</span>
+      <select
+        [ngClass]="{
+          'border border-danger': isSubmitting && f['category'].errors
+        }"
+        formControlName="category"
+        class="form-select"
+        aria-label="Default select example"
+      >
+        <option i18n="@@select-placeholder" value="">Select</option>
+        <option i18n="@@select-person" value="Person">Person</option>
+        <option i18n="@@select-item" value="Item">Item</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label
+        *ngIf="isAddMode"
+        i18n="@@lostFound-reportFound-imageLabel"
+        for="formFile"
+        class="form-label"
+        >Upload Image</label
+      >
+      <span *ngIf="isAddMode" class="mandatory-mark">*</span>
+      <em
+        *ngIf="isAddMode"
+        i18n-matTooltip="@@upload"
+        class="bi bi-info-circle-fill"
+        data-toggle="tooltip"
+        data-placement="top"
+        mat-raised-button
+        matTooltip="You can upload up to 3 images"
+        matTooltipPosition="above"
+      >
+      </em>
+      <br />
+      <label
+        *ngIf="!isAddMode"
+        i18n="@@lostFound-reportFound-imageViewLabel"
+        for="formFile"
+        class="form-label"
+        >View Image</label
+      ><br />
+      <button
+        [ngClass]="{
+          'border border-danger': isSubmitting && f['image'].errors
+        }"
+        *ngIf="isAddMode"
+        i18n="@@choose-file"
+        class="btn btn-dark mb-3"
+        type="button"
+        (click)="uploadMultipleFiles()"
+      >
+        Choose Files
+      </button>
+
+      <div class="d-flex justify-content-start">
+        <div
+          class="uploaded-image-hldr mb-2 mr-3"
+          *ngFor="let result of imgResultMultiple; index as i"
+        >
+          <span *ngIf="isAddMode" (click)="removeImage(i)" class="close-btn"
+            ><img src="assets/images/close-btn.png" alt=""
+          /></span>
+          <img
+            i18n-alt="@@no-file-choosen"
+            class="preview-img"
+            [src]="result"
+            alt="No file Choosen"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label
+        i18n="@@lostFound-reportFound-descLabel"
+        for="exampleFormControlTextarea1"
+        class="form-label"
+        >Description</label
+      ><span class="mandatory-mark">*</span>
+      <em
+        i18n-matTooltip="@@max-desc-char"
+        class="bi bi-info-circle-fill"
+        data-toggle="tooltip"
+        data-placement="top"
+        mat-raised-button
+        matTooltip="Maximum 1000 characters are allowed"
+        matTooltipPosition="above"
+      >
+      </em>
+      <textarea
+        (keydown)="space($event)"
+        maxlength="1000"
+        [ngClass]="{
+          'border border-danger': isSubmitting && f['description'].errors
+        }"
+        formControlName="description"
+        class="form-control"
+        rows="3"
+      ></textarea>
+    </div>
+    <div class="form-group">
+      <label i18n="@@lostFound-reportFound-tokenNo">Lost Token No</label>
+      <div class="input-group">
+        <input
+          i18n-placeholder="@@lostFound-reportLost-tokenNo"
+          formControlName="lostTokenId"
+          type="text"
+          class="form-control"
+          placeholder="Token No"
+        />
+        <div class="input-group-append">
+          <button
+            data-toggle="modal"
+            data-target="#exampleModal"
+            type="button"
+            class="input-group-text"
+            id="basic-addon2"
+          >
+            <em class="bi bi-search"></em>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label i18n="@@lostFound-reportLost-beatBoxId">Beat Box No</label>
+      <span class="mandatory-mark">*</span>
+      <select
+        [ngClass]="{
+          'border border-danger': isSubmitting && f['beatBoxDescription'].errors
+        }"
+        formControlName="beatBoxDescription"
+        class="form-select"
+        aria-label="Default select example"
+      >
+        <option i18n="@@select-placeholder" value="">Select</option>
+        <option *ngFor="let item of beatBox" [value]="item.beatBoxDescription">
+          {{ item.beatBoxId + "-" + item.beatBoxDescription }}
+        </option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label i18n="@@lostFound-reportFound-locationLabel">Found Location</label>
+      <span class="mandatory-mark">*</span>
+      <input
+        (keydown)="space($event)"
+        [ngClass]="{
+          'border border-danger': isSubmitting && f['location'].errors
+        }"
+        i18n-placeholder="@@lostFound-reportFound-category"
+        formControlName="location"
+        type="text"
+        class="form-control"
+        placeholder="Enter Found  Location"
+      />
+    </div>
+    <div class="form-group">
+      <label i18n="@@lostFound-reportFound-date">Found Date Time</label>
+      <span class="mandatory-mark">*</span>
+      <input
+        [ngClass]="{
+          'border border-danger': isSubmitting && f['foundDateTime'].errors
+        }"
+        formControlName="foundDateTime"
+        type="datetime-local"
+        class="form-control"
+      />
+      <div *ngIf="f['foundDateTime'].errors" class="invalid-feedback">
+        <div
+          i18n="@@lostFound-reportLost-dateErr"
+          *ngIf="f['foundDateTime'].errors['invalidRange']"
+        >
+          *Please Enter a Valid Date
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label i18n="@@lostFound-foundItem-Status"> Status</label>
+      <span class="mandatory-mark">*</span>
+      <select
+        [ngClass]="{
+          'border border-danger': isSubmitting && f['status'].errors
+        }"
+        formControlName="status"
+        class="form-select"
+        aria-label="Default select example"
+      >
+        <option i18n="@@status-found" value="Found">Found</option>
+        <option
+          *ngIf="this.reportItemForm.value.lostTokenId"
+          i18n="@@status-reportReturned"
+          value="Returned"
+        >
+          Returned
+        </option>
+      </select>
+    </div>
+    <div class="text-center">
+      <button
+        i18n="@@lostFound-reportFound-enterButton"
+        class="btn cmn-btn btn-lg btn-dark mx-auto"
+        [disabled]="loading"
+        type="submit"
+      >
+        Enter
+      </button>
+    </div>
+  </form>
+</div>
+<button
+  class="modal-button"
+  #modalButton
+  data-toggle="modal"
+  data-target="#exampleModalCenter"
+></button>
+<div
+  class="modal fade"
+  id="exampleModalCenter"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content success-content">
+      <div class="modal-header">
+        <button
+          (click)="navigateToList()"
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <img class="success-image" src="assets/images/checked.png" alt="" />
+        <h2 i18n="@@lostFound-reportFound-successTitle">SUCCESS !</h2>
+        <p i18n="@@lostFound-reportFound-successContent">
+          Your Information is submitted
+        </p>
+        <p *ngIf="isAddMode" i18n="@@lostFound-reportLost-successMessageToken">
+          Your token ID is
+        </p>
+        <h2 *ngIf="isAddMode" class="token">#{{ tokenNo }}</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <h5 class="modal-title" id="exampleModalLabel">Select Token</h5> -->
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div *ngIf="loading" class="loading">
+          <mat-spinner color="accent"></mat-spinner>
+        </div>
+        <div class="form-group">
+          <h3>
+            <span i18n="@@lostFound-reportLost-primaryPhone"
+              >Primary Phone </span
+            ><span class="mandatory-mark">*</span>
+          </h3>
+          <div class="input-group">
+            <input
+              [ngClass]="{
+                'border border-danger':
+                  isSubmitting && primaryPhone.toString().length != 10
+              }"
+              i18n-placeholder="@@phoneNo-placeHolder"
+              type="number"
+              [(ngModel)]="primaryPhone"
+              class="form-control"
+              placeholder="(0000) 000000"
+              aria-label="Text input with dropdown button"
+            />
+          </div>
+
+          <div
+            *ngIf="
+              isSubmitting &&
+              primaryPhone.toString().length != 10 &&
+              primaryPhone.toString().length != 0
+            "
+            class="invalid-feedback"
+          >
+            <div i18n="@@lostFound-reportLost-primaryTenDigitErr">
+              *Phone number should be of 10 digits
+            </div>
+          </div>
+        </div>
+        <div class="text-center mb-3">
+          <button
+            (click)="searchPhoneNo(1)"
+            i18n="@@lostFound-reportLost-submitButton"
+            class="btn btn-dark cmn-btn mx-auto"
+            type="button"
+          >
+            Enter
+          </button>
+        </div>
+
+        <ng-container *ngIf="searchTokens.length">
+          <table class="table table-timing" aria-hidden="true">
+            <thead>
+              <tr>
+                <th width="30" i18n scope="col">&nbsp;</th>
+                <th i18n scope="col">Token No</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of searchTokens">
+                <td>
+                  <input
+                    type="radio"
+                    [value]="item.token"
+                    [(ngModel)]="lostTokenNo"
+                  />
+                </td>
+                <td>{{ item.token }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <app-paginator-goto
+            [length]="dataCount"
+            [pageIndex]="0"
+            [pageSize]="20"
+            (page)="PageChange($event)"
+          ></app-paginator-goto>
+        </ng-container>
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button> -->
+        <button
+          *ngIf="searchTokens.length"
+          (click)="setToken()"
+          type="button"
+          data-dismiss="modal"
+          class="btn btn-primary"
+        >
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,154 @@
+<div *ngIf="loading" class="loading">
+  <mat-spinner color="accent"></mat-spinner>
+</div>
+
+<div *ngIf="parkingSpaces; else not_found" class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <select
+        class="form-select mb-3"
+        aria-label="Default select example"
+        [(ngModel)]="vehicleType"
+      >
+        <option i18n value="Bike">Bike</option>
+        <option i18n value="Car">Car</option>
+        <option i18n value="Bus">Bus</option>
+        <option i18n value="Shuttle">Shuttle</option>
+      </select>
+    </div>
+  </div>
+  <div class="d-flex justify-content-between mb-2">
+    <p>
+      <span i18n="@@totalCount"> Total</span>
+      {{ parkingSpaces[vehicleType]?.length | odia
+      }}<span i18n="@@parking-parkingSpace-length"> Parking Area Found </span>
+    </p>
+    <div class="filter-icon">
+      <span class="refresh-button" (click)="refreshData()">
+        <span i18n="@@refresh">Refresh</span>
+        <em class="b bi-arrow-clockwise ml-2"></em>
+      </span>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row" *ngIf="parkingSpaces[vehicleType]">
+      <div
+        *ngFor="let item of parkingSpaces[vehicleType]"
+        class="col-sm-12 col-md-6 mb-4"
+      >
+        <div class="item-holder">
+          <div class="row">
+            <div class="col-4 pr-0">
+              <div class="img-hldr">
+                <a
+                  [href]="
+                    'https://maps.google.com/maps?z=12&t=m&q=loc:' +
+                    item?.latitude +
+                    '+' +
+                    item?.longitude
+                  "
+                  target="_blank"
+                >
+                  <img
+                    [src]="'assets/images/parking/' + item.parkingId + '.jpg'"
+                    loading="lazy"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="desc-hldr">
+                <h3>{{ item.parkingName }}</h3>
+                <h4 i18n="@@parking-parkingSpace-location">Location</h4>
+                <p>
+                  {{ item.location }}
+                </p>
+
+                <h4 i18n="@@parking-parkingSpace-parkingTime">
+                  Parking Timings
+                </h4>
+                <p>
+                  <span i18n="@@open"> Open:</span>
+                  {{ item?.openingTime | odia }} -
+                  <span i18n="@@close">Close:</span>
+                  {{ item?.closingTime | odia }}
+                </p>
+                <h4 i18n="@@parking-parkingSpace-avaialble">Available</h4>
+                <p>
+                  <span>
+                    <em
+                      *ngIf="vehicleType == 'Bike'"
+                      class="bi bi-bicycle mr-2"
+                    ></em>
+                    <em
+                      *ngIf="vehicleType == 'Car'"
+                      class="bi bi-car-front-fill ml-2 mr-2"
+                    ></em>
+                    <em
+                      *ngIf="vehicleType == 'Bus'"
+                      class="bi bi-bus-front-fill"
+                    ></em>
+                    <em
+                      *ngIf="vehicleType == 'Shuttle'"
+                      class="bi bi-truck"
+                    ></em>
+                    {{ item?.vacancy | odia }}</span
+                  >
+                  <!-- <span *ngIf="vehicleType=='Bike'"
+                    ><em class="bi bi-car-front-fill ml-2 mr-2"></em>
+                    {{ item?.fourWheelerVacancy | odia }}</span
+                  > -->
+                </p>
+              </div>
+            </div>
+            <div class="container mt-3">
+              <div class="row">
+                <div class="col-6">
+                  <button
+                    type="button"
+                    class="btn cmn-btn dark-btn"
+                    [routerLink]="['/parking/parking-info', item.parkingId]"
+                    i18n="@@parking-parkingSpace-viewDetails"
+                  >
+                    View Details
+                  </button>
+                </div>
+                <div class="col-6">
+                  <a
+                    [href]="
+                      'https://maps.google.com/maps?z=12&t=m&q=loc:' +
+                      item?.latitude +
+                      '+' +
+                      item?.longitude
+                    "
+                    target="_blank"
+                    type="button"
+                    class="btn cmn-btn brown-btn"
+                    i18n="@@parking-parkingSpace-viewMap"
+                  >
+                    View Map
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-container *ngIf="parkingSpaces?.length">
+  <app-paginator-goto
+    [length]="dataCount"
+    [pageIndex]="0"
+    [pageSize]="20"
+    (page)="PageChange($event)"
+  ></app-paginator-goto>
+</ng-container>
+<ng-template #not_found>
+  <div class="container no-data-found">
+    <p i18n="@@no-data" class="text-center">Sorry No data found ....</p>
+  </div>
+</ng-template>

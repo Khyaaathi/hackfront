@@ -1,0 +1,50 @@
+<!-- section -->
+<div class="banner-mask">
+  <picture>
+    <source
+      srcset="assets/images/banner/m-banner_places-around.jpg"
+      media="(max-width: 992px)"
+    />
+    <source
+      srcset="assets/images/banner/d-banner_placesAroundPuri.jpg"
+      media="(min-width: 992px)"
+    />
+    <source srcset="assets/images/banner/d-banner_placesAroundPuri.jpg" />
+    <img src="assets/images/banner/d-banner_placesAroundPuri.jpg" alt="Ratha Yatra Image" />
+  </picture>
+</div>
+<div class="container banner-curve">
+  <h2 i18n="@@about-placeVisit-title">Places Around Puri</h2>
+  <p i18n="@@about-placeVisit-content">
+    Holding the stature of one of the revered Char Dhams of India, Puri the
+    ancient city of Odisha brims with the magic of tourist places that can win
+    hearts in a blink. It's only when one walks along the many pilgrimages in
+    Puri, chanting the name of Lord Jagannath, that he feels the outpour of
+    peace in his soul. With every changing day, the city brings a new experience
+    for its travellers, sometimes through its famous wildlife sanctuary, at the
+    other with its scenic lake setting and most of all with its gripping waves
+    and sun-toasted sand.
+  </p>
+
+  <h3 i18n="@@about-placeVisit-topPlaces">Top Tourist Places</h3>
+  <ul class="place-link">
+    <li *ngFor="let place of places">
+      <div>
+        <span class="r-desc mr-3">{{ place.place }}</span
+        ><strong class="km-text"
+          >{{ place.inKm | odia }}&nbsp;<span i18n="@@km">km</span></strong
+        >
+      </div>
+      <a
+        [href]="'https://maps.google.com/maps?z=12&t=m&q=' + place.location"
+        target="_blank"
+      >
+        <img
+          style="margin-left: auto; margin-right: 0"
+          src="assets/images/place-visit-arow.png"
+          alt=""
+        />
+      </a>
+    </li>
+  </ul>
+</div>
